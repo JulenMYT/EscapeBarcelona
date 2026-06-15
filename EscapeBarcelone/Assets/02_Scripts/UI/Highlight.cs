@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Highlight : MonoBehaviour
 {
-    [SerializeField] private GameObject highlightCircle;
+    [SerializeField] private Transform highlightAnchor;
     [SerializeField] private Transform background;
     [SerializeField] private Transform defaultParent;
 
     public void StartHighlight()
     {
-        background.SetParent(highlightCircle.transform);
+        background.SetParent(highlightAnchor);
     }
 
     public void StopHighlight()

@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d271171ddf1e56942b976975ca7efd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Highlight
-  highlightCircle: {fileID: 126154118}
+  highlightAnchor: {fileID: 126154119}
   background: {fileID: 297830887}
   defaultParent: {fileID: 750972793}
 --- !u!1 &297830886
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 578027265}
   - component: {fileID: 578027267}
   m_Layer: 5
-  m_Name: Clickable
+  m_Name: ClickableLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 1402384470}
   - component: {fileID: 1402384469}
   m_Layer: 0
-  m_Name: FirstSceneEvent
+  m_Name: FirstSceneEventRouter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d271171ddf1e56942b976975ca7efd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Highlight
-  highlightCircle: {fileID: 1788818173}
+  highlightAnchor: {fileID: 1788818174}
   background: {fileID: 297830887}
   defaultParent: {fileID: 750972793}
 --- !u!1 &1928983067
