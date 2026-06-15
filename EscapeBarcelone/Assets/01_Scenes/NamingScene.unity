@@ -549,7 +549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextSequenceViewer
   inputField: {fileID: 2123691612}
   panel: {fileID: 1330720349}
-  textLabel: {fileID: 1900069944}
+  dialogueText: {fileID: 1900069944}
+  speakerText: {fileID: 0}
 --- !u!1 &1167689955
 GameObject:
   m_ObjectHideFlags: 0

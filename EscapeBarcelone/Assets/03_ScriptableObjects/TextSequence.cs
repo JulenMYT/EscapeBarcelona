@@ -10,6 +10,8 @@ public class TextSequence : ScriptableObject
 [Serializable]
 public class TextData
 {
+    public string speakerName;
+
     [TextArea]
     public string text;
 
