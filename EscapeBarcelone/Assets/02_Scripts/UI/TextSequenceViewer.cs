@@ -16,13 +16,15 @@ public class TextSequenceViewer : MonoBehaviour
 
     public event Action OnSequenceCompleted;
     public event Action<string> OnInputEntered;
+    public event Action<string> OnTextEvent;
 
-    private TextSequence sequence;
-    private TextData line;
-    private int lineIndex;
+    private TextSequence currentSequence;
+    private TextData currentLine;
+    private int currentLineIndex;
     private bool isPlaying;
     private bool isTransitioning;
-    private Coroutine autoAdvanceRoutine;
+    private Coroutine autoAdvanceCoroutine;
+    private Coroutine lineDelayCoroutine;
 
     private void Awake()
     {
@@ -41,55 +43,65 @@ public class TextSequenceViewer : MonoBehaviour
 
     private void Update()
     {
-        if (!CanReadManualAdvance())
+        if (ShouldAdvanceManually())
         {
-            return;
+            AdvanceToNextLine();
         }
-
-        GoToNextLine();
     }
 
-    public void Play(TextSequence newSequence)
+    public void Play(TextSequence sequence)
     {
-        StopAutoAdvance();
+        StopRunningCoroutines();
 
-        sequence = newSequence;
-        lineIndex = 0;
+        currentSequence = sequence;
+        currentLineIndex = 0;
         isPlaying = true;
+        isTransitioning = false;
 
-        ShowLineAtCurrentIndex();
+        BeginCurrentLine();
     }
 
     public void Stop()
     {
-        StopAutoAdvance();
+        StopRunningCoroutines();
 
         isPlaying = false;
         isTransitioning = false;
+        currentSequence = null;
 
         HideView();
+    }
+
+    public void ContinueAfterExternalAction()
+    {
+        if (!CanContinueAfterExternalAction())
+        {
+            return;
+        }
+
+        AdvanceToNextLine();
     }
 
     private void SubscribeToEvents()
     {
         if (inputField != null)
         {
-            inputField.OnInputEntered += SubmitInput;
+            inputField.OnInputEntered += HandleInputSubmitted;
         }
 
-        panel.OnFadeOutComplete += PrepareLineAfterFadeOut;
-        panel.OnFadeInComplete += EnableLineInteractionAfterFadeIn;
+        panel.OnFadeOutComplete += HandlePanelFadeOutComplete;
+        panel.OnFadeInComplete += HandlePanelFadeInComplete;
     }
 
     private void UnsubscribeFromEvents()
     {
         if (inputField != null)
         {
-            inputField.OnInputEntered -= SubmitInput;
+            inputField.OnInputEntered -= HandleInputSubmitted;
         }
 
-        panel.OnFadeOutComplete -= PrepareLineAfterFadeOut;
-        panel.OnFadeInComplete -= EnableLineInteractionAfterFadeIn;
+        panel.OnFadeOutComplete -= HandlePanelFadeOutComplete;
+        panel.OnFadeInComplete -= HandlePanelFadeInComplete;
     }
 
     private void HideView()
@@ -99,7 +111,7 @@ public class TextSequenceViewer : MonoBehaviour
         SetSpeakerVisible(false);
     }
 
-    private bool CanReadManualAdvance()
+    private bool ShouldAdvanceManually()
     {
         if (!isPlaying || isTransitioning)
         {
@@ -111,67 +123,134 @@ public class TextSequenceViewer : MonoBehaviour
             || Input.GetKeyDown(KeyCode.Return);
     }
 
-    private void ShowLineAtCurrentIndex()
+    private void BeginCurrentLine()
     {
-        if (!HasLineAtCurrentIndex())
+        if (!TryLoadCurrentLine())
         {
-            FinishSequence();
+            CompleteSequence();
             return;
         }
 
-        StopAutoAdvance();
+        StopRunningCoroutines();
 
-        line = sequence.texts[lineIndex];
         isTransitioning = true;
-
         SetInputVisible(false);
+
         panel.FadeOut();
     }
 
-    private bool HasLineAtCurrentIndex()
+    private bool TryLoadCurrentLine()
     {
-        return sequence != null && lineIndex < sequence.texts.Length;
+        if (currentSequence == null || currentLineIndex >= currentSequence.texts.Length)
+        {
+            return false;
+        }
+
+        currentLine = currentSequence.texts[currentLineIndex];
+        return true;
     }
 
-    private void PrepareLineAfterFadeOut()
+    private void HandlePanelFadeOutComplete()
     {
         if (!isPlaying)
         {
             return;
         }
 
-        StartCoroutine(ShowLineAfterDelay());
+        StartLineRevealDelay();
     }
 
-    private IEnumerator ShowLineAfterDelay()
+    private void StartLineRevealDelay()
     {
-        dialogueText.text = ResolveTextTags(line.text);
-        ApplySpeaker(line.speakerName);
-        SetInputVisible(line.inputField);
+        StopLineDelay();
 
+        lineDelayCoroutine = StartCoroutine(RevealLineAfterDelay());
+    }
+
+    private IEnumerator RevealLineAfterDelay()
+    {
         yield return new WaitForSeconds(lineTransitionDelay);
 
+        lineDelayCoroutine = null;
+
+        ApplyCurrentLineToView();
         panel.FadeIn();
     }
 
-    private void EnableLineInteractionAfterFadeIn()
+    private void ApplyCurrentLineToView()
+    {
+        dialogueText.text = ResolveText(currentLine.text);
+        ApplySpeaker(currentLine.speakerName);
+        SetInputVisible(ShouldShowInput());
+    }
+
+    private void HandlePanelFadeInComplete()
     {
         if (!isPlaying)
         {
             return;
         }
 
-        if (line.inputField && inputField != null)
+        TriggerCurrentLineEvent();
+        ConfigureCurrentLineInteraction();
+    }
+
+    private void ConfigureCurrentLineInteraction()
+    {
+        if (ShouldWaitForInput())
         {
             return;
         }
 
-        isTransitioning = line.autoAdvance;
-
-        if (line.autoAdvance)
+        if (ShouldWaitForExternalAction())
         {
-            StartAutoAdvance(line.duration);
+            isTransitioning = true;
+            return;
         }
+
+        if (ShouldAutoAdvance())
+        {
+            isTransitioning = true;
+            StartAutoAdvance(currentLine.duration);
+            return;
+        }
+
+        isTransitioning = false;
+    }
+
+    private bool ShouldShowInput()
+    {
+        return currentLine.inputField && inputField != null;
+    }
+
+    private bool ShouldWaitForInput()
+    {
+        return currentLine.inputField && inputField != null;
+    }
+
+    private bool ShouldWaitForExternalAction()
+    {
+        return currentLine.waitForExternalAction;
+    }
+
+    private bool ShouldAutoAdvance()
+    {
+        return currentLine.autoAdvance;
+    }
+
+    private bool CanContinueAfterExternalAction()
+    {
+        return isPlaying && currentLine.waitForExternalAction;
+    }
+
+    private void TriggerCurrentLineEvent()
+    {
+        if (string.IsNullOrWhiteSpace(currentLine.eventKey))
+        {
+            return;
+        }
+
+        OnTextEvent?.Invoke(currentLine.eventKey);
     }
 
     private void ApplySpeaker(string speakerName)
@@ -199,7 +278,7 @@ public class TextSequenceViewer : MonoBehaviour
             : speakerName;
     }
 
-    private string ResolveTextTags(string text)
+    private string ResolveText(string text)
     {
         return text.Replace(PlayerTag, GameManager.Instance.playerName);
     }
@@ -227,37 +306,55 @@ public class TextSequenceViewer : MonoBehaviour
     private void StartAutoAdvance(float duration)
     {
         StopAutoAdvance();
-        autoAdvanceRoutine = StartCoroutine(AutoAdvanceAfterDelay(duration));
-    }
 
-    private void StopAutoAdvance()
-    {
-        if (autoAdvanceRoutine == null)
-        {
-            return;
-        }
-
-        StopCoroutine(autoAdvanceRoutine);
-        autoAdvanceRoutine = null;
+        autoAdvanceCoroutine = StartCoroutine(AutoAdvanceAfterDelay(duration));
     }
 
     private IEnumerator AutoAdvanceAfterDelay(float duration)
     {
         yield return new WaitForSeconds(duration);
 
-        autoAdvanceRoutine = null;
-        GoToNextLine();
+        autoAdvanceCoroutine = null;
+        AdvanceToNextLine();
     }
 
-    private void GoToNextLine()
+    private void StopRunningCoroutines()
     {
-        lineIndex++;
+        StopAutoAdvance();
+        StopLineDelay();
+    }
+
+    private void StopAutoAdvance()
+    {
+        if (autoAdvanceCoroutine == null)
+        {
+            return;
+        }
+
+        StopCoroutine(autoAdvanceCoroutine);
+        autoAdvanceCoroutine = null;
+    }
+
+    private void StopLineDelay()
+    {
+        if (lineDelayCoroutine == null)
+        {
+            return;
+        }
+
+        StopCoroutine(lineDelayCoroutine);
+        lineDelayCoroutine = null;
+    }
+
+    private void AdvanceToNextLine()
+    {
+        currentLineIndex++;
         isTransitioning = false;
 
-        ShowLineAtCurrentIndex();
+        BeginCurrentLine();
     }
 
-    private void SubmitInput(string value)
+    private void HandleInputSubmitted(string value)
     {
         if (!isPlaying)
         {
@@ -267,10 +364,10 @@ public class TextSequenceViewer : MonoBehaviour
         OnInputEntered?.Invoke(value);
 
         SetInputVisible(false);
-        GoToNextLine();
+        AdvanceToNextLine();
     }
 
-    private void FinishSequence()
+    private void CompleteSequence()
     {
         Stop();
         OnSequenceCompleted?.Invoke();

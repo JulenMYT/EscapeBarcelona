@@ -18,4 +18,6 @@ public class TextData
     public bool autoAdvance;
     public float duration = 2f;
     public bool inputField;
+    public bool waitForExternalAction;
+    public string eventKey;
 }

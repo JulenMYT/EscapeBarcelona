@@ -18,19 +18,48 @@ MonoBehaviour:
     autoAdvance: 0
     duration: 0
     inputField: 0
+    waitForExternalAction: 0
+    eventKey: 
   - speakerName: Player
     text: "Je suis {player}, je vais chercher un billet pour Barcelona dans cette
       pi\xE8ce."
     autoAdvance: 0
     duration: 0
     inputField: 0
+    waitForExternalAction: 0
+    eventKey: 
   - speakerName: Player
     text: "Je suis {player}, allons \xE0 Barcelona!"
     autoAdvance: 0
     duration: 0
     inputField: 0
+    waitForExternalAction: 0
+    eventKey: 
   - speakerName: Player
     text: La Sagrada Familia.
     autoAdvance: 0
     duration: 0
     inputField: 0
+    waitForExternalAction: 0
+    eventKey: 
+  - speakerName: Player
+    text: Je vois un arbre
+    autoAdvance: 0
+    duration: 0
+    inputField: 0
+    waitForExternalAction: 0
+    eventKey: HighlightTree
+  - speakerName: Player
+    text: "Moi, {player}, vais parler \xE0 Poo en cliquant sur Poo"
+    autoAdvance: 0
+    duration: 0
+    inputField: 0
+    waitForExternalAction: 1
+    eventKey: HighlightPoo
+  - speakerName: Poo
+    text: "Bonjour {player}, je vais battre Giygas, il se trouve \xE0 Barcelona."
+    autoAdvance: 0
+    duration: 0
+    inputField: 0
+    waitForExternalAction: 0
+    eventKey: StopHighlightPoo
