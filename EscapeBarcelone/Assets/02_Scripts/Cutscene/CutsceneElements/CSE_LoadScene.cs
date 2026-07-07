@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class CSE_LoadScene : MonoBehaviour
+public class CSE_LoadScene : CutsceneElementBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private string sceneName;
+
+    public override void Execute()
     {
-        
+        base.Execute();
+        LoadScene();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LoadScene()
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }

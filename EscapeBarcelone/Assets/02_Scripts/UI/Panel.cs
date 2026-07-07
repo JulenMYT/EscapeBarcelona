@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Panel : MonoBehaviour
 {
-    private CanvasGroup canvasGroup;
+    protected CanvasGroup canvasGroup;
 
     private void Start()
     {

@@ -21,7 +21,7 @@ public class TutorialHandler : MonoBehaviour
 
     private void Update()
     {
-        if (tutorialUI != null && Input.GetKeyDown(KeyCode.Mouse0))
+        if (currentTutorial && Input.GetKeyDown(KeyCode.Mouse0))
         {
             PlayNextLine();
         }
@@ -44,11 +44,11 @@ public class TutorialHandler : MonoBehaviour
 
         if (index >= currentTutorial.tutorialLines.Length)
         {
-            EndDialogue();
+            EndTutorial();
         }
     }
 
-    private void EndDialogue()
+    private void EndTutorial()
     {
         currentTutorial = null;
         tutorialUI.Hide();

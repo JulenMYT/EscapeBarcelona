@@ -6,14 +6,17 @@ public class CutsceneHandler : MonoBehaviour
     public Camera cam;
     public DialogueHandler dialogueHandler { get; private set; }
     public TutorialHandler tutorialHandler { get; private set; }
+    public FadePanel fadePanel { get; private set; }
     private CutsceneElementBase[] cutsceneElements;
     private int index = -1;
 
     public void Start()
     {
+        cam = Camera.main;
         cutsceneElements = GetComponentsInChildren<CutsceneElementBase>();
         dialogueHandler = FindAnyObjectByType<DialogueHandler>();
         tutorialHandler = FindAnyObjectByType<TutorialHandler>();
+        fadePanel = FindAnyObjectByType<FadePanel>();
     }
 
     private void ExecuteCurrentElement()
