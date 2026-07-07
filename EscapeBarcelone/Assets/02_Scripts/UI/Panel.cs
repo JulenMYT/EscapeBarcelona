@@ -1,8 +1,19 @@
+using System;
 using UnityEngine;
 
 public abstract class Panel : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup canvasGroup;
+    private CanvasGroup canvasGroup;
+
+    private void Start()
+    {
+        Initialize();
+    }
+
+    protected virtual void Initialize()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
 
     public void Show()
     {
