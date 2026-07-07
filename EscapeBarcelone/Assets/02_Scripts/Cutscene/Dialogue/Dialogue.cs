@@ -9,6 +9,7 @@ public class Dialogue : ScriptableObject
     public class DialogueLine
     {
         public string speakerName;
+        [TextArea(3, 10)]
         public string lineText;
         public AudioClip voiceClip;
     }

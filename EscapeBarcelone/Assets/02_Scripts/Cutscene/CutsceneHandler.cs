@@ -5,6 +5,7 @@ public class CutsceneHandler : MonoBehaviour
 {
     public Camera cam;
     public DialogueHandler dialogueHandler { get; private set; }
+    public TutorialHandler tutorialHandler { get; private set; }
     private CutsceneElementBase[] cutsceneElements;
     private int index = -1;
 
@@ -12,6 +13,7 @@ public class CutsceneHandler : MonoBehaviour
     {
         cutsceneElements = GetComponentsInChildren<CutsceneElementBase>();
         dialogueHandler = FindAnyObjectByType<DialogueHandler>();
+        tutorialHandler = FindAnyObjectByType<TutorialHandler>();
     }
 
     private void ExecuteCurrentElement()
