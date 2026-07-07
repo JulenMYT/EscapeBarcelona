@@ -9,9 +9,17 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public event Action OnInteract;
 
+    private const string outlineMaterialPath = "OutlineMaterial";
+    private const string baseMaterialPath = "BaseMaterial";
+
+    private Material outlineMaterial;
+    private Material baseMaterial;
+
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        outlineMaterial = Resources.Load<Material>(outlineMaterialPath);
+        baseMaterial = Resources.Load<Material>(baseMaterialPath);
     }
 
     public virtual void Interact()
@@ -22,13 +30,13 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     public virtual void Enter() 
     {
         if (spriteRenderer)
-            spriteRenderer.color = highlightColor;
+            spriteRenderer.material = outlineMaterial;
     }
 
     public virtual void Exit() 
     {
         if (spriteRenderer)
-            spriteRenderer.color = Color.white;
+            spriteRenderer.material = baseMaterial;
     }
 
     public void OnPointerClick(PointerEventData eventData)
