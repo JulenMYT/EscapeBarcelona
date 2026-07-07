@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Color highlightColor = Color.orange;
     private SpriteRenderer spriteRenderer;
+
+    public event Action OnInteract;
 
     private void Start()
     {
@@ -13,6 +16,7 @@ public class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPoin
 
     public virtual void Interact()
     {
+        OnInteract?.Invoke();
     }
 
     public virtual void Enter() 
