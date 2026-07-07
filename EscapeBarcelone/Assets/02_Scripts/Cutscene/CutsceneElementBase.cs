@@ -1,16 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class CutsceneElementBase : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float duration;
+    public CutsceneHandler cutsceneHandler { get; private set; }
+
+    private void Start()
     {
-        
+        cutsceneHandler = GetComponent<CutsceneHandler>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Execute()
     {
-        
+
+    }
+
+    protected IEnumerator WaitAndAdvance()
+    {
+        yield return new WaitForSeconds(duration);
+        cutsceneHandler.PlayNextElement();
     }
 }
