@@ -3,12 +3,12 @@ using UnityEngine.EventSystems;
 
 public class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private Color highlightColor = Color.yellow;
+    [SerializeField] private Color highlightColor = Color.orange;
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public virtual void Interact()
