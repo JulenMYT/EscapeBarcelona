@@ -15,14 +15,14 @@ public abstract class Panel : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void Show()
+    public virtual void Show()
     {
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1.0f;
     }
 
-    public void Hide()
+    public virtual void Hide()
     {
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;

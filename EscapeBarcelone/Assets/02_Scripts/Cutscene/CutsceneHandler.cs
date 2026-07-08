@@ -7,6 +7,7 @@ public class CutsceneHandler : MonoBehaviour
     public DialogueHandler dialogueHandler { get; private set; }
     public TutorialHandler tutorialHandler { get; private set; }
     public FadePanel fadePanel { get; private set; }
+    public FocusPanel focusPanel { get; private set; }
     private CutsceneElementBase[] cutsceneElements;
     private int index = -1;
 
@@ -17,6 +18,7 @@ public class CutsceneHandler : MonoBehaviour
         dialogueHandler = FindAnyObjectByType<DialogueHandler>();
         tutorialHandler = FindAnyObjectByType<TutorialHandler>();
         fadePanel = FindAnyObjectByType<FadePanel>();
+        focusPanel = FindAnyObjectByType<FocusPanel>();
     }
 
     private void ExecuteCurrentElement()
