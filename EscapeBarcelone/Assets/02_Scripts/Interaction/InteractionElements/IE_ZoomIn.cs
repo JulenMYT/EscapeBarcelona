@@ -32,7 +32,6 @@ public class IE_ZoomIn : InteractionElementBase
     public override void Interact()
     {
         base.Interact();
-        Debug.Log($"Interacting with {gameObject.name}, opening {targetObject.gameObject.name}");
         layoutOrderBefore = focusPanel.GetOrderInLayer();
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);
