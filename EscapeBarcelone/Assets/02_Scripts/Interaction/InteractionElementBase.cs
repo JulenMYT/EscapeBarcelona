@@ -4,8 +4,8 @@ using UnityEngine.EventSystems;
 
 public enum InteractionType
 {
-    OutlineHighlight,
-    NoneOutline,
+    Outline,
+    Highlight,
     Stretch,
     None
 }
@@ -13,7 +13,8 @@ public enum InteractionType
 public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Color highlightColor = Color.orange;
-    [SerializeField] private InteractionType interactionType = InteractionType.NoneOutline;
+    [SerializeField] private InteractionType interactionType = InteractionType.None;
+    [SerializeField] private InteractionType interactionTypeHover = InteractionType.Outline;
     private SpriteRenderer spriteRenderer;
 
     public event Action OnInteract;
@@ -29,23 +30,6 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         outlineMaterial = Resources.Load<Material>(outlineMaterialPath);
         baseMaterial = Resources.Load<Material>(baseMaterialPath);
-
-        switch (interactionType)
-        {
-            case InteractionType.OutlineHighlight:
-                if (spriteRenderer)
-                    spriteRenderer.material = outlineMaterial; 
-                break;
-            case InteractionType.NoneOutline:
-                if (spriteRenderer)
-                    spriteRenderer.material = baseMaterial; 
-                break;
-            case InteractionType.Stretch:
-
-                break;
-            default:
-                break;
-        }
     }
 
     public virtual void Interact()
@@ -55,13 +39,13 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void Enter() 
     {
-        switch (interactionType)
+        switch (interactionTypeHover)
         {
-            case InteractionType.OutlineHighlight:
+            case InteractionType.Highlight:
                 if (spriteRenderer)
                     spriteRenderer.color = highlightColor; 
                 break;
-            case InteractionType.NoneOutline:
+            case InteractionType.Outline:
                 if (spriteRenderer)
                     spriteRenderer.material = outlineMaterial; 
                 break;
@@ -76,19 +60,33 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void Exit() 
     {
-        switch (interactionType)
+        switch (interactionTypeHover)
         {
-            case InteractionType.OutlineHighlight:
+            case InteractionType.Highlight:
                 if (spriteRenderer)
                     spriteRenderer.color = Color.white;
                 break;
-            case InteractionType.NoneOutline:
+            case InteractionType.Outline:
                 if (spriteRenderer)
-                    spriteRenderer.material = baseMaterial; 
+                    spriteRenderer.material = baseMaterial;
                 break;
             case InteractionType.Stretch:
                 if (spriteRenderer)
                     spriteRenderer.transform.localScale /= 1.2f;
+                break;
+            default:
+                break;
+        }
+
+        switch (interactionType)
+        {
+            case InteractionType.Highlight:
+                if (spriteRenderer)
+                    spriteRenderer.color = highlightColor;
+                break;
+            case InteractionType.Outline:
+                if (spriteRenderer)
+                    spriteRenderer.material = outlineMaterial;
                 break;
             default:
                 break;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CutsceneHandler : MonoBehaviour
 {
-    public Camera cam;
+    public Camera cam { get; private set; }
     public DialogueHandler dialogueHandler { get; private set; }
     public TutorialHandler tutorialHandler { get; private set; }
     public FadePanel fadePanel { get; private set; }

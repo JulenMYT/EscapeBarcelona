@@ -14,8 +14,13 @@ public class CutsceneInitiator : MonoBehaviour
     {
         if (playOnStart)
         {
-            cutsceneHandler.PlayNextElement();
+            StartCutscene();
             playOnStart = false;
         }
+    }
+
+    public void StartCutscene()
+    {
+        cutsceneHandler.PlayNextElement();
     }
 }
