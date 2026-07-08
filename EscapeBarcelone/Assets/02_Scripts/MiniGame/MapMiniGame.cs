@@ -39,6 +39,10 @@ public class MapMiniGame : MonoBehaviour
         }
 
         gameplayPanel.ShowValidateButton();
+        gameplayPanel.ShowToggleButton();
+
+        gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;
+        gameplayPanel.OnToggleButtonClicked += ToggleCanvas;
 
         gameplayPanel.OnValidateButtonClicked -= VerifyAnswers;
         gameplayPanel.OnValidateButtonClicked += VerifyAnswers;
@@ -64,6 +68,10 @@ public class MapMiniGame : MonoBehaviour
             cutsceneInitiator.StartCutscene();
             mapMiniGameCanvas.SetActive(false);
             gameplayPanel.HideValidateButton();
+            gameplayPanel.HideToggleButton();
+
+            gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;
+            gameplayPanel.OnValidateButtonClicked -= VerifyAnswers;
 
             foreach (var picture in pictures)
             {
