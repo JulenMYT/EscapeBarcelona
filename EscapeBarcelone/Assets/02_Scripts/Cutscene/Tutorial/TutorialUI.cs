@@ -15,4 +15,9 @@ public class TutorialUI : Panel
     {
         tutorialText.text = line;
     }
+
+    public override void Show()
+    {
+        canvasGroup.alpha = 1.0f;
+    }
 }

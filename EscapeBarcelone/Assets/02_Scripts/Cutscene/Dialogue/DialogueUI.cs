@@ -17,4 +17,9 @@ public class DialogueUI : Panel
         speakerName.text = line.speakerName;
         dialogueText.text = line.lineText;
     }
+
+    public override void Show()
+    {
+        canvasGroup.alpha = 1.0f;
+    }
 }

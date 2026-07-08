@@ -36,8 +36,19 @@ public class FocusPanel : Panel
         SetMaterialSizeY(size.y);
     }
 
+    public int GetOrderInLayer()
+    {
+        return darkImage.canvas.sortingOrder;
+    }
+
+    public void SetOrderInLayer(int order)
+    {
+        darkImage.canvas.sortingOrder = order;
+    }
+
     public override void Show()
     {
         canvasGroup.alpha = 1.0f;
+        SetMaterialOffset(new Vector2(10,0));
     }
 }

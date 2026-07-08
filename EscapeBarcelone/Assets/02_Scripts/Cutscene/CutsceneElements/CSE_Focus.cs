@@ -6,6 +6,8 @@ public class CSE_Focus : CutsceneElementBase
     [SerializeField] private Vector2 size;
     [SerializeField] private Vector2 offset;
 
+    [SerializeField] private int orderInLayer = 0;
+
     public override void Execute()
     {
         base.Execute();
@@ -16,7 +18,7 @@ public class CSE_Focus : CutsceneElementBase
             focusPanel.Show();
             focusPanel.SetMaterialOffset(offset);
             focusPanel.SetMaterialSize(size);
-            focusPanel.Show();
+            focusPanel.SetOrderInLayer(orderInLayer);
         }
         else
         {

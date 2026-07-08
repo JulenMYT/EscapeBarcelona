@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class CSE_WaitForClick : CutsceneElementBase
+public class CSE_WaitForClose : CutsceneElementBase
 {
     [SerializeField] private InteractionElementBase interactionElement;
 
     public override void Execute()
     {
-        interactionElement.OnInteract += OnInteraction;
+        interactionElement.OnClose += OnClose;
         interactionElement.SetInteractable(true);
     }
 
-    private void OnInteraction()
+    private void OnClose()
     {
-        interactionElement.OnInteract -= OnInteraction;
+        interactionElement.OnClose -= OnClose;
         cutsceneHandler.PlayNextElement();
     }
 }

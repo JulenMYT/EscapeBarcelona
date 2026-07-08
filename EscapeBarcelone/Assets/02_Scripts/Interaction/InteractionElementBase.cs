@@ -12,12 +12,16 @@ public enum InteractionType
 
 public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] private bool isInteractable = true;
+    [SerializeField] private bool canBeClosed = true;
+
     [SerializeField] private Color highlightColor = Color.orange;
     [SerializeField] private InteractionType interactionType = InteractionType.None;
     [SerializeField] private InteractionType interactionTypeHover = InteractionType.Outline;
-    private SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
     public event Action OnInteract;
+    public event Action OnClose;
 
     private const string outlineMaterialPath = "OutlineMaterial";
     private const string baseMaterialPath = "BaseMaterial";
@@ -30,6 +34,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         outlineMaterial = Resources.Load<Material>(outlineMaterialPath);
         baseMaterial = Resources.Load<Material>(baseMaterialPath);
+
+        Initialize();
     }
 
     public virtual void Interact()
@@ -93,18 +99,58 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
+        if (!isInteractable)
+            return;
         Interact();
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
+        if (!isInteractable)
+            return;
         Enter();
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
+        if (!isInteractable)
+            return;
         Exit();
+    }
+
+    public virtual void Initialize()
+    {
+
+    }
+
+    public virtual void Open()
+    {
+        gameObject.SetActive(true);
+
+        if (canBeClosed)
+        {
+            GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
+            gameplayPanel.OpenInteractionElement(this);
+        }
+    }
+
+    public virtual void Close()
+    {
+        gameObject.SetActive(false);
+
+        if (canBeClosed)
+        {
+            GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
+            gameplayPanel.RemoveInteractionElement(this);
+        }
+
+        OnClose?.Invoke();
+    }
+
+    public void SetInteractable(bool value)
+    {
+        isInteractable = value;
     }
 }
