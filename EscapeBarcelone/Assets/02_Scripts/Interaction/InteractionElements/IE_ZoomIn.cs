@@ -4,7 +4,7 @@ public class IE_ZoomIn : InteractionElementBase
 {
     [SerializeField] protected InteractionElementBase targetObject;
     [SerializeField] private int layoutOrderAfter;
-    private int layoutOrderBefore;
+    [SerializeField] private int layoutOrderBefore;
     [SerializeField] private bool hideOnZoom;
 
     private FocusPanel focusPanel;
@@ -32,7 +32,6 @@ public class IE_ZoomIn : InteractionElementBase
     public override void Interact()
     {
         base.Interact();
-        layoutOrderBefore = focusPanel.GetOrderInLayer();
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);
         focusPanel.Show();
