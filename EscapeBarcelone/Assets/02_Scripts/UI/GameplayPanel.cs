@@ -8,12 +8,17 @@ public class GameplayPanel : Panel
 {
     [SerializeField] private Button closeButton;
 
+    [SerializeField] private Button validateButton;
+
     private Stack<InteractionElementBase> interactionStack = new();
+
+    public event Action OnValidateButtonClicked;
 
     protected override void Initialize()
     {
         base.Initialize();
         closeButton.onClick.AddListener(CloseCurrentInteraction);
+        validateButton.onClick.AddListener(() => OnValidateButtonClicked?.Invoke());
     }
 
     public void OpenInteractionElement(InteractionElementBase element)
@@ -62,5 +67,15 @@ public class GameplayPanel : Panel
     public void HideCloseButton()
     {
         closeButton.gameObject.SetActive(false);
+    }
+
+    public void ShowValidateButton()
+    {
+        validateButton.gameObject.SetActive(true);
+    }
+
+    public void HideValidateButton()
+    {
+        validateButton.gameObject.SetActive(false);
     }
 }

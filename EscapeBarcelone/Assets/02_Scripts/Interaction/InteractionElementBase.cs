@@ -134,7 +134,6 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void Open()
     {
-        Debug.Log($"Opening {gameObject.name}");
         gameObject.SetActive(true);
 
         if (canBeClosed)

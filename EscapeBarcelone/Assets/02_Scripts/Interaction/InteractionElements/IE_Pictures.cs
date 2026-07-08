@@ -8,7 +8,6 @@ public class IE_Pictures : IE_ZoomIn
 
     protected override void BeforeOpenTarget()
     {
-        Debug.Log("BeforeOpenTarget called in IE_Pictures");
         IE_DisplayPicture displayPicture = targetObject as IE_DisplayPicture;
 
         if (displayPicture)
