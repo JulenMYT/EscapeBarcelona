@@ -26,15 +26,22 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     private const string outlineMaterialPath = "OutlineMaterial";
     private const string baseMaterialPath = "BaseMaterial";
 
-    private Material outlineMaterial;
-    private Material baseMaterial;
+    private static Material outlineMaterial;
+    private static Material baseMaterial;
 
-    private void Start()
+    protected virtual void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        outlineMaterial = Resources.Load<Material>(outlineMaterialPath);
-        baseMaterial = Resources.Load<Material>(baseMaterialPath);
 
+        if (outlineMaterial == null)
+            outlineMaterial = Resources.Load<Material>(outlineMaterialPath);
+
+        if (baseMaterial == null)
+            baseMaterial = Resources.Load<Material>(baseMaterialPath);
+    }
+
+    protected virtual void Start()
+    {
         Initialize();
     }
 
@@ -127,6 +134,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void Open()
     {
+        Debug.Log($"Opening {gameObject.name}");
         gameObject.SetActive(true);
 
         if (canBeClosed)

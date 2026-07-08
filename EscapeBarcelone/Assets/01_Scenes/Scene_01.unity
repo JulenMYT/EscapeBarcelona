@@ -280,11 +280,11 @@ Transform:
   m_GameObject: {fileID: 42246685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.096428595, y: 0.33111113, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.3775714, y: 0.34111115, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1338384496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &42246687
 SpriteRenderer:
@@ -446,11 +446,11 @@ Transform:
   m_GameObject: {fileID: 74065264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3078571, y: -0.33111113, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.3781429, y: 0.32588884, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1004998146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &74065266
 SpriteRenderer:
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 135259968}
   - component: {fileID: 135259967}
   m_Layer: 0
-  m_Name: IE_Picture
+  m_Name: IE_Picture_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,12 +674,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14, y: 9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 982650596}
   - {fileID: 1259666462}
-  m_Father: {fileID: 1272285228}
+  m_Father: {fileID: 1883155899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &135259967
 BoxCollider2D:
@@ -736,17 +736,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 135259964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da739ca2a2824824db01d429cb702470, type: 3}
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IE_ZoomIn
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
   isInteractable: 0
   canBeClosed: 1
   highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
   interactionType: 3
   interactionTypeHover: 0
-  targetObject: {fileID: 1771844688}
+  targetObject: {fileID: 1771844689}
   layoutOrderAfter: 0
-  hideOnZoom: 1
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &144359875
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,11 +775,11 @@ Transform:
   m_GameObject: {fileID: 144359875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28785703, y: 0.32333335, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.369, y: 0.327, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1213511472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &144359877
 SpriteRenderer:
@@ -967,12 +969,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14, y: 9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1065747912}
   - {fileID: 1579555846}
-  m_Father: {fileID: 1272285228}
+  m_Father: {fileID: 1883155899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &242118958
 BoxCollider2D:
@@ -1008,7 +1010,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00033333898, y: -0.0005943477}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1018,7 +1020,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8204146, y: 0.3768391}
   m_EdgeRadius: 0
 --- !u!114 &242118959
 MonoBehaviour:
@@ -1548,7 +1550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 369}
+  m_AnchoredPosition: {x: 0, y: -407}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529293543
@@ -2516,11 +2518,11 @@ Transform:
   m_GameObject: {fileID: 846937431}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14642864, y: 0.32888892, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.38842863, y: 0.33188894, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 2019640152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &846937433
 SpriteRenderer:
@@ -2679,11 +2681,11 @@ Transform:
   m_GameObject: {fileID: 934602426}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07142857, y: -0.3366667, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.37457144, y: 0.33133328, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1355783283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &934602428
 SpriteRenderer:
@@ -2926,6 +2928,210 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1004998145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004998146}
+  - component: {fileID: 1004998148}
+  - component: {fileID: 1004998147}
+  m_Layer: 0
+  m_Name: IE_Picture_08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1004998146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004998145}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.686, y: -0.657, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 74065265}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1004998147
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004998145}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1004998148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004998145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 6d1a0783ca52f6642bbb3aee62299db0, type: 3}
+  text: De vacaciones con el Julenito
+--- !u!1 &1028634939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1028634940}
+  - component: {fileID: 1028634942}
+  - component: {fileID: 1028634941}
+  m_Layer: 0
+  m_Name: IE_Picture_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1028634940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028634939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02, y: -0.659, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1778296480}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1028634941
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028634939}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1028634942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028634939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 34363e1fdad64514eb3b94f3c97aafbe, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &1056647149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,6 +3842,108 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   speakerName: {fileID: 1667131936}
   dialogueText: {fileID: 1095125246}
+--- !u!1 &1213511471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213511472}
+  - component: {fileID: 1213511474}
+  - component: {fileID: 1213511473}
+  m_Layer: 0
+  m_Name: IE_Picture_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1213511472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213511471}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.685, y: 0.015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 144359876}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1213511473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213511471}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1213511474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213511471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 1331f0173697d634b933863dc43211c9, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &1246337835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,7 +4085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1272285228
 Transform:
   m_ObjectHideFlags: 0
@@ -3792,8 +4100,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1883155899}
-  - {fileID: 242118957}
-  - {fileID: 135259965}
   m_Father: {fileID: 405986123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1272285229
@@ -3813,6 +4119,108 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
   interactionType: 3
   interactionTypeHover: 3
+--- !u!1 &1280485602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280485603}
+  - component: {fileID: 1280485605}
+  - component: {fileID: 1280485604}
+  m_Layer: 0
+  m_Name: IE_Picture_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1280485603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280485602}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.229, y: -0.679, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1460685867}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1280485604
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280485602}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1280485605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280485602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 6e2785a696664354a8ad6a3d932a0465, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &1329863582
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,6 +4327,210 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1338384495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338384496}
+  - component: {fileID: 1338384498}
+  - component: {fileID: 1338384497}
+  m_Layer: 0
+  m_Name: IE_Picture_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338384496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338384495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.474, y: -0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 42246686}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1338384497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338384495}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1338384498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338384495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 54ced3fdadd9b0242840e78c0cb82cb4, type: 3}
+  text: De vacaciones con el Julenito
+--- !u!1 &1355783282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355783283}
+  - component: {fileID: 1355783285}
+  - component: {fileID: 1355783284}
+  m_Layer: 0
+  m_Name: IE_Picture_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355783283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355783282}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.446, y: -0.668, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 934602427}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1355783284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355783282}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &1355783285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355783282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 9b414e258a544b4428cff108a5512627, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &1460685866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,11 +4557,11 @@ Transform:
   m_GameObject: {fileID: 1460685866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14500004, y: -0.31888893, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.37400004, y: 0.36011106, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1280485603}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1460685868
 SpriteRenderer:
@@ -4572,7 +5184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771844687}
-  - component: {fileID: 1771844688}
+  - component: {fileID: 1771844689}
   m_Layer: 0
   m_Name: BigPicture
   m_TagString: Untagged
@@ -4598,7 +5210,7 @@ Transform:
   - {fileID: 2046769739}
   m_Father: {fileID: 405986123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1771844688
+--- !u!114 &1771844689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4607,14 +5219,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771844686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6966c9792a3c7774e9f6418f2f251afb, type: 3}
+  m_Script: {fileID: 11500000, guid: f547ff9658f8ec94183820ff8074afc3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IE_Test
+  m_EditorClassIdentifier: Assembly-CSharp::IE_DisplayPicture
   isInteractable: 0
   canBeClosed: 1
   highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
   interactionType: 3
   interactionTypeHover: 3
+  text: {fileID: 376102138}
+  spriteRendererPicture: {fileID: 691212947}
 --- !u!1 &1778296479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4641,11 +5255,11 @@ Transform:
   m_GameObject: {fileID: 1778296479}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3542857, y: -0.32888892, z: 0}
-  m_LocalScale: {x: 0.028571427, y: 0.04444445, z: 0.4}
+  m_LocalPosition: {x: -0.37428564, y: 0.33011103, z: 0}
+  m_LocalScale: {x: 0.028571425, y: 0.044444453, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1883155899}
+  m_Father: {fileID: 1028634940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1778296481
 SpriteRenderer:
@@ -5080,7 +5694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSE_WaitForClose
   duration: 0
-  interactionElement: {fileID: 1771844688}
+  interactionElement: {fileID: 1771844689}
 --- !u!114 &1778470355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5265,13 +5879,15 @@ Transform:
   m_LocalScale: {x: 14, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 934602427}
-  - {fileID: 1778296480}
-  - {fileID: 42246686}
-  - {fileID: 1460685867}
-  - {fileID: 144359876}
-  - {fileID: 846937432}
-  - {fileID: 74065265}
+  - {fileID: 135259965}
+  - {fileID: 1355783283}
+  - {fileID: 1028634940}
+  - {fileID: 1338384496}
+  - {fileID: 1280485603}
+  - {fileID: 1213511472}
+  - {fileID: 2019640152}
+  - {fileID: 1004998146}
+  - {fileID: 242118957}
   m_Father: {fileID: 1272285228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1883155900
@@ -5442,6 +6058,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!1 &2019640151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019640152}
+  - component: {fileID: 2019640154}
+  - component: {fileID: 2019640153}
+  m_Layer: 0
+  m_Name: IE_Picture_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019640152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019640151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.242, y: -0.003, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 846937432}
+  m_Father: {fileID: 1883155899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2019640153
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019640151}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37377197, y: 0.33436656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.15638936, y: 0.21481195}
+  m_EdgeRadius: 0
+--- !u!114 &2019640154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019640151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bf86b35b03a8c4fb740a8c8cd39138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IE_Pictures
+  isInteractable: 0
+  canBeClosed: 1
+  highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+  interactionType: 3
+  interactionTypeHover: 0
+  targetObject: {fileID: 1771844689}
+  layoutOrderAfter: 0
+  hideOnZoom: 0
+  sprite: {fileID: 21300000, guid: 8f1e28b3b9bb7b04b9de04ffb440c1ed, type: 3}
+  text: De vacaciones con el Julenito
 --- !u!1 &2046769738
 GameObject:
   m_ObjectHideFlags: 0

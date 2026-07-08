@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class IE_ZoomIn : InteractionElementBase
 {
-    [SerializeField] private InteractionElementBase targetObject;
+    [SerializeField] protected InteractionElementBase targetObject;
     [SerializeField] private int layoutOrderAfter;
     private int layoutOrderBefore;
     [SerializeField] private bool hideOnZoom;
@@ -12,7 +12,6 @@ public class IE_ZoomIn : InteractionElementBase
     public override void Initialize()
     {
         focusPanel = FindAnyObjectByType<FocusPanel>();
-        targetObject.OnClose += HandleClose;
     }
 
     private void HandleClose()
@@ -25,13 +24,21 @@ public class IE_ZoomIn : InteractionElementBase
             gameObject.SetActive(true);
     }
 
+    protected virtual void BeforeOpenTarget()
+    {
+
+    }
+
     public override void Interact()
     {
         base.Interact();
+        Debug.Log($"Interacting with {gameObject.name}, opening {targetObject.gameObject.name}");
         layoutOrderBefore = focusPanel.GetOrderInLayer();
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);
         focusPanel.Show();
+
+        BeforeOpenTarget();
 
         targetObject.OnClose += HandleClose;
         targetObject.Open();
