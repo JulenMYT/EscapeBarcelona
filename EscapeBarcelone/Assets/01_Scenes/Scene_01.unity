@@ -933,11 +933,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
-  text: "Giant Step \xE0 Onett"
+  text: Giant Step
 --- !u!1 &144359875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,7 +2849,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fa4a2a5fb3d17944a149cc7212397ac, type: 2}
+  - {fileID: 2100000, guid: 1e2d5334cabc0c74f8ebc9ab31c493cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6081,7 +6081,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 16
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 02688392b355b46418613d11ba245fb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6425,11 +6425,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 6d1a0783ca52f6642bbb3aee62299db0, type: 3}
-  text: "Fire Spring \xE0 Lost Underworld"
+  text: Fire Spring
 --- !u!1 &1028634939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,11 +6528,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 34363e1fdad64514eb3b94f3c97aafbe, type: 3}
-  text: "Milky Well \xE0 Saturn Valley"
+  text: Milky Well
 --- !u!1 &1039358143
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,11 +7757,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 1331f0173697d634b933863dc43211c9, type: 3}
-  text: "Pink Cloud \xE0 Dalaam"
+  text: Pink Cloud
 --- !u!1 &1246337835
 GameObject:
   m_ObjectHideFlags: 0
@@ -7977,11 +7977,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 6e2785a696664354a8ad6a3d932a0465, type: 3}
-  text: "Magnet Hill \xE0 Fourside"
+  text: Magnet Hill
 --- !u!1 &1286524994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8323,11 +8323,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 54ced3fdadd9b0242840e78c0cb82cb4, type: 3}
-  text: "Rainy Circle \xE0 Winters"
+  text: Rainy Circle
 --- !u!1 &1355783282
 GameObject:
   m_ObjectHideFlags: 0
@@ -8426,11 +8426,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 9b414e258a544b4428cff108a5512627, type: 3}
-  text: "Lilliput Steps \xE0 Happy Happy Village"
+  text: Lilliput Steps
 --- !u!1 &1460685866
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,11 +11455,11 @@ MonoBehaviour:
   interactionType: 3
   interactionTypeHover: 0
   targetObject: {fileID: 1771844689}
-  layoutOrderAfter: 9
+  layoutOrderAfter: 11
   layoutOrderBefore: 5
   hideOnZoom: 0
   sprite: {fileID: 21300000, guid: 8f1e28b3b9bb7b04b9de04ffb440c1ed, type: 3}
-  text: "Lumine Hall \xE0 ???"
+  text: Lumine Hall
 --- !u!1 &2046769738
 GameObject:
   m_ObjectHideFlags: 0
