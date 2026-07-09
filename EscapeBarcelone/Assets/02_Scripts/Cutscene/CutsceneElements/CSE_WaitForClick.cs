@@ -17,3 +17,4 @@ public class CSE_WaitForClick : CutsceneElementBase
         cutsceneHandler.PlayNextElement();
     }
 }
+    

@@ -7,6 +7,5 @@ public static class InteractionManager
     public static void SetBlocked(bool value)
     {
         Blocked = value;
-        Debug.Log(value);
     }
 }

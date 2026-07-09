@@ -589,7 +589,7 @@ Transform:
   m_GameObject: {fileID: 78193928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.3918263, w: 0.92003924}
-  m_LocalPosition: {x: 23.43, y: 2.96, z: 10}
+  m_LocalPosition: {x: 16.65, y: -0.15, z: 10}
   m_LocalScale: {x: 0.19199999, y: 0.23433997, z: 0.32999995}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4821,12 +4821,7 @@ GameObject:
   - component: {fileID: 748511666}
   - component: {fileID: 748511665}
   - component: {fileID: 748511668}
-  - component: {fileID: 748511677}
-  - component: {fileID: 748511667}
-  - component: {fileID: 748511680}
   - component: {fileID: 748511669}
-  - component: {fileID: 748511678}
-  - component: {fileID: 748511679}
   m_Layer: 0
   m_Name: CS_Cutscene_01
   m_TagString: Untagged
@@ -4877,20 +4872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
---- !u!114 &748511667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748511663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d707dae3606326d47b4ce3738eb16fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
-  duration: 0
-  tutorial: {fileID: 11400000, guid: 6320da1aa28d4e042ac1d2f28c7ce3e2, type: 2}
 --- !u!114 &748511668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4914,68 +4895,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 748511663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adeec57887f0b3f479f00b6c3622a12d, type: 3}
+  m_Script: {fileID: 11500000, guid: 590302b174cf65c42aec74d8258e109c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_WaitForClick
-  duration: 0
-  interactionElement: {fileID: 555934699}
---- !u!114 &748511677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748511663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b694116ebeac7f7468e787a05839a3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Highlight
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_TutorialStep
   duration: 0
   objectsToHighlight:
   - {fileID: 555934694}
   size: {x: 0.5, y: 0.3}
   offset: {x: -1.38, y: 0}
---- !u!114 &748511678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748511663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc9110df2bbcd54bb9de9b21e31f81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Unhighlight
-  duration: 0
---- !u!114 &748511679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748511663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51f4abe92efddb419c549752da8f87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_HidePanel
-  duration: 0
+  target: {fileID: 0}
+  updateTransform: 0
+  position: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
+  tutorial: {fileID: 11400000, guid: 6320da1aa28d4e042ac1d2f28c7ce3e2, type: 2}
   panel: {fileID: 1961191165}
---- !u!114 &748511680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748511663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e907ef0bd80343649bf6dd9452b8cfca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
-  duration: 0.5
+  interactionElement: {fileID: 555934699}
 --- !u!1 &758856113
 GameObject:
   m_ObjectHideFlags: 0
@@ -9591,8 +9525,6 @@ GameObject:
   - component: {fileID: 1624510247}
   - component: {fileID: 1624510249}
   - component: {fileID: 1624510252}
-  - component: {fileID: 1624510251}
-  - component: {fileID: 1624510250}
   - component: {fileID: 1624510254}
   m_Layer: 0
   m_Name: CS_Cutscene_03
@@ -9641,7 +9573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneInitiator
   playOnStart: 0
-  playOnSceneLoaded: 1
+  playOnSceneLoaded: 0
   sceneName: 1
   playOnce: 1
 --- !u!114 &1624510249
@@ -9658,34 +9590,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
   duration: 0
   tutorial: {fileID: 11400000, guid: 1ce23b81c01859a4a9be7910e330ba4f, type: 2}
---- !u!114 &1624510250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624510245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e80659cc4f6da74aaaf2014f71d6f0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Close
-  duration: 0
-  interaction: {fileID: 915126231}
---- !u!114 &1624510251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624510245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e80659cc4f6da74aaaf2014f71d6f0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Close
-  duration: 0
-  interaction: {fileID: 1272285229}
 --- !u!114 &1624510252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9699,7 +9603,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Close
   duration: 0
-  interaction: {fileID: 1771844689}
+  interactions:
+  - {fileID: 1771844689}
+  - {fileID: 1272285229}
+  - {fileID: 915126231}
 --- !u!114 &1624510254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10575,21 +10482,9 @@ GameObject:
   - component: {fileID: 1778470327}
   - component: {fileID: 1778470374}
   - component: {fileID: 1778470373}
-  - component: {fileID: 1778470362}
-  - component: {fileID: 1778470317}
-  - component: {fileID: 1778470315}
-  - component: {fileID: 1778470329}
-  - component: {fileID: 1778470363}
-  - component: {fileID: 1778470314}
-  - component: {fileID: 1778470371}
+  - component: {fileID: 1778470375}
   - component: {fileID: 1778470333}
-  - component: {fileID: 1778470368}
-  - component: {fileID: 1778470336}
-  - component: {fileID: 1778470331}
-  - component: {fileID: 1778470339}
-  - component: {fileID: 1778470367}
-  - component: {fileID: 1778470353}
-  - component: {fileID: 1778470370}
+  - component: {fileID: 1778470376}
   - component: {fileID: 1778470340}
   - component: {fileID: 1778470366}
   - component: {fileID: 1778470347}
@@ -10597,12 +10492,7 @@ GameObject:
   - component: {fileID: 1778470372}
   - component: {fileID: 1778470355}
   - component: {fileID: 1778470354}
-  - component: {fileID: 1778470346}
-  - component: {fileID: 1778470365}
-  - component: {fileID: 1778470349}
-  - component: {fileID: 1778470357}
-  - component: {fileID: 1778470364}
-  - component: {fileID: 1778470369}
+  - component: {fileID: 1778470377}
   - component: {fileID: 1778470359}
   - component: {fileID: 1778470360}
   - component: {fileID: 1778470358}
@@ -10613,7 +10503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1778470312
 Transform:
   m_ObjectHideFlags: 0
@@ -10629,56 +10519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1246337836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1778470314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 0
-  updateTransform: 0
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
---- !u!114 &1778470315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d707dae3606326d47b4ce3738eb16fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
-  duration: 0
-  tutorial: {fileID: 11400000, guid: 60a125167073a974ca97ccafc82707b7, type: 2}
---- !u!114 &1778470317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 1
-  updateTransform: 1
-  position: {x: 23.68, y: 0.88, z: 0}
-  rotation: {x: 0, y: 0, z: 29.319372}
 --- !u!114 &1778470327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10707,34 +10547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
---- !u!114 &1778470329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adeec57887f0b3f479f00b6c3622a12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_WaitForClick
-  duration: 0
-  interactionElement: {fileID: 224661606}
---- !u!114 &1778470331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d707dae3606326d47b4ce3738eb16fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
-  duration: 0
-  tutorial: {fileID: 11400000, guid: b9cb098ccf0d0774f97d337cfea5020e, type: 2}
 --- !u!114 &1778470333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10748,38 +10560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
   duration: 2
---- !u!114 &1778470336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 1
-  updateTransform: 1
-  position: {x: 22.04, y: 2.71, z: 10}
-  rotation: {x: 0, y: 0, z: 324.09763}
---- !u!114 &1778470339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adeec57887f0b3f479f00b6c3622a12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_WaitForClick
-  duration: 0
-  interactionElement: {fileID: 311549388}
 --- !u!114 &1778470340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10808,24 +10588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
   duration: 0
   tutorial: {fileID: 11400000, guid: 941c9306a6af33744a168bade4b2594a, type: 2}
---- !u!114 &1778470346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 1
-  updateTransform: 1
-  position: {x: 19.28, y: -0.66, z: 10}
-  rotation: {x: 0, y: 0, z: 114.7068}
 --- !u!114 &1778470347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10844,38 +10606,6 @@ MonoBehaviour:
   updateTransform: 1
   position: {x: 23.43, y: 2.96, z: 10}
   rotation: {x: 0, y: 0, z: 46.136368}
---- !u!114 &1778470349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d707dae3606326d47b4ce3738eb16fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Tutorial
-  duration: 0
-  tutorial: {fileID: 11400000, guid: 3a79f094ea1c0de46b528c4331919abe, type: 2}
---- !u!114 &1778470353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 0
-  updateTransform: 0
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
 --- !u!114 &1778470354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10905,20 +10635,6 @@ MonoBehaviour:
   duration: 0
   button: {fileID: 1131223129}
   activate: 1
---- !u!114 &1778470357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adeec57887f0b3f479f00b6c3622a12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_WaitForClick
-  duration: 0
-  interactionElement: {fileID: 1662265018}
 --- !u!114 &1778470358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10974,66 +10690,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_CustomEvent
   duration: 0
   mapMiniGame: {fileID: 1272285230}
---- !u!114 &1778470362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b694116ebeac7f7468e787a05839a3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Highlight
-  duration: 0
-  objectsToHighlight:
-  - {fileID: 224661603}
-  size: {x: 0, y: 0}
-  offset: {x: 10, y: 0}
---- !u!114 &1778470363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc9110df2bbcd54bb9de9b21e31f81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Unhighlight
-  duration: 0
---- !u!114 &1778470364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc9110df2bbcd54bb9de9b21e31f81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Unhighlight
-  duration: 0
---- !u!114 &1778470365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b694116ebeac7f7468e787a05839a3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Highlight
-  duration: 0
-  objectsToHighlight:
-  - {fileID: 1662265014}
-  size: {x: 0, y: 0}
-  offset: {x: 10, y: 0}
 --- !u!114 &1778470366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11050,82 +10706,6 @@ MonoBehaviour:
   objectsToHighlight: []
   size: {x: 0, y: 0}
   offset: {x: 10, y: 0}
---- !u!114 &1778470367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc9110df2bbcd54bb9de9b21e31f81e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Unhighlight
-  duration: 0
---- !u!114 &1778470368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b694116ebeac7f7468e787a05839a3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_Highlight
-  duration: 0
-  objectsToHighlight:
-  - {fileID: 311549385}
-  size: {x: 0, y: 0}
-  offset: {x: 10, y: 0}
---- !u!114 &1778470369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bc6f74f5265240a18fdb7ca280e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleObject
-  duration: 0
-  target: {fileID: 78193928}
-  enable: 0
-  updateTransform: 0
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
---- !u!114 &1778470370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51f4abe92efddb419c549752da8f87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_HidePanel
-  duration: 0
-  panel: {fileID: 1961191165}
---- !u!114 &1778470371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778470311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51f4abe92efddb419c549752da8f87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSE_HidePanel
-  duration: 0
-  panel: {fileID: 1961191165}
 --- !u!114 &1778470372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11167,6 +10747,78 @@ MonoBehaviour:
   duration: 0
   button: {fileID: 1131223129}
   activate: 0
+--- !u!114 &1778470375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590302b174cf65c42aec74d8258e109c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_TutorialStep
+  duration: 0
+  objectsToHighlight:
+  - {fileID: 224661603}
+  size: {x: 0, y: 0}
+  offset: {x: 10, y: 0}
+  target: {fileID: 78193928}
+  updateTransform: 1
+  position: {x: 23.68, y: 0.88, z: 0}
+  rotation: {x: 0, y: 0, z: 29.319372}
+  tutorial: {fileID: 11400000, guid: 60a125167073a974ca97ccafc82707b7, type: 2}
+  panel: {fileID: 1961191165}
+  interactionElement: {fileID: 224661606}
+--- !u!114 &1778470376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590302b174cf65c42aec74d8258e109c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_TutorialStep
+  duration: 0
+  objectsToHighlight:
+  - {fileID: 311549385}
+  size: {x: 0, y: 0}
+  offset: {x: 10, y: 0}
+  target: {fileID: 78193928}
+  updateTransform: 1
+  position: {x: 22.04, y: 2.71, z: 10}
+  rotation: {x: 0, y: 0, z: 324.097}
+  tutorial: {fileID: 11400000, guid: b9cb098ccf0d0774f97d337cfea5020e, type: 2}
+  panel: {fileID: 1961191165}
+  interactionElement: {fileID: 311549388}
+--- !u!114 &1778470377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590302b174cf65c42aec74d8258e109c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_TutorialStep
+  duration: 0
+  objectsToHighlight:
+  - {fileID: 1662265014}
+  size: {x: 0, y: 0}
+  offset: {x: 10, y: 0}
+  target: {fileID: 78193928}
+  updateTransform: 1
+  position: {x: 16.65, y: -0.15, z: 10}
+  rotation: {x: 0, y: 0, z: 46.136}
+  tutorial: {fileID: 11400000, guid: 3a79f094ea1c0de46b528c4331919abe, type: 2}
+  panel: {fileID: 1961191165}
+  interactionElement: {fileID: 1662265018}
 --- !u!1 &1844293527
 GameObject:
   m_ObjectHideFlags: 0
