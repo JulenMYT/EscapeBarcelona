@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,6 +19,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     [SerializeField] private Color highlightColor = Color.orange;
     [SerializeField] private InteractionType interactionType = InteractionType.None;
     [SerializeField] private InteractionType interactionTypeHover = InteractionType.Outline;
+
     protected SpriteRenderer spriteRenderer;
 
     public event Action OnInteract;
@@ -29,7 +31,58 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     private static Material outlineMaterial;
     private static Material baseMaterial;
 
-    public static Transform FocusRoot;
+    private static readonly Stack<Transform> focusStack = new();
+
+    private bool ignoreInteractionBlock;
+
+    public static Transform FocusRoot => focusStack.Count > 0 ? focusStack.Peek() : null;
+
+    public bool IsInteractable
+    {
+        get => isInteractable;
+        private set
+        {
+            isInteractable = value;
+
+            if (!isInteractable)
+            {
+                Exit();
+            }
+        }
+    }
+
+    public bool IgnoreInteractionBlock
+    {
+        get => ignoreInteractionBlock;
+        private set
+        {
+            ignoreInteractionBlock = value;
+
+            if (!ignoreInteractionBlock)
+            {
+                Exit();
+            }
+        }
+    }
+
+    public bool CanBeClosed
+    {
+        get => canBeClosed;
+        private set => canBeClosed = value;
+    }
+
+    public static void PushFocus(Transform target)
+    {
+        focusStack.Push(target);
+    }
+
+    public static void PopFocus()
+    {
+        if (focusStack.Count > 0)
+        {
+            focusStack.Pop();
+        }
+    }
 
     protected virtual void Awake()
     {
@@ -47,33 +100,38 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
         Initialize();
     }
 
+    public void SetIgnoreInteractionBlock(bool value)
+    {
+        IgnoreInteractionBlock = value;
+    }
+
     public virtual void Interact()
     {
         OnInteract?.Invoke();
     }
 
-    public virtual void Enter() 
+    public virtual void Enter()
     {
         switch (interactionTypeHover)
         {
             case InteractionType.Highlight:
                 if (spriteRenderer)
-                    spriteRenderer.color = highlightColor; 
+                    spriteRenderer.color = highlightColor;
                 break;
+
             case InteractionType.Outline:
                 if (spriteRenderer)
-                    spriteRenderer.material = outlineMaterial; 
+                    spriteRenderer.material = outlineMaterial;
                 break;
+
             case InteractionType.Stretch:
                 if (spriteRenderer)
                     spriteRenderer.transform.localScale *= 1.2f;
                 break;
-            default:
-                break;
         }
     }
 
-    public virtual void Exit() 
+    public virtual void Exit()
     {
         switch (interactionTypeHover)
         {
@@ -81,15 +139,15 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
                 if (spriteRenderer)
                     spriteRenderer.color = Color.white;
                 break;
+
             case InteractionType.Outline:
                 if (spriteRenderer)
                     spriteRenderer.material = baseMaterial;
                 break;
+
             case InteractionType.Stretch:
                 if (spriteRenderer)
                     spriteRenderer.transform.localScale /= 1.2f;
-                break;
-            default:
                 break;
         }
 
@@ -99,18 +157,20 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
                 if (spriteRenderer)
                     spriteRenderer.color = highlightColor;
                 break;
+
             case InteractionType.Outline:
                 if (spriteRenderer)
                     spriteRenderer.material = outlineMaterial;
-                break;
-            default:
                 break;
         }
     }
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        if (!isInteractable)
+        if (InteractionManager.Blocked && !IgnoreInteractionBlock)
+            return;
+
+        if (!IsInteractable)
             return;
 
         if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
@@ -121,7 +181,10 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        if (!isInteractable)
+        if (InteractionManager.Blocked && !IgnoreInteractionBlock)
+            return;
+
+        if (!IsInteractable)
             return;
 
         if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
@@ -132,10 +195,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
-        if (!isInteractable)
-            return;
-
-        if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
+        if (!IsInteractable)
             return;
 
         Exit();
@@ -150,7 +210,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     {
         gameObject.SetActive(true);
 
-        if (canBeClosed)
+        if (CanBeClosed)
         {
             GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
             gameplayPanel.OpenInteractionElement(this);
@@ -161,7 +221,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     {
         gameObject.SetActive(false);
 
-        if (canBeClosed)
+        if (CanBeClosed)
         {
             GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
             gameplayPanel.RemoveInteractionElement(this);
@@ -172,10 +232,11 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public void SetInteractable(bool value)
     {
-        isInteractable = value;
-        if (!isInteractable)
-        {
-            Exit();
-        }
+        IsInteractable = value;
+    }
+
+    public void SetClosable(bool value)
+    {
+        CanBeClosed = value;
     }
 }

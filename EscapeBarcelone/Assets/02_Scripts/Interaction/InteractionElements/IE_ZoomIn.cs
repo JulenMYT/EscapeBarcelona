@@ -14,18 +14,6 @@ public class IE_ZoomIn : InteractionElementBase
         focusPanel = FindAnyObjectByType<FocusPanelGameplay>();
     }
 
-    private void HandleClose()
-    {
-        FocusRoot = null;
-
-        targetObject.OnClose -= HandleClose;
-
-        focusPanel.SetOrderInLayer(layoutOrderBefore);
-
-        if (hideOnZoom)
-            gameObject.SetActive(true);
-    }
-
     protected virtual void BeforeOpenTarget()
     {
 
@@ -35,7 +23,7 @@ public class IE_ZoomIn : InteractionElementBase
     {
         base.Interact();
 
-        FocusRoot = targetObject.transform;
+        PushFocus(targetObject.transform);
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);
         focusPanel.Show();
@@ -47,5 +35,17 @@ public class IE_ZoomIn : InteractionElementBase
 
         if (hideOnZoom)
             gameObject.SetActive(false);
+    }
+
+    private void HandleClose()
+    {
+        PopFocus();
+
+        targetObject.OnClose -= HandleClose;
+
+        focusPanel.SetOrderInLayer(layoutOrderBefore);
+
+        if (hideOnZoom)
+            gameObject.SetActive(true);
     }
 }

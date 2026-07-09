@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CSE_ToggleInteractable : CutsceneElementBase
+public class CSE_ToggleClosable : CutsceneElementBase
 {
     [SerializeField] private List<InteractionElementBase> targetObjects;
 
-    [SerializeField] private bool setInteractable = true;
+    [SerializeField] private bool setClosable = true;
 
     public override void Execute()
     {
@@ -13,7 +13,8 @@ public class CSE_ToggleInteractable : CutsceneElementBase
 
         foreach (InteractionElementBase targetObject in targetObjects)
         {
-            targetObject.SetInteractable(setInteractable);
+            targetObject.SetClosable(setClosable);
         }
+        cutsceneHandler.PlayNextElement();
     }
 }
