@@ -29,6 +29,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     private static Material outlineMaterial;
     private static Material baseMaterial;
 
+    public static Transform FocusRoot;
+
     protected virtual void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -110,6 +112,10 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     {
         if (!isInteractable)
             return;
+
+        if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
+            return;
+
         Interact();
     }
 
@@ -117,6 +123,10 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     {
         if (!isInteractable)
             return;
+
+        if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
+            return;
+
         Enter();
     }
 
@@ -124,6 +134,10 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     {
         if (!isInteractable)
             return;
+
+        if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
+            return;
+
         Exit();
     }
 

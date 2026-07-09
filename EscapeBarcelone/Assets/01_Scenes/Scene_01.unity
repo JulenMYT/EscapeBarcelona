@@ -5859,7 +5859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6966c9792a3c7774e9f6418f2f251afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IE_Test
-  isInteractable: 1
+  isInteractable: 0
   canBeClosed: 0
   highlightColor: {r: 1, g: 0.6470588, b: 0, a: 1}
   interactionType: 3
@@ -10244,8 +10244,9 @@ GameObject:
   - component: {fileID: 1778470340}
   - component: {fileID: 1778470366}
   - component: {fileID: 1778470347}
-  - component: {fileID: 1778470355}
   - component: {fileID: 1778470343}
+  - component: {fileID: 1778470372}
+  - component: {fileID: 1778470355}
   - component: {fileID: 1778470354}
   - component: {fileID: 1778470346}
   - component: {fileID: 1778470365}
@@ -10776,6 +10777,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_HidePanel
   duration: 0
   panel: {fileID: 1961191165}
+--- !u!114 &1778470372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e907ef0bd80343649bf6dd9452b8cfca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
+  duration: 0.5
 --- !u!1 &1867459406
 GameObject:
   m_ObjectHideFlags: 0

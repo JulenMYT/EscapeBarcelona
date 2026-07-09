@@ -16,6 +16,8 @@ public class IE_ZoomIn : InteractionElementBase
 
     private void HandleClose()
     {
+        FocusRoot = null;
+
         targetObject.OnClose -= HandleClose;
 
         focusPanel.SetOrderInLayer(layoutOrderBefore);
@@ -32,6 +34,8 @@ public class IE_ZoomIn : InteractionElementBase
     public override void Interact()
     {
         base.Interact();
+
+        FocusRoot = targetObject.transform;
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);
         focusPanel.Show();
