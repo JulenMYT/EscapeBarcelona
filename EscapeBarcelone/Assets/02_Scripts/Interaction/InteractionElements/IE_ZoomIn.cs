@@ -18,7 +18,7 @@ public class IE_ZoomIn : InteractionElementBase
     {
         targetObject.OnClose -= HandleClose;
 
-        focusPanel.SetOrderInLayer(layoutOrderBefore);
+        //focusPanel.SetOrderInLayer(layoutOrderBefore);
 
         if (hideOnZoom)
             gameObject.SetActive(true);
@@ -33,8 +33,8 @@ public class IE_ZoomIn : InteractionElementBase
     {
         base.Interact();
 
-        focusPanel.SetOrderInLayer(layoutOrderAfter);
-        focusPanel.Show();
+        //focusPanel.SetOrderInLayer(layoutOrderAfter);
+        //focusPanel.Show();
 
         BeforeOpenTarget();
 

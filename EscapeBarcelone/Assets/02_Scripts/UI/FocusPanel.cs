@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,10 @@ public class FocusPanel : Panel
 {
     private Image darkImage;
     private Material darkImageMaterial;
+
+    private Dictionary<SpriteRenderer, int> previousOrders = new();
+
+    private const int HighlightOffset = 50;
 
     protected override void Initialize()
     {
@@ -46,9 +51,30 @@ public class FocusPanel : Panel
         darkImage.canvas.sortingOrder = order;
     }
 
+    public void Highlight(SpriteRenderer[] renderers)
+    {
+        Unhighlight();
+
+        foreach (var renderer in renderers)
+        {
+            previousOrders.Add(renderer, renderer.sortingOrder);
+            renderer.sortingOrder += HighlightOffset;
+        }
+    }
+
+    public void Unhighlight()
+    {
+        foreach (var pair in previousOrders)
+        {
+            pair.Key.sortingOrder = pair.Value;
+        }
+
+        previousOrders.Clear();
+    }
+
     public override void Show()
     {
         canvasGroup.alpha = 1.0f;
-        SetMaterialOffset(new Vector2(10,0));
+        SetMaterialOffset(new Vector2(10, 0));
     }
 }
