@@ -15,3 +15,4 @@ MonoBehaviour:
   tutorialLines:
   - Algunos objetos tienen varios elementos; intenta hacer clic en esta foto para
     ampliarla !
+  autoHide: 0

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tutorial_01
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - Para desplazarte, haz clic en las Mr. Saturn
+  - Para desplazarte, haz clic en las flechas
+  autoHide: 0

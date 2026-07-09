@@ -7,18 +7,18 @@ public class IE_ZoomIn : InteractionElementBase
     [SerializeField] private int layoutOrderBefore;
     [SerializeField] private bool hideOnZoom;
 
-    private FocusPanel focusPanel;
+    private FocusPanelGameplay focusPanel;
 
     public override void Initialize()
     {
-        focusPanel = FindAnyObjectByType<FocusPanel>();
+        focusPanel = FindAnyObjectByType<FocusPanelGameplay>();
     }
 
     private void HandleClose()
     {
         targetObject.OnClose -= HandleClose;
 
-        //focusPanel.SetOrderInLayer(layoutOrderBefore);
+        focusPanel.SetOrderInLayer(layoutOrderBefore);
 
         if (hideOnZoom)
             gameObject.SetActive(true);
@@ -33,8 +33,8 @@ public class IE_ZoomIn : InteractionElementBase
     {
         base.Interact();
 
-        //focusPanel.SetOrderInLayer(layoutOrderAfter);
-        //focusPanel.Show();
+        focusPanel.SetOrderInLayer(layoutOrderAfter);
+        focusPanel.Show();
 
         BeforeOpenTarget();
 

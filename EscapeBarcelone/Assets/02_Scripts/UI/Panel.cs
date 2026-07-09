@@ -24,7 +24,6 @@ public abstract class Panel : MonoBehaviour
 
     public virtual void Hide()
     {
-        Debug.Log("hide");
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.0f;

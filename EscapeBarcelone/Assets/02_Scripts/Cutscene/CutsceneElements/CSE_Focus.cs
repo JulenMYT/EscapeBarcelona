@@ -11,7 +11,7 @@ public class CSE_Focus : CutsceneElementBase
     public override void Execute()
     {
         base.Execute();
-        FocusPanel focusPanel = cutsceneHandler.focusPanel;
+        FocusPanelTutorial focusPanel = cutsceneHandler.focusPanel;
 
         if (show)
         {

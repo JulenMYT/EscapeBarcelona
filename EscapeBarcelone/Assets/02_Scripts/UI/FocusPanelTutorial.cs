@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FocusPanel : Panel
+public class FocusPanelTutorial : Panel
 {
     private Image darkImage;
     private Material darkImageMaterial;

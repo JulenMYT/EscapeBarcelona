@@ -15,3 +15,4 @@ MonoBehaviour:
   tutorialLines:
   - Cuando hayas terminado con un objeto, puedes cerrarlo con la cruz de la esquina
     superior derecha.
+  autoHide: 0

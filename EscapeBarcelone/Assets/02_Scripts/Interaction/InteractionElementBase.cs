@@ -159,5 +159,9 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     public void SetInteractable(bool value)
     {
         isInteractable = value;
+        if (!isInteractable)
+        {
+            Exit();
+        }
     }
 }

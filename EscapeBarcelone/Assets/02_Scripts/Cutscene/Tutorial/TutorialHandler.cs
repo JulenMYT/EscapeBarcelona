@@ -50,8 +50,9 @@ public class TutorialHandler : MonoBehaviour
 
     private void EndTutorial()
     {
+        if (currentTutorial.autoHide)
+            tutorialUI?.Hide();
         currentTutorial = null;
-        tutorialUI.Hide();
         OnTutorialComplete?.Invoke();
     }
 

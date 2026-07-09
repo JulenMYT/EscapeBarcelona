@@ -5,4 +5,6 @@ public class Tutorial : ScriptableObject
 {
     [TextArea(3, 10)]
     public string[] tutorialLines;
+
+    public bool autoHide = true;
 }
