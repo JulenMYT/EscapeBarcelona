@@ -387,7 +387,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 54ced3fdadd9b0242840e78c0cb82cb4, type: 3}
+  m_Sprite: {fileID: 226702753830753226, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -553,7 +553,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6d1a0783ca52f6642bbb3aee62299db0, type: 3}
+  m_Sprite: {fileID: -6251682230944352461, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
+  sprite: {fileID: -1259408508766424310, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Giant Step
 --- !u!1 &138738776
 GameObject:
@@ -1201,7 +1201,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 1331f0173697d634b933863dc43211c9, type: 3}
+  m_Sprite: {fileID: -1370661682523340017, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2580,7 +2580,7 @@ MonoBehaviour:
   layoutOrderAfter: 5
   layoutOrderBefore: 2
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
+  sprite: {fileID: -1259408508766424310, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: De vacaciones con el Julenito
 --- !u!1 &324917234
 GameObject:
@@ -3643,7 +3643,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 4.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &556906207
 GameObject:
@@ -4645,7 +4645,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 4.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &711293067
 GameObject:
@@ -5703,7 +5703,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8f1e28b3b9bb7b04b9de04ffb440c1ed, type: 3}
+  m_Sprite: {fileID: 8020143640844766479, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6350,7 +6350,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9b414e258a544b4428cff108a5512627, type: 3}
+  m_Sprite: {fileID: -5962389079421231736, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6599,7 +6599,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
+  m_Sprite: {fileID: -1259408508766424310, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6762,7 +6762,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 6d1a0783ca52f6642bbb3aee62299db0, type: 3}
+  sprite: {fileID: -6251682230944352461, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Fire Spring
 --- !u!1 &1028634939
 GameObject:
@@ -6865,7 +6865,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 34363e1fdad64514eb3b94f3c97aafbe, type: 3}
+  sprite: {fileID: 2788568348960109317, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Milky Well
 --- !u!1 &1039358143
 GameObject:
@@ -8169,7 +8169,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 1331f0173697d634b933863dc43211c9, type: 3}
+  sprite: {fileID: -1370661682523340017, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Pink Cloud
 --- !u!1 &1246337835
 GameObject:
@@ -8223,7 +8223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1272285228
 Transform:
   m_ObjectHideFlags: 0
@@ -8391,7 +8391,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 6e2785a696664354a8ad6a3d932a0465, type: 3}
+  sprite: {fileID: -7921052967969465774, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Magnet Hill
 --- !u!1 &1286524994
 GameObject:
@@ -8737,7 +8737,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 54ced3fdadd9b0242840e78c0cb82cb4, type: 3}
+  sprite: {fileID: 226702753830753226, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Rainy Circle
 --- !u!1 &1355783282
 GameObject:
@@ -8840,7 +8840,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 9b414e258a544b4428cff108a5512627, type: 3}
+  sprite: {fileID: -5962389079421231736, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Lilliput Steps
 --- !u!1 &1460685866
 GameObject:
@@ -8923,7 +8923,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 6e2785a696664354a8ad6a3d932a0465, type: 3}
+  m_Sprite: {fileID: -7921052967969465774, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10093,7 +10093,7 @@ MonoBehaviour:
   layoutOrderAfter: 5
   layoutOrderBefore: 2
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 8f1e28b3b9bb7b04b9de04ffb440c1ed, type: 3}
+  sprite: {fileID: 8020143640844766479, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: De vacaciones con el Julenito
 --- !u!1 &1676540900
 GameObject:
@@ -10176,7 +10176,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c62ebe1156d93cc46842f0709973afd2, type: 3}
+  m_Sprite: {fileID: -1259408508766424310, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10458,7 +10458,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 34363e1fdad64514eb3b94f3c97aafbe, type: 3}
+  m_Sprite: {fileID: 2788568348960109317, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12119,7 +12119,7 @@ MonoBehaviour:
   layoutOrderAfter: 9
   layoutOrderBefore: 5
   hideOnZoom: 1
-  sprite: {fileID: 21300000, guid: 8f1e28b3b9bb7b04b9de04ffb440c1ed, type: 3}
+  sprite: {fileID: 8020143640844766479, guid: f6a7368afef72db408f704055b4857dc, type: 3}
   text: Lumine Hall
 --- !u!1 &2046769738
 GameObject:
