@@ -1,0 +1,3835 @@
+fileFormatVersion: 2
+guid: 9887b6c01259aa64f8f8a27bf65b8a40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -959185446052790620
+    second: earthboundObjectSpritesheet-export_0
+  - first:
+      213: -972934900329280716
+    second: earthboundObjectSpritesheet-export_1
+  - first:
+      213: 4309068505764477193
+    second: earthboundObjectSpritesheet-export_2
+  - first:
+      213: -6061953166521943825
+    second: earthboundObjectSpritesheet-export_3
+  - first:
+      213: -8469616529447240122
+    second: earthboundObjectSpritesheet-export_4
+  - first:
+      213: -4228339921826949824
+    second: earthboundObjectSpritesheet-export_5
+  - first:
+      213: -577067177889421155
+    second: earthboundObjectSpritesheet-export_6
+  - first:
+      213: 2017321092206900357
+    second: earthboundObjectSpritesheet-export_7
+  - first:
+      213: -6140047817845509414
+    second: earthboundObjectSpritesheet-export_8
+  - first:
+      213: 3972153725592085028
+    second: earthboundObjectSpritesheet-export_9
+  - first:
+      213: -3855811729779674024
+    second: earthboundObjectSpritesheet-export_10
+  - first:
+      213: -5871704477179062902
+    second: earthboundObjectSpritesheet-export_11
+  - first:
+      213: -23755648927345414
+    second: earthboundObjectSpritesheet-export_12
+  - first:
+      213: -2514668392119786270
+    second: earthboundObjectSpritesheet-export_13
+  - first:
+      213: -1068346662961971535
+    second: earthboundObjectSpritesheet-export_14
+  - first:
+      213: -9036693387761724753
+    second: earthboundObjectSpritesheet-export_15
+  - first:
+      213: -6225681113123191016
+    second: earthboundObjectSpritesheet-export_16
+  - first:
+      213: 7365321201502055150
+    second: earthboundObjectSpritesheet-export_17
+  - first:
+      213: 5266763273327443703
+    second: earthboundObjectSpritesheet-export_18
+  - first:
+      213: 2089006234483685079
+    second: earthboundObjectSpritesheet-export_19
+  - first:
+      213: -1466661216922461745
+    second: earthboundObjectSpritesheet-export_20
+  - first:
+      213: -467912535520908712
+    second: earthboundObjectSpritesheet-export_21
+  - first:
+      213: 3381620303036135340
+    second: earthboundObjectSpritesheet-export_22
+  - first:
+      213: -659949355664992116
+    second: earthboundObjectSpritesheet-export_23
+  - first:
+      213: 240263268702450963
+    second: earthboundObjectSpritesheet-export_24
+  - first:
+      213: -6831749173367894020
+    second: earthboundObjectSpritesheet-export_25
+  - first:
+      213: -8968444441607181309
+    second: earthboundObjectSpritesheet-export_26
+  - first:
+      213: -4146354724356927089
+    second: earthboundObjectSpritesheet-export_27
+  - first:
+      213: -8477223439227258352
+    second: earthboundObjectSpritesheet-export_28
+  - first:
+      213: -444065247030780167
+    second: earthboundObjectSpritesheet-export_29
+  - first:
+      213: 6884934773180592306
+    second: earthboundObjectSpritesheet-export_30
+  - first:
+      213: -5225374250504327821
+    second: earthboundObjectSpritesheet-export_31
+  - first:
+      213: 7591177130177107109
+    second: earthboundObjectSpritesheet-export_32
+  - first:
+      213: -3409011440570437974
+    second: earthboundObjectSpritesheet-export_33
+  - first:
+      213: 5164210994397700681
+    second: earthboundObjectSpritesheet-export_34
+  - first:
+      213: 6499963881400715428
+    second: earthboundObjectSpritesheet-export_35
+  - first:
+      213: 5413442814122525901
+    second: earthboundObjectSpritesheet-export_36
+  - first:
+      213: 7864935860158353187
+    second: earthboundObjectSpritesheet-export_37
+  - first:
+      213: 7108877937984110084
+    second: earthboundObjectSpritesheet-export_38
+  - first:
+      213: 7561940054081129194
+    second: earthboundObjectSpritesheet-export_39
+  - first:
+      213: -1343768349215091848
+    second: earthboundObjectSpritesheet-export_40
+  - first:
+      213: 2173306620598229625
+    second: earthboundObjectSpritesheet-export_41
+  - first:
+      213: 6644397539626005256
+    second: earthboundObjectSpritesheet-export_42
+  - first:
+      213: 1824052710562639290
+    second: earthboundObjectSpritesheet-export_43
+  - first:
+      213: 6912873925823224135
+    second: earthboundObjectSpritesheet-export_44
+  - first:
+      213: 8150669522498656554
+    second: earthboundObjectSpritesheet-export_45
+  - first:
+      213: -4229369793608355237
+    second: earthboundObjectSpritesheet-export_46
+  - first:
+      213: -2924607618198523444
+    second: earthboundObjectSpritesheet-export_47
+  - first:
+      213: -6013461701152510995
+    second: earthboundObjectSpritesheet-export_48
+  - first:
+      213: -4001893006944643413
+    second: earthboundObjectSpritesheet-export_49
+  - first:
+      213: -3940735370544437422
+    second: earthboundObjectSpritesheet-export_50
+  - first:
+      213: 5601290648256478534
+    second: earthboundObjectSpritesheet-export_51
+  - first:
+      213: 3350930760696294839
+    second: earthboundObjectSpritesheet-export_52
+  - first:
+      213: -2856628457132178890
+    second: earthboundObjectSpritesheet-export_53
+  - first:
+      213: 6599220208120345883
+    second: earthboundObjectSpritesheet-export_54
+  - first:
+      213: 8159106910689844808
+    second: earthboundObjectSpritesheet-export_55
+  - first:
+      213: -427645468328744914
+    second: earthboundObjectSpritesheet-export_56
+  - first:
+      213: 1027444020386397331
+    second: earthboundObjectSpritesheet-export_57
+  - first:
+      213: -2684909996065603705
+    second: earthboundObjectSpritesheet-export_58
+  - first:
+      213: -8193838641292650985
+    second: earthboundObjectSpritesheet-export_59
+  - first:
+      213: -2485818651574652700
+    second: earthboundObjectSpritesheet-export_60
+  - first:
+      213: 8382923691427270528
+    second: earthboundObjectSpritesheet-export_61
+  - first:
+      213: -6134791201694852346
+    second: earthboundObjectSpritesheet-export_62
+  - first:
+      213: 7083271160959815911
+    second: earthboundObjectSpritesheet-export_63
+  - first:
+      213: -4564864337901200440
+    second: earthboundObjectSpritesheet-export_64
+  - first:
+      213: -4260404337758358175
+    second: earthboundObjectSpritesheet-export_65
+  - first:
+      213: 2934969069446301091
+    second: earthboundObjectSpritesheet-export_66
+  - first:
+      213: -5974913216491144432
+    second: earthboundObjectSpritesheet-export_67
+  - first:
+      213: 6746110476816285420
+    second: earthboundObjectSpritesheet-export_68
+  - first:
+      213: -3312153168048530975
+    second: earthboundObjectSpritesheet-export_69
+  - first:
+      213: 7748775750734881084
+    second: earthboundObjectSpritesheet-export_70
+  - first:
+      213: 6436170219192482874
+    second: earthboundObjectSpritesheet-export_71
+  - first:
+      213: -3412185210090214826
+    second: earthboundObjectSpritesheet-export_72
+  - first:
+      213: -5190519440901750681
+    second: earthboundObjectSpritesheet-export_73
+  - first:
+      213: 4740785786275996214
+    second: earthboundObjectSpritesheet-export_74
+  - first:
+      213: 4643496364788083031
+    second: earthboundObjectSpritesheet-export_75
+  - first:
+      213: -1766095119507384552
+    second: earthboundObjectSpritesheet-export_76
+  - first:
+      213: 1287735667732853502
+    second: earthboundObjectSpritesheet-export_77
+  - first:
+      213: 1453427699811966829
+    second: earthboundObjectSpritesheet-export_78
+  - first:
+      213: -108401599728166077
+    second: earthboundObjectSpritesheet-export_79
+  - first:
+      213: 5343652533311410259
+    second: earthboundObjectSpritesheet-export_80
+  - first:
+      213: -7114970120348141914
+    second: earthboundObjectSpritesheet-export_81
+  - first:
+      213: 4868465923986053202
+    second: earthboundObjectSpritesheet-export_82
+  - first:
+      213: 7730415705659938002
+    second: earthboundObjectSpritesheet-export_83
+  - first:
+      213: -7989049283500210132
+    second: earthboundObjectSpritesheet-export_84
+  - first:
+      213: 9045862256702096586
+    second: earthboundObjectSpritesheet-export_85
+  - first:
+      213: 8226814299272875217
+    second: earthboundObjectSpritesheet-export_86
+  - first:
+      213: 2375974093596216005
+    second: earthboundObjectSpritesheet-export_87
+  - first:
+      213: 201139088658344795
+    second: earthboundObjectSpritesheet-export_88
+  - first:
+      213: 3783026849373649650
+    second: earthboundObjectSpritesheet-export_89
+  - first:
+      213: 3087322552656815980
+    second: earthboundObjectSpritesheet-export_90
+  - first:
+      213: -2800864852020939123
+    second: earthboundObjectSpritesheet-export_91
+  - first:
+      213: 3461554128187120577
+    second: earthboundObjectSpritesheet-export_92
+  - first:
+      213: 5004058451177653839
+    second: earthboundObjectSpritesheet-export_93
+  - first:
+      213: 8012745873118143003
+    second: earthboundObjectSpritesheet-export_94
+  - first:
+      213: -7877050621314366490
+    second: earthboundObjectSpritesheet-export_95
+  - first:
+      213: 3269447767161527860
+    second: earthboundObjectSpritesheet-export_96
+  - first:
+      213: -16868061191069380
+    second: earthboundObjectSpritesheet-export_97
+  - first:
+      213: 855922116423207790
+    second: earthboundObjectSpritesheet-export_98
+  - first:
+      213: 1505447799657422789
+    second: earthboundObjectSpritesheet-export_99
+  - first:
+      213: -8746066678067893962
+    second: earthboundObjectSpritesheet-export_100
+  - first:
+      213: 1569788218724587367
+    second: earthboundObjectSpritesheet-export_101
+  - first:
+      213: 2000146521905965228
+    second: earthboundObjectSpritesheet-export_102
+  - first:
+      213: 5911407278493656206
+    second: earthboundObjectSpritesheet-export_103
+  - first:
+      213: -2447832232828200585
+    second: earthboundObjectSpritesheet-export_104
+  - first:
+      213: -4761257246601794162
+    second: earthboundObjectSpritesheet-export_105
+  - first:
+      213: 2794558544780808664
+    second: earthboundObjectSpritesheet-export_106
+  - first:
+      213: -2152438347654278924
+    second: earthboundObjectSpritesheet-export_107
+  - first:
+      213: -2219235949773765439
+    second: earthboundObjectSpritesheet-export_108
+  - first:
+      213: 7526286303897629065
+    second: earthboundObjectSpritesheet-export_109
+  - first:
+      213: -5929936878453720878
+    second: earthboundObjectSpritesheet-export_110
+  - first:
+      213: 1718545473543101181
+    second: earthboundObjectSpritesheet-export_111
+  - first:
+      213: -4690146597711627837
+    second: earthboundObjectSpritesheet-export_112
+  - first:
+      213: -5325305696657524400
+    second: earthboundObjectSpritesheet-export_113
+  - first:
+      213: -1474323106483694976
+    second: earthboundObjectSpritesheet-export_114
+  - first:
+      213: -2144626126133928738
+    second: earthboundObjectSpritesheet-export_115
+  - first:
+      213: 3605840956957025240
+    second: earthboundObjectSpritesheet-export_116
+  - first:
+      213: -7419892643460399673
+    second: earthboundObjectSpritesheet-export_117
+  - first:
+      213: -1675740748566335906
+    second: earthboundObjectSpritesheet-export_118
+  - first:
+      213: 8294488245416665141
+    second: earthboundObjectSpritesheet-export_119
+  - first:
+      213: -5738355865334967255
+    second: earthboundObjectSpritesheet-export_120
+  - first:
+      213: 3400801462402051505
+    second: earthboundObjectSpritesheet-export_121
+  - first:
+      213: 8347603607742269310
+    second: earthboundObjectSpritesheet-export_122
+  - first:
+      213: 4033574926785682197
+    second: earthboundObjectSpritesheet-export_123
+  - first:
+      213: -1863408295099553188
+    second: earthboundObjectSpritesheet-export_124
+  - first:
+      213: 4951265053373748470
+    second: earthboundObjectSpritesheet-export_125
+  - first:
+      213: 2676964194231833081
+    second: earthboundObjectSpritesheet-export_126
+  - first:
+      213: 6121777858157589178
+    second: earthboundObjectSpritesheet-export_127
+  - first:
+      213: 3252293390750505417
+    second: earthboundObjectSpritesheet-export_128
+  - first:
+      213: 1561907611937403785
+    second: earthboundObjectSpritesheet-export_129
+  - first:
+      213: 3881683280312064721
+    second: earthboundObjectSpritesheet-export_130
+  - first:
+      213: -5355891385861081052
+    second: earthboundObjectSpritesheet-export_131
+  - first:
+      213: 1092064937412229569
+    second: earthboundObjectSpritesheet-export_132
+  - first:
+      213: 3418477587485852576
+    second: earthboundObjectSpritesheet-export_133
+  - first:
+      213: 8398965490688924785
+    second: earthboundObjectSpritesheet-export_134
+  - first:
+      213: -3518235616006353177
+    second: earthboundObjectSpritesheet-export_135
+  - first:
+      213: 1450127870671813409
+    second: earthboundObjectSpritesheet-export_136
+  - first:
+      213: -288665895827761500
+    second: earthboundObjectSpritesheet-export_137
+  - first:
+      213: 2857145860786017477
+    second: earthboundObjectSpritesheet-export_138
+  - first:
+      213: -2814373724431060733
+    second: earthboundObjectSpritesheet-export_139
+  - first:
+      213: 3170164633748624071
+    second: earthboundObjectSpritesheet-export_140
+  - first:
+      213: 4300910226587114164
+    second: earthboundObjectSpritesheet-export_141
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae7c463be940b2f0800000000000000
+      internalID: -959185446052790620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b0b4cecd07f72f0800000000000000
+      internalID: -972934900329280716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 385
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9093aeeb9f2eccb30800000000000000
+      internalID: 4309068505764477193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 385
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8b76076bd9fdba0800000000000000
+      internalID: -6061953166521943825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 373
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e3582f3a0e57a80800000000000000
+      internalID: -8469616529447240122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 373
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045d6e96e3be155c0800000000000000
+      internalID: -4228339921826949824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 374
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d982d5a8578ddf7f0800000000000000
+      internalID: -577067177889421155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 374
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58435ea58d6fefb10800000000000000
+      internalID: 2017321092206900357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 346
+        width: 65
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2f7618a0b2acaa0800000000000000
+      internalID: -6140047817845509414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422292f94ccef1730800000000000000
+      internalID: 3972153725592085028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 368
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854b2b529a76d7ac0800000000000000
+      internalID: -3855811729779674024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_11
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 322
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85dbab33e3838ea0800000000000000
+      internalID: -5871704477179062902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 344
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4d648fc5a9baff0800000000000000
+      internalID: -23755648927345414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 353
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e42ccfab6a1a1dd0800000000000000
+      internalID: -2514668392119786270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 344
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be7d21de587c21f0800000000000000
+      internalID: -1068346662961971535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 319
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa257560e37379280800000000000000
+      internalID: -9036693387761724753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 319
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8170f6f3300f999a0800000000000000
+      internalID: -6225681113123191016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_17
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 320
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeaee201c90e63660800000000000000
+      internalID: 7365321201502055150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_18
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 320
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe71c6ea4d471940800000000000000
+      internalID: 5266763273327443703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 65
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6f9fb2a14adfc10800000000000000
+      internalID: 2089006234483685079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_20
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 322
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc99e77d46f55abe0800000000000000
+      internalID: -1466661216922461745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_21
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 322
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ae25e2704a189f0800000000000000
+      internalID: -467912535520908712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_22
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 333
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7b7bfbfbdedee20800000000000000
+      internalID: 3381620303036135340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 322
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8817ddbe8367d6f0800000000000000
+      internalID: -659949355664992116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_24
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 322
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315759f7b26955300800000000000000
+      internalID: 240263268702450963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 331
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff86dea250c031a0800000000000000
+      internalID: -6831749173367894020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_26
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 322
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c6d261c4fa98380800000000000000
+      internalID: -8968444441607181309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_27
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 332
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8151f5b8503576c0800000000000000
+      internalID: -4146354724356927089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_28
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 320
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a7e3f323ada5a80800000000000000
+      internalID: -8477223439227258352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 312
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe52a5b20d56d9f0800000000000000
+      internalID: -444065247030780167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_30
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 312
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0f921c2b33c8f50800000000000000
+      internalID: 6884934773180592306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_31
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 312
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d673cedcdbb77b0800000000000000
+      internalID: -5225374250504327821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_32
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 312
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4964f4167495960800000000000000
+      internalID: 7591177130177107109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 294
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae6e811822c0b0d0800000000000000
+      internalID: -3409011440570437974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_34
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 294
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942ed3ac986faa740800000000000000
+      internalID: 5164210994397700681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_35
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 278
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a842cb36b2843a50800000000000000
+      internalID: 6499963881400715428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 293
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc40aabce89602b40800000000000000
+      internalID: 5413442814122525901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_37
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 294
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f48fd9e7dd52d60800000000000000
+      internalID: 7864935860158353187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_38
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 299
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e7725f1dec7a260800000000000000
+      internalID: 7108877937984110084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_39
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 295
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeacd401a6861f860800000000000000
+      internalID: 7561940054081129194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_40
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 295
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8731f945ec9f95de0800000000000000
+      internalID: -1343768349215091848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_41
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 298
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a13c45bd2292e10800000000000000
+      internalID: 2173306620598229625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_42
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 292
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80333e7db54a53c50800000000000000
+      internalID: 6644397539626005256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_43
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 298
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdaca8a646505910800000000000000
+      internalID: 1824052710562639290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_44
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 292
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749d0c5a5367fef50800000000000000
+      internalID: 6912873925823224135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_45
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 292
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2992222fbefc1170800000000000000
+      internalID: 8150669522498656554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_46
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 293
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52f434b4924e45c0800000000000000
+      internalID: -4229369793608355237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_47
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 280
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc130e1ddd4b967d0800000000000000
+      internalID: -2924607618198523444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_48
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 294
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb63688174eb8ca0800000000000000
+      internalID: -6013461701152510995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_49
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 298
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6d1fb538b6678c0800000000000000
+      internalID: -4001893006944643413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_50
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 279
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257a1e43f02bf49c0800000000000000
+      internalID: -3940735370544437422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_51
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 279
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d7b0dea28cbbd40800000000000000
+      internalID: 5601290648256478534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 278
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd6b3ad5c5e08e20800000000000000
+      internalID: 3350930760696294839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_53
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 278
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6324d55ad873b58d0800000000000000
+      internalID: -2856628457132178890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_54
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 274
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15b79ba0d3259b50800000000000000
+      internalID: 6599220208120345883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_55
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 274
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e5a18a188fa3170800000000000000
+      internalID: 8159106910689844808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_56
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 274
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28a57a56b2b01af0800000000000000
+      internalID: -427645468328744914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_57
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 275
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cfab594e6324e00800000000000000
+      internalID: 1027444020386397331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_58
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 279
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f3d9675984dbad0800000000000000
+      internalID: -2684909996065603705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_59
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 278
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716d1e62b23a94e80800000000000000
+      internalID: -8193838641292650985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e03ad85b19908dd0800000000000000
+      internalID: -2485818651574652700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_61
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 245
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f8ab6cea0265470800000000000000
+      internalID: 8382923691427270528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_62
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 247
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b59c3d7e7dcdaa0800000000000000
+      internalID: -6134791201694852346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_63
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 247
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e057c49795dc4260800000000000000
+      internalID: 7083271160959815911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_64
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 209
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbdc83021856a0c0800000000000000
+      internalID: -4564864337901200440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_65
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 209
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1653160d3d000e4c0800000000000000
+      internalID: -4260404337758358175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_66
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 206
+        width: 53
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a50b1b81da1bb820800000000000000
+      internalID: 2934969069446301091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_67
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 209
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b32470618d41da0800000000000000
+      internalID: -5974913216491144432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_68
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 209
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceefc2a7cbffe9d50800000000000000
+      internalID: 6746110476816285420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_69
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 209
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e958c00e3ed802d0800000000000000
+      internalID: -3312153168048530975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_70
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 209
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31a6b29d7e298b60800000000000000
+      internalID: 7748775750734881084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_71
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 209
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c7aecc6bed15950800000000000000
+      internalID: 6436170219192482874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_72
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 209
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a2bb441ab75a0d0800000000000000
+      internalID: -3412185210090214826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_73
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 209
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760ca4da11297f7b0800000000000000
+      internalID: -5190519440901750681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_74
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 209
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632a33b0e87aac140800000000000000
+      internalID: 4740785786275996214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_75
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 209
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759e20b6753017040800000000000000
+      internalID: 4643496364788083031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_76
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 209
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817163298d19d77e0800000000000000
+      internalID: -1766095119507384552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_77
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 209
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef231df54c4fed110800000000000000
+      internalID: 1287735667732853502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_78
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 172
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f510adacc9b2410800000000000000
+      internalID: 1453427699811966829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_79
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 170
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b5e13c151ee7ef0800000000000000
+      internalID: -108401599728166077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_80
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 178
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350942bcaa7782a40800000000000000
+      internalID: 5343652533311410259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_81
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 185
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6712d4f5c824d90800000000000000
+      internalID: -7114970120348141914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_82
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 183
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2585840b6f3409340800000000000000
+      internalID: 4868465923986053202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_83
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 189
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d416f57024f74b60800000000000000
+      internalID: 7730415705659938002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_84
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 184
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2881e32102312190800000000000000
+      internalID: -7989049283500210132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_85
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 170
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac487d1abcb598d70800000000000000
+      internalID: 9045862256702096586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_86
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 170
+        width: 10
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc834584048b2270800000000000000
+      internalID: 8226814299272875217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_87
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 172
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca455489d729f020800000000000000
+      internalID: 2375974093596216005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_88
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 172
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b2de97fe69ac200800000000000000
+      internalID: 201139088658344795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_89
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 171
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa7eac40e2008430800000000000000
+      internalID: 3783026849373649650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_90
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 173
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67692a118f58da20800000000000000
+      internalID: 3087322552656815980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_91
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 170
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d863a67b1445129d0800000000000000
+      internalID: -2800864852020939123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_92
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 179
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb5165b329e90030800000000000000
+      internalID: 3461554128187120577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_93
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 173
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f464cb116acf17540800000000000000
+      internalID: 5004058451177653839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_94
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 170
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b122fa21bedf23f60800000000000000
+      internalID: 8012745873118143003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_95
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 170
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e389ceb1381fa290800000000000000
+      internalID: -7877050621314366490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_96
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 172
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e5b550c696f5d20800000000000000
+      internalID: 3269447767161527860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_97
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 171
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3128a4769214cff0800000000000000
+      internalID: -16868061191069380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_98
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 172
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b4ec841a8d0eb00800000000000000
+      internalID: 855922116423207790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_99
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 172
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf597e2ccc64e410800000000000000
+      internalID: 1505447799657422789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 72
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639e1e7e1babf9680800000000000000
+      internalID: -8746066678067893962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_101
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 132
+        width: 71
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7671cad511209c510800000000000000
+      internalID: 1569788218724587367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_102
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 134
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca820f81aa2f1cb10800000000000000
+      internalID: 2000146521905965228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_103
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 134
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84e54d8999890250800000000000000
+      internalID: 5911407278493656206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_104
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 99
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779168cad8d870ed0800000000000000
+      internalID: -2447832232828200585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_105
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 95
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dab0ca2cd9cedb0800000000000000
+      internalID: -4761257246601794162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_106
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 95
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d151b5b03448c620800000000000000
+      internalID: 2794558544780808664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_107
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f053271ab00122e0800000000000000
+      internalID: -2152438347654278924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_108
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 97
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c445f469a0b331e0800000000000000
+      internalID: -2219235949773765439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_109
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 97
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981b4b5748db27860800000000000000
+      internalID: 7526286303897629065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_110
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 97
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8f643c3d1a4bda0800000000000000
+      internalID: -5929936878453720878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_111
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 97
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa54e0c00089d710800000000000000
+      internalID: 1718545473543101181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_112
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 99
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c934e2d48049eeb0800000000000000
+      internalID: -4690146597711627837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_113
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 99
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0593d5efea6b816b0800000000000000
+      internalID: -5325305696657524400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_114
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 99
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08293e922f62a8be0800000000000000
+      internalID: -1474323106483694976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_115
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 99
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcd3c7a6e1cc32e0800000000000000
+      internalID: -2144626126133928738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_116
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 99
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d36afbee358a0230800000000000000
+      internalID: 3605840956957025240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_117
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 98
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd320bf3fe370990800000000000000
+      internalID: -7419892643460399673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e6e0aeaa29eb8e0800000000000000
+      internalID: -1675740748566335906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_119
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 44
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530a6b5fc11fb1370800000000000000
+      internalID: 8294488245416665141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_120
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 44
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9241eeb5eb34d50b0800000000000000
+      internalID: -5738355865334967255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_121
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 44
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd6a1e69e2123f20800000000000000
+      internalID: 3400801462402051505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_122
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 44
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e774f35f045a8d370800000000000000
+      internalID: 8347603607742269310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_123
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 43
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b9bfd66032af730800000000000000
+      internalID: 4033574926785682197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_124
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 40
+        width: 21
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a23134708d326e0800000000000000
+      internalID: -1863408295099553188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_125
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 40
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4d527455d66b440800000000000000
+      internalID: 4951265053373748470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_126
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 63
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1d0a160cc762520800000000000000
+      internalID: 2676964194231833081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_127
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 40
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2b555078ce4f450800000000000000
+      internalID: 6121777858157589178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_128
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 40
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9d8058b97722d20800000000000000
+      internalID: 3252293390750505417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_129
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 55
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983f18d92b20da510800000000000000
+      internalID: 1561907611937403785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_130
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 55
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dad29d90628ed530800000000000000
+      internalID: 3881683280312064721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_131
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 55
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428fc2a492d0ca5b0800000000000000
+      internalID: -5355891385861081052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_132
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c97d1a464bc72f00800000000000000
+      internalID: 1092064937412229569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_133
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a38ab2014fd07f20800000000000000
+      internalID: 3418477587485852576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_134
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 3
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c17493d9e1f8470800000000000000
+      internalID: 8398965490688924785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_135
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 77
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee40dff857bc2fc0800000000000000
+      internalID: -3518235616006353177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_136
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b79428d93ef1410800000000000000
+      internalID: 1450127870671813409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_137
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 40
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a69a6ca5e37efbf0800000000000000
+      internalID: -288665895827761500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_138
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 40
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4d0a7c50f96a720800000000000000
+      internalID: 2857145860786017477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_139
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 41
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301f712420651f8d0800000000000000
+      internalID: -2814373724431060733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_140
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 41
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2d71a20ffaefb20800000000000000
+      internalID: 3170164633748624071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundObjectSpritesheet-export_141
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 0
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bad19a5017efab30800000000000000
+      internalID: 4300910226587114164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6cb71c2b7d4174b4a9bbb6d38df9582a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      earthboundObjectSpritesheet-export_0: -959185446052790620
+      earthboundObjectSpritesheet-export_1: -972934900329280716
+      earthboundObjectSpritesheet-export_10: -3855811729779674024
+      earthboundObjectSpritesheet-export_100: -8746066678067893962
+      earthboundObjectSpritesheet-export_101: 1569788218724587367
+      earthboundObjectSpritesheet-export_102: 2000146521905965228
+      earthboundObjectSpritesheet-export_103: 5911407278493656206
+      earthboundObjectSpritesheet-export_104: -2447832232828200585
+      earthboundObjectSpritesheet-export_105: -4761257246601794162
+      earthboundObjectSpritesheet-export_106: 2794558544780808664
+      earthboundObjectSpritesheet-export_107: -2152438347654278924
+      earthboundObjectSpritesheet-export_108: -2219235949773765439
+      earthboundObjectSpritesheet-export_109: 7526286303897629065
+      earthboundObjectSpritesheet-export_11: -5871704477179062902
+      earthboundObjectSpritesheet-export_110: -5929936878453720878
+      earthboundObjectSpritesheet-export_111: 1718545473543101181
+      earthboundObjectSpritesheet-export_112: -4690146597711627837
+      earthboundObjectSpritesheet-export_113: -5325305696657524400
+      earthboundObjectSpritesheet-export_114: -1474323106483694976
+      earthboundObjectSpritesheet-export_115: -2144626126133928738
+      earthboundObjectSpritesheet-export_116: 3605840956957025240
+      earthboundObjectSpritesheet-export_117: -7419892643460399673
+      earthboundObjectSpritesheet-export_118: -1675740748566335906
+      earthboundObjectSpritesheet-export_119: 8294488245416665141
+      earthboundObjectSpritesheet-export_12: -23755648927345414
+      earthboundObjectSpritesheet-export_120: -5738355865334967255
+      earthboundObjectSpritesheet-export_121: 3400801462402051505
+      earthboundObjectSpritesheet-export_122: 8347603607742269310
+      earthboundObjectSpritesheet-export_123: 4033574926785682197
+      earthboundObjectSpritesheet-export_124: -1863408295099553188
+      earthboundObjectSpritesheet-export_125: 4951265053373748470
+      earthboundObjectSpritesheet-export_126: 2676964194231833081
+      earthboundObjectSpritesheet-export_127: 6121777858157589178
+      earthboundObjectSpritesheet-export_128: 3252293390750505417
+      earthboundObjectSpritesheet-export_129: 1561907611937403785
+      earthboundObjectSpritesheet-export_13: -2514668392119786270
+      earthboundObjectSpritesheet-export_130: 3881683280312064721
+      earthboundObjectSpritesheet-export_131: -5355891385861081052
+      earthboundObjectSpritesheet-export_132: 1092064937412229569
+      earthboundObjectSpritesheet-export_133: 3418477587485852576
+      earthboundObjectSpritesheet-export_134: 8398965490688924785
+      earthboundObjectSpritesheet-export_135: -3518235616006353177
+      earthboundObjectSpritesheet-export_136: 1450127870671813409
+      earthboundObjectSpritesheet-export_137: -288665895827761500
+      earthboundObjectSpritesheet-export_138: 2857145860786017477
+      earthboundObjectSpritesheet-export_139: -2814373724431060733
+      earthboundObjectSpritesheet-export_14: -1068346662961971535
+      earthboundObjectSpritesheet-export_140: 3170164633748624071
+      earthboundObjectSpritesheet-export_141: 4300910226587114164
+      earthboundObjectSpritesheet-export_15: -9036693387761724753
+      earthboundObjectSpritesheet-export_16: -6225681113123191016
+      earthboundObjectSpritesheet-export_17: 7365321201502055150
+      earthboundObjectSpritesheet-export_18: 5266763273327443703
+      earthboundObjectSpritesheet-export_19: 2089006234483685079
+      earthboundObjectSpritesheet-export_2: 4309068505764477193
+      earthboundObjectSpritesheet-export_20: -1466661216922461745
+      earthboundObjectSpritesheet-export_21: -467912535520908712
+      earthboundObjectSpritesheet-export_22: 3381620303036135340
+      earthboundObjectSpritesheet-export_23: -659949355664992116
+      earthboundObjectSpritesheet-export_24: 240263268702450963
+      earthboundObjectSpritesheet-export_25: -6831749173367894020
+      earthboundObjectSpritesheet-export_26: -8968444441607181309
+      earthboundObjectSpritesheet-export_27: -4146354724356927089
+      earthboundObjectSpritesheet-export_28: -8477223439227258352
+      earthboundObjectSpritesheet-export_29: -444065247030780167
+      earthboundObjectSpritesheet-export_3: -6061953166521943825
+      earthboundObjectSpritesheet-export_30: 6884934773180592306
+      earthboundObjectSpritesheet-export_31: -5225374250504327821
+      earthboundObjectSpritesheet-export_32: 7591177130177107109
+      earthboundObjectSpritesheet-export_33: -3409011440570437974
+      earthboundObjectSpritesheet-export_34: 5164210994397700681
+      earthboundObjectSpritesheet-export_35: 6499963881400715428
+      earthboundObjectSpritesheet-export_36: 5413442814122525901
+      earthboundObjectSpritesheet-export_37: 7864935860158353187
+      earthboundObjectSpritesheet-export_38: 7108877937984110084
+      earthboundObjectSpritesheet-export_39: 7561940054081129194
+      earthboundObjectSpritesheet-export_4: -8469616529447240122
+      earthboundObjectSpritesheet-export_40: -1343768349215091848
+      earthboundObjectSpritesheet-export_41: 2173306620598229625
+      earthboundObjectSpritesheet-export_42: 6644397539626005256
+      earthboundObjectSpritesheet-export_43: 1824052710562639290
+      earthboundObjectSpritesheet-export_44: 6912873925823224135
+      earthboundObjectSpritesheet-export_45: 8150669522498656554
+      earthboundObjectSpritesheet-export_46: -4229369793608355237
+      earthboundObjectSpritesheet-export_47: -2924607618198523444
+      earthboundObjectSpritesheet-export_48: -6013461701152510995
+      earthboundObjectSpritesheet-export_49: -4001893006944643413
+      earthboundObjectSpritesheet-export_5: -4228339921826949824
+      earthboundObjectSpritesheet-export_50: -3940735370544437422
+      earthboundObjectSpritesheet-export_51: 5601290648256478534
+      earthboundObjectSpritesheet-export_52: 3350930760696294839
+      earthboundObjectSpritesheet-export_53: -2856628457132178890
+      earthboundObjectSpritesheet-export_54: 6599220208120345883
+      earthboundObjectSpritesheet-export_55: 8159106910689844808
+      earthboundObjectSpritesheet-export_56: -427645468328744914
+      earthboundObjectSpritesheet-export_57: 1027444020386397331
+      earthboundObjectSpritesheet-export_58: -2684909996065603705
+      earthboundObjectSpritesheet-export_59: -8193838641292650985
+      earthboundObjectSpritesheet-export_6: -577067177889421155
+      earthboundObjectSpritesheet-export_60: -2485818651574652700
+      earthboundObjectSpritesheet-export_61: 8382923691427270528
+      earthboundObjectSpritesheet-export_62: -6134791201694852346
+      earthboundObjectSpritesheet-export_63: 7083271160959815911
+      earthboundObjectSpritesheet-export_64: -4564864337901200440
+      earthboundObjectSpritesheet-export_65: -4260404337758358175
+      earthboundObjectSpritesheet-export_66: 2934969069446301091
+      earthboundObjectSpritesheet-export_67: -5974913216491144432
+      earthboundObjectSpritesheet-export_68: 6746110476816285420
+      earthboundObjectSpritesheet-export_69: -3312153168048530975
+      earthboundObjectSpritesheet-export_7: 2017321092206900357
+      earthboundObjectSpritesheet-export_70: 7748775750734881084
+      earthboundObjectSpritesheet-export_71: 6436170219192482874
+      earthboundObjectSpritesheet-export_72: -3412185210090214826
+      earthboundObjectSpritesheet-export_73: -5190519440901750681
+      earthboundObjectSpritesheet-export_74: 4740785786275996214
+      earthboundObjectSpritesheet-export_75: 4643496364788083031
+      earthboundObjectSpritesheet-export_76: -1766095119507384552
+      earthboundObjectSpritesheet-export_77: 1287735667732853502
+      earthboundObjectSpritesheet-export_78: 1453427699811966829
+      earthboundObjectSpritesheet-export_79: -108401599728166077
+      earthboundObjectSpritesheet-export_8: -6140047817845509414
+      earthboundObjectSpritesheet-export_80: 5343652533311410259
+      earthboundObjectSpritesheet-export_81: -7114970120348141914
+      earthboundObjectSpritesheet-export_82: 4868465923986053202
+      earthboundObjectSpritesheet-export_83: 7730415705659938002
+      earthboundObjectSpritesheet-export_84: -7989049283500210132
+      earthboundObjectSpritesheet-export_85: 9045862256702096586
+      earthboundObjectSpritesheet-export_86: 8226814299272875217
+      earthboundObjectSpritesheet-export_87: 2375974093596216005
+      earthboundObjectSpritesheet-export_88: 201139088658344795
+      earthboundObjectSpritesheet-export_89: 3783026849373649650
+      earthboundObjectSpritesheet-export_9: 3972153725592085028
+      earthboundObjectSpritesheet-export_90: 3087322552656815980
+      earthboundObjectSpritesheet-export_91: -2800864852020939123
+      earthboundObjectSpritesheet-export_92: 3461554128187120577
+      earthboundObjectSpritesheet-export_93: 5004058451177653839
+      earthboundObjectSpritesheet-export_94: 8012745873118143003
+      earthboundObjectSpritesheet-export_95: -7877050621314366490
+      earthboundObjectSpritesheet-export_96: 3269447767161527860
+      earthboundObjectSpritesheet-export_97: -16868061191069380
+      earthboundObjectSpritesheet-export_98: 855922116423207790
+      earthboundObjectSpritesheet-export_99: 1505447799657422789
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

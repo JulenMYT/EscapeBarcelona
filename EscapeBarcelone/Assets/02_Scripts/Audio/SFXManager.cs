@@ -1,12 +1,29 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
+public enum AudioChannel
+{
+    Default,
+    Radio,
+    UI,
+    Voice
+}
+
 public class SFXManager
 {
     private readonly AudioSource[] audioSourcePool;
+    private readonly AudioMixerGroup defaultMixer;
+    private readonly AudioMixerGroup radioMixer;
 
-    public SFXManager(Transform parent, AudioMixerGroup mixerGroup, int poolSize)
+    public SFXManager(
+        Transform parent,
+        AudioMixerGroup defaultMixer,
+        AudioMixerGroup radioMixer,
+        int poolSize)
     {
+        this.defaultMixer = defaultMixer;
+        this.radioMixer = radioMixer;
+
         audioSourcePool = new AudioSource[poolSize];
 
         for (int i = 0; i < poolSize; i++)
@@ -16,7 +33,6 @@ public class SFXManager
 
             AudioSource source = audioObject.AddComponent<AudioSource>();
             source.playOnAwake = false;
-            source.outputAudioMixerGroup = mixerGroup;
 
             audioSourcePool[i] = source;
         }
@@ -28,12 +44,19 @@ public class SFXManager
         float pitch = 1f,
         bool loop = false,
         float spatialBlend = 0f,
-        int priority = 128)
+        int priority = 128,
+        AudioChannel type = AudioChannel.Default)
     {
         AudioSource source = GetAvailableAudioSource();
 
         if (!source)
             return null;
+
+        source.outputAudioMixerGroup = type switch
+        {
+            AudioChannel.Radio => radioMixer,
+            _ => defaultMixer
+        };
 
         source.clip = clip;
         source.volume = volume;

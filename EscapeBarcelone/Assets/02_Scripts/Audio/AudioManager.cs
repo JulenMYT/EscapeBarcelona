@@ -35,10 +35,12 @@ public class AudioManager : MonoBehaviour
         audioMixer = Resources.Load<AudioMixer>("MainMixer");
 
         AudioMixerGroup musicGroup = audioMixer.FindMatchingGroups("Music")[0];
-        AudioMixerGroup sfxGroup = audioMixer.FindMatchingGroups("SFX")[0];
+
+        AudioMixerGroup sfxDefaultGroup = audioMixer.FindMatchingGroups("SFX/Default")[0];
+        AudioMixerGroup sfxRadioGroup = audioMixer.FindMatchingGroups("SFX/Radio")[0];
 
         Music = new MusicManager(transform, musicGroup);
-        SFX = new SFXManager(transform, sfxGroup, 10);
+        SFX = new SFXManager(transform, sfxDefaultGroup, sfxRadioGroup, 10);
     }
 
     private const string MASTER_VOLUME = "MasterVolume";
