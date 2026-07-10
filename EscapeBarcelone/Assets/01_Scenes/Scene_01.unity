@@ -4908,7 +4908,6 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   tutorial: {fileID: 11400000, guid: 6320da1aa28d4e042ac1d2f28c7ce3e2, type: 2}
-  panel: {fileID: 1961191165}
   interactionElement: {fileID: 555934699}
 --- !u!1 &758856113
 GameObject:
@@ -10769,7 +10768,6 @@ MonoBehaviour:
   position: {x: 23.68, y: 0.88, z: 0}
   rotation: {x: 0, y: 0, z: 29.319372}
   tutorial: {fileID: 11400000, guid: 60a125167073a974ca97ccafc82707b7, type: 2}
-  panel: {fileID: 1961191165}
   interactionElement: {fileID: 224661606}
 --- !u!114 &1778470376
 MonoBehaviour:
@@ -10793,7 +10791,6 @@ MonoBehaviour:
   position: {x: 22.04, y: 2.71, z: 10}
   rotation: {x: 0, y: 0, z: 324.097}
   tutorial: {fileID: 11400000, guid: b9cb098ccf0d0774f97d337cfea5020e, type: 2}
-  panel: {fileID: 1961191165}
   interactionElement: {fileID: 311549388}
 --- !u!114 &1778470377
 MonoBehaviour:
@@ -10817,7 +10814,6 @@ MonoBehaviour:
   position: {x: 16.65, y: -0.15, z: 10}
   rotation: {x: 0, y: 0, z: 46.136}
   tutorial: {fileID: 11400000, guid: 3a79f094ea1c0de46b528c4331919abe, type: 2}
-  panel: {fileID: 1961191165}
   interactionElement: {fileID: 1662265018}
 --- !u!1 &1844293527
 GameObject:
