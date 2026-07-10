@@ -38,8 +38,8 @@ public class MapMiniGame : MonoBehaviour
             picture.SetInteractable(true);
         }
 
-        gameplayPanel.ShowValidateButton();
-        gameplayPanel.ShowToggleButton();
+        gameplayPanel.SetValidateButtonVisible(true);
+        gameplayPanel.SetValidateButtonVisible(true);
 
         gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;
         gameplayPanel.OnToggleButtonClicked += ToggleCanvas;
@@ -68,8 +68,8 @@ public class MapMiniGame : MonoBehaviour
             Debug.Log("All answers are correct!");
             cutsceneInitiator.StartCutscene();
             mapMiniGameCanvas.SetActive(false);
-            gameplayPanel.HideValidateButton();
-            gameplayPanel.HideToggleButton();
+            gameplayPanel.SetValidateButtonVisible(false);
+            gameplayPanel.SetValidateButtonVisible(false);
 
             gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;
             gameplayPanel.OnValidateButtonClicked -= VerifyAnswers;

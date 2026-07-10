@@ -13,13 +13,17 @@ public enum InteractionType
 
 public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [Header("Interaction")]
     [SerializeField] private bool isInteractable = true;
     [SerializeField] private bool canBeClosed = true;
-
     [SerializeField] private Color highlightColor = Color.orange;
+
     [SerializeField] private InteractionType interactionType = InteractionType.None;
     [SerializeField] private InteractionType interactionTypeHover = InteractionType.Outline;
 
+    private bool ignoreInteractionBlock;
+
+    [Header("References")]
     protected SpriteRenderer spriteRenderer;
 
     public event Action OnInteract;
@@ -31,9 +35,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     private static Material outlineMaterial;
     private static Material baseMaterial;
 
-    private static readonly Stack<Transform> focusStack = new();
-
-    private bool ignoreInteractionBlock;
+    protected static readonly Stack<Transform> focusStack = new();
+    protected static InteractionStack interactionStack;
 
     public static Transform FocusRoot => focusStack.Count > 0 ? focusStack.Peek() : null;
 
@@ -45,9 +48,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
             isInteractable = value;
 
             if (!isInteractable)
-            {
                 Exit();
-            }
         }
     }
 
@@ -59,28 +60,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
             ignoreInteractionBlock = value;
 
             if (!ignoreInteractionBlock)
-            {
                 Exit();
-            }
-        }
-    }
-
-    public bool CanBeClosed
-    {
-        get => canBeClosed;
-        private set => canBeClosed = value;
-    }
-
-    public static void PushFocus(Transform target)
-    {
-        focusStack.Push(target);
-    }
-
-    public static void PopFocus()
-    {
-        if (focusStack.Count > 0)
-        {
-            focusStack.Pop();
         }
     }
 
@@ -97,7 +77,20 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     protected virtual void Start()
     {
+        if (interactionStack == null)
+            InitializeInteractionStack(FindAnyObjectByType<GameplayPanel>());
+
         Initialize();
+    }
+
+    public virtual void Initialize()
+    {
+
+    }
+
+    public static void InitializeInteractionStack(GameplayPanel panel)
+    {
+        interactionStack = new InteractionStack(panel);
     }
 
     public void SetIgnoreInteractionBlock(bool value)
@@ -201,31 +194,20 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
         Exit();
     }
 
-    public virtual void Initialize()
-    {
-
-    }
-
     public virtual void Open()
     {
         gameObject.SetActive(true);
 
-        if (CanBeClosed)
-        {
-            GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
-            gameplayPanel.OpenInteractionElement(this);
-        }
+        if (canBeClosed)
+            interactionStack.AddInteractionElement(this);
     }
 
     public virtual void Close()
     {
         gameObject.SetActive(false);
 
-        if (CanBeClosed)
-        {
-            GameplayPanel gameplayPanel = FindAnyObjectByType<GameplayPanel>();
-            gameplayPanel.RemoveInteractionElement(this);
-        }
+        if (canBeClosed)
+            interactionStack.RemoveInteractionElement(this);
 
         OnClose?.Invoke();
     }
@@ -237,6 +219,6 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public void SetClosable(bool value)
     {
-        CanBeClosed = value;
+        canBeClosed = value;
     }
 }

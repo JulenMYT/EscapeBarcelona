@@ -40,6 +40,7 @@ public class CutsceneHandler : MonoBehaviour
 
         dialogueHandler = cachedDialogueHandler;
         tutorialHandler = cachedTutorialHandler;
+        tutorialUI = cachedTutorialUI;
         fadePanel = cachedFadePanel;
         focusPanel = cachedFocusPanel;
     }

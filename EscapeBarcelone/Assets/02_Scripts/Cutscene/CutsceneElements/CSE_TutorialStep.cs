@@ -76,9 +76,6 @@ public class CSE_TutorialStep : CutsceneElementBase
             target.SetActive(false);
         }
 
-        FocusPanelTutorial focusPanel = cutsceneHandler.focusPanel;
-
-        focusPanel.Hide();
         cutsceneHandler.tutorialUI.Hide();
 
         cutsceneHandler.PlayNextElement();

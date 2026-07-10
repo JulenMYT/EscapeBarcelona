@@ -7,7 +7,6 @@ public class CSE_WaitForClose : CutsceneElementBase
     public override void Execute()
     {
         interactionElement.OnClose += OnClose;
-        interactionElement.SetInteractable(true);
     }
 
     private void OnClose()

@@ -48,4 +48,15 @@ public class IE_ZoomIn : InteractionElementBase
         if (hideOnZoom)
             gameObject.SetActive(true);
     }
+
+    public static void PushFocus(Transform target)
+    {
+        focusStack.Push(target);
+    }
+
+    public static void PopFocus()
+    {
+        if (focusStack.Count > 0)
+            focusStack.Pop();
+    }
 }
