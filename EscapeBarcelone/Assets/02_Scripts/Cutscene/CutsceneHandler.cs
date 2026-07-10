@@ -5,11 +5,13 @@ public class CutsceneHandler : MonoBehaviour
     public Camera cam { get; private set; }
     public DialogueHandler dialogueHandler { get; private set; }
     public TutorialHandler tutorialHandler { get; private set; }
+    public TutorialUI tutorialUI { get; private set; }
     public FadePanel fadePanel { get; private set; }
     public FocusPanelTutorial focusPanel { get; private set; }
 
     private static DialogueHandler cachedDialogueHandler;
     private static TutorialHandler cachedTutorialHandler;
+    private static TutorialUI cachedTutorialUI;
     private static FadePanel cachedFadePanel;
     private static FocusPanelTutorial cachedFocusPanel;
 
@@ -26,6 +28,9 @@ public class CutsceneHandler : MonoBehaviour
 
         if (cachedTutorialHandler == null)
             cachedTutorialHandler = FindAnyObjectByType<TutorialHandler>();
+
+        if (cachedTutorialUI == null)
+            cachedTutorialUI = FindAnyObjectByType<TutorialUI>();
 
         if (cachedFadePanel == null)
             cachedFadePanel = FindAnyObjectByType<FadePanel>();

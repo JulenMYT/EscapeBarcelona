@@ -20,11 +20,9 @@ public class CSE_TutorialStep : CutsceneElementBase
 
     [Header("Tutorial")]
     [SerializeField] private Tutorial tutorial;
-    [SerializeField] private Panel panel;
 
     [Header("WaitForClick")]
     [SerializeField] private InteractionElementBase interactionElement;
-
 
     public override void Execute()
     {
@@ -81,7 +79,7 @@ public class CSE_TutorialStep : CutsceneElementBase
         FocusPanelTutorial focusPanel = cutsceneHandler.focusPanel;
 
         focusPanel.Hide();
-        panel.Hide();
+        cutsceneHandler.tutorialUI.Hide();
 
         cutsceneHandler.PlayNextElement();
     }
