@@ -23,6 +23,8 @@ public class IE_ZoomIn : InteractionElementBase
     {
         base.Interact();
 
+        Exit();
+
         PushFocus(targetObject.transform);
 
         focusPanel.SetOrderInLayer(layoutOrderAfter);

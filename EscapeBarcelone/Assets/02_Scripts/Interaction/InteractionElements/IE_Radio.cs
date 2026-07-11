@@ -3,7 +3,6 @@ using UnityEngine;
 public class IE_Radio : InteractionElementBase
 {
     [SerializeField] private AudioClip audioClip;
-    [SerializeField] private bool startActivate;
     [SerializeField] private SceneName sceneName;
 
     private AudioSource audioSource;
@@ -19,34 +18,29 @@ public class IE_Radio : InteractionElementBase
             sceneLoader = FindAnyObjectByType<SceneLoader>();
 
         sceneLoader.OnSceneLoaded += OnSceneLoaded;
-
-        if (startActivate)
-        {
-            Activate();
-        }
     }
 
     private void OnSceneLoaded(SceneName loadedScene)
     {
         if (loadedScene == sceneName)
         {
-            if (startActivate)
+            if (activated)
                 Activate();
         }
         else
         {
             if (activated)
-                Deactivate();
+                CloseAudioSource();
         }
     }
 
-    private void Activate()
+    private void Activate() 
     {
-        if (activated)
+        if (audioSource != null)
             return;
 
         activated = true;
-        audioSource = AudioManager.Instance.SFX.Play(audioClip, loop:true, type:AudioChannel.Radio);
+        audioSource = AudioManager.Instance.SFX.Play(audioClip, loop: true, type: AudioChannel.Radio);
     }
 
     private void Deactivate()
@@ -56,11 +50,7 @@ public class IE_Radio : InteractionElementBase
 
         activated = false;
 
-        if (audioSource != null)
-        {
-            audioSource.Stop();
-            audioSource = null;
-        }
+        CloseAudioSource();
     }
 
     public override void Interact()
@@ -72,6 +62,15 @@ public class IE_Radio : InteractionElementBase
         else
         {
             Activate();
+        }
+    }
+
+    private void CloseAudioSource()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource = null;
         }
     }
 
