@@ -83,11 +83,27 @@ public class PuzzlePieceGenerator
 
     private Sprite CreateSprite(Texture2D texture, Rect spriteRect, int x, int y, PuzzleGridData grid, float pixelsPerUnit)
     {
+        int xMin = Mathf.FloorToInt(
+            x * spriteRect.width / grid.columns
+        );
+
+        int xMax = Mathf.FloorToInt(
+            (x + 1) * spriteRect.width / grid.columns
+        );
+
+        int yMin = Mathf.FloorToInt(
+            y * spriteRect.height / grid.rows
+        );
+
+        int yMax = Mathf.FloorToInt(
+            (y + 1) * spriteRect.height / grid.rows
+        );
+
         Rect rect = new Rect(
-            spriteRect.x + x * grid.pieceWidth,
-            spriteRect.y + y * grid.pieceHeight,
-            grid.pieceWidth,
-            grid.pieceHeight
+            spriteRect.x + xMin,
+            spriteRect.y + yMin,
+            xMax - xMin,
+            yMax - yMin
         );
 
         return Sprite.Create(
@@ -115,6 +131,8 @@ public class PuzzlePieceGenerator
 
         group.AddPiece(piece);
         groups.Add(group);
+
+        piece.transform.localPosition = Vector3.zero;
     }
 
     private Vector3 GetPiecePosition(

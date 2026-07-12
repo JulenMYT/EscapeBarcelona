@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: 41109dbcdb03c384aa74c9655d2ada22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7293292637406500313
+    second: earthboundbosses-export_0
+  - first:
+      213: 1032617694138823368
+    second: earthboundbosses-export_1
+  - first:
+      213: 9179068341719052632
+    second: earthboundbosses-export_2
+  - first:
+      213: 7346347187752673450
+    second: earthboundbosses-export_3
+  - first:
+      213: -6523923982652238892
+    second: earthboundbosses-export_4
+  - first:
+      213: 117467868302705380
+    second: earthboundbosses-export_5
+  - first:
+      213: 7245502002839493610
+    second: earthboundbosses-export_6
+  - first:
+      213: -3383987394052647473
+    second: earthboundbosses-export_7
+  - first:
+      213: -8703406405202180459
+    second: earthboundbosses-export_8
+  - first:
+      213: 9127492355092528196
+    second: earthboundbosses-export_9
+  - first:
+      213: 7864663583043801646
+    second: earthboundbosses-export_10
+  - first:
+      213: 7481921893880438998
+    second: earthboundbosses-export_11
+  - first:
+      213: -8296979816569417044
+    second: earthboundbosses-export_12
+  - first:
+      213: -8806457656114384566
+    second: earthboundbosses-export_13
+  - first:
+      213: 109389279115523264
+    second: earthboundbosses-export_14
+  - first:
+      213: -1604606739922332075
+    second: earthboundbosses-export_15
+  - first:
+      213: -1460823703125430408
+    second: earthboundbosses-export_16
+  - first:
+      213: -5835001217672213322
+    second: earthboundbosses-export_17
+  - first:
+      213: 3900582922431715630
+    second: earthboundbosses-export_18
+  - first:
+      213: -5509679177229395123
+    second: earthboundbosses-export_19
+  - first:
+      213: 1193316543591579041
+    second: earthboundbosses-export_20
+  - first:
+      213: -7329558241025178538
+    second: earthboundbosses-export_21
+  - first:
+      213: -976832677733574690
+    second: earthboundbosses-export_22
+  - first:
+      213: 3033426325000825358
+    second: earthboundbosses-export_23
+  - first:
+      213: -3704000045131723119
+    second: earthboundbosses-export_24
+  - first:
+      213: 5118774470981377749
+    second: earthboundbosses-export_25
+  - first:
+      213: 5630398611825136692
+    second: earthboundbosses-export_26
+  - first:
+      213: 8719087050778614400
+    second: earthboundbosses-export_27
+  - first:
+      213: -4793555640706796658
+    second: earthboundbosses-export_28
+  - first:
+      213: -5998345570227234796
+    second: earthboundbosses-export_29
+  - first:
+      213: -8647248942126668095
+    second: earthboundbosses-export_30
+  - first:
+      213: 8218928701351736562
+    second: earthboundbosses-export_31
+  - first:
+      213: 5445132237810283635
+    second: earthboundbosses-export_32
+  - first:
+      213: 4206546147871134944
+    second: earthboundbosses-export_33
+  - first:
+      213: 1862821807752468800
+    second: earthboundbosses-export_34
+  - first:
+      213: 301830162358731702
+    second: earthboundbosses-export_35
+  - first:
+      213: 7846976032638530402
+    second: earthboundbosses-export_36
+  - first:
+      213: -8888768118415280415
+    second: earthboundbosses-export_37
+  - first:
+      213: -5896575768623363006
+    second: earthboundbosses-export_38
+  - first:
+      213: -7968132525740386700
+    second: earthboundbosses-export_39
+  - first:
+      213: -1451753447466653767
+    second: earthboundbosses-export_40
+  - first:
+      213: -3386613035692527727
+    second: earthboundbosses-export_41
+  - first:
+      213: 5945528689351807677
+    second: earthboundbosses-export_42
+  - first:
+      213: 699678925124791231
+    second: earthboundbosses-export_43
+  - first:
+      213: 4597014191021330449
+    second: earthboundbosses-export_44
+  - first:
+      213: -7424229459379037077
+    second: earthboundbosses-export_45
+  - first:
+      213: 1753394858530611554
+    second: earthboundbosses-export_46
+  - first:
+      213: 1929546292673100791
+    second: earthboundbosses-export_47
+  - first:
+      213: -6723343276562436933
+    second: earthboundbosses-export_48
+  - first:
+      213: 1809924629895951029
+    second: earthboundbosses-export_49
+  - first:
+      213: 7536063807215336291
+    second: earthboundbosses-export_50
+  - first:
+      213: 7088267730098578371
+    second: earthboundbosses-export_51
+  - first:
+      213: -6204591932259374147
+    second: earthboundbosses-export_52
+  - first:
+      213: 796215179278604090
+    second: earthboundbosses-export_53
+  - first:
+      213: -1403625897592719723
+    second: earthboundbosses-export_54
+  - first:
+      213: -9213158206760451632
+    second: earthboundbosses-export_55
+  - first:
+      213: 5386458561172566426
+    second: earthboundbosses-export_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: earthboundbosses-export_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 246
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ae960ecf409ca90800000000000000
+      internalID: -7293292637406500313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 246
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c27def5258945e00800000000000000
+      internalID: 1032617694138823368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 246
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851b235260a926f70800000000000000
+      internalID: 9179068341719052632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 246
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa020ba38d773f560800000000000000
+      internalID: 7346347187752673450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 246
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d39c58f3bd5675a0800000000000000
+      internalID: -6523923982652238892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_5
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 246
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e284b2676451a100800000000000000
+      internalID: 117467868302705380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 246
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb11aaeea13d8460800000000000000
+      internalID: 7245502002839493610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_7
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 246
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5971de469a901d0800000000000000
+      internalID: -3383987394052647473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_8
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 270
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5968012bcf9473780800000000000000
+      internalID: -8703406405202180459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 246
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c326bffed5bae70800000000000000
+      internalID: 9127492355092528196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_10
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 270
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22d6492cd5e42d60800000000000000
+      internalID: 7864663583043801646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_11
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 246
+        width: 121
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d026f1525025d760800000000000000
+      internalID: 7481921893880438998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_12
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 132
+        width: 205
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca25bcce0d43bdc80800000000000000
+      internalID: -8296979816569417044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_13
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 246
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4178cd9b6d29c580800000000000000
+      internalID: -8806457656114384566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 173
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4bae348f0a48100800000000000000
+      internalID: 109389279115523264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 173
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5565bbeebaa4bb9e0800000000000000
+      internalID: -1604606739922332075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 173
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fecbfe49c1abbe0800000000000000
+      internalID: -1460823703125430408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_17
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 197
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc0da4ce49e50fa0800000000000000
+      internalID: -5835001217672213322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_18
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 173
+        width: 31
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e295f747087a12630800000000000000
+      internalID: 3900582922431715630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 173
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b10e6daffa983b0800000000000000
+      internalID: -5509679177229395123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_20
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 173
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad7f5de2138f8010800000000000000
+      internalID: 1193316543591579041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_21
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 173
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654482b0d9d284a90800000000000000
+      internalID: -7329558241025178538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_22
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 173
+        width: 66
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed752b6ead79172f0800000000000000
+      internalID: -976832677733574690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_23
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 173
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a2ef9bb25e81a20800000000000000
+      internalID: 3033426325000825358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_24
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 173
+        width: 129
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e84e5659fb89cc0800000000000000
+      internalID: -3704000045131723119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_25
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 173
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dede2cc24a890740800000000000000
+      internalID: 5118774470981377749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_26
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 97
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43490b1d4b1332e40800000000000000
+      internalID: 5630398611825136692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_27
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 97
+        width: 121
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a1e5b1a7b600970800000000000000
+      internalID: 8719087050778614400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 91
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83f998ca8ed97db0800000000000000
+      internalID: -4793555640706796658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_29
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 97
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41851960c7891cca0800000000000000
+      internalID: -5998345570227234796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_30
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 127
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6ea28f6eccef780800000000000000
+      internalID: -8647248942126668095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_31
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 97
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4355eab108f0270800000000000000
+      internalID: 8218928701351736562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_32
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 118
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374b5b5bbeef09b40800000000000000
+      internalID: 5445132237810283635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_33
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 121
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4952b2f67a06a30800000000000000
+      internalID: 4206546147871134944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_34
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 97
+        width: 31
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049dfe280921ad910800000000000000
+      internalID: 1862821807752468800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_35
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 15
+        width: 114
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b304e9fee0503400800000000000000
+      internalID: 301830162358731702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 17
+        width: 120
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2637c6a602f06ec60800000000000000
+      internalID: 7846976032638530402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 16
+        width: 120
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e63a03bd70c4a480800000000000000
+      internalID: -8888768118415280415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_38
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 16
+        width: 120
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c470074972b2ea0800000000000000
+      internalID: -5896575768623363006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_39
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 6
+        width: 80
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47612005fa18b6190800000000000000
+      internalID: -7968132525740386700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_40
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 77
+        width: 147
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b72d466ee55adbe0800000000000000
+      internalID: -1451753447466653767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_41
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 34
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fe6d713655001d0800000000000000
+      internalID: -3386613035692527727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_42
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 34
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db255ba97d2c28250800000000000000
+      internalID: 5945528689351807677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_43
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 7
+        width: 122
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbe3ec7642c5b900800000000000000
+      internalID: 699678925124791231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_44
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 7
+        width: 122
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110914bfc00ebcf30800000000000000
+      internalID: 4597014191021330449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_45
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 25
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6cd8b654a6d7f890800000000000000
+      internalID: -7424229459379037077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_46
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 25
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261a6bd755f455810800000000000000
+      internalID: 1753394858530611554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_47
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbb378412027ca10800000000000000
+      internalID: 1929546292673100791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_48
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 3
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc2c7969e2e1b2a0800000000000000
+      internalID: -6723343276562436933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2bd2b8cd42e1910800000000000000
+      internalID: 1809924629895951029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_50
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 3
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b7fb9da1a759860800000000000000
+      internalID: 7536063807215336291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_51
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 3
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3e36df1f59e5260800000000000000
+      internalID: 7088267730098578371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_52
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbec6dc28cd4e9a0800000000000000
+      internalID: -6204591932259374147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_53
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37dcadac79bc0b00800000000000000
+      internalID: 796215179278604090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_54
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 3
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5967270dea1558ce0800000000000000
+      internalID: -1403625897592719723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_55
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 3
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d18192ac69442080800000000000000
+      internalID: -9213158206760451632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earthboundbosses-export_56
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a917d00d58b80ca40800000000000000
+      internalID: 5386458561172566426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 41f9a80b703826d47a390ed03221a360
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      earthboundbosses-export_0: -7293292637406500313
+      earthboundbosses-export_1: 1032617694138823368
+      earthboundbosses-export_10: 7864663583043801646
+      earthboundbosses-export_11: 7481921893880438998
+      earthboundbosses-export_12: -8296979816569417044
+      earthboundbosses-export_13: -8806457656114384566
+      earthboundbosses-export_14: 109389279115523264
+      earthboundbosses-export_15: -1604606739922332075
+      earthboundbosses-export_16: -1460823703125430408
+      earthboundbosses-export_17: -5835001217672213322
+      earthboundbosses-export_18: 3900582922431715630
+      earthboundbosses-export_19: -5509679177229395123
+      earthboundbosses-export_2: 9179068341719052632
+      earthboundbosses-export_20: 1193316543591579041
+      earthboundbosses-export_21: -7329558241025178538
+      earthboundbosses-export_22: -976832677733574690
+      earthboundbosses-export_23: 3033426325000825358
+      earthboundbosses-export_24: -3704000045131723119
+      earthboundbosses-export_25: 5118774470981377749
+      earthboundbosses-export_26: 5630398611825136692
+      earthboundbosses-export_27: 8719087050778614400
+      earthboundbosses-export_28: -4793555640706796658
+      earthboundbosses-export_29: -5998345570227234796
+      earthboundbosses-export_3: 7346347187752673450
+      earthboundbosses-export_30: -8647248942126668095
+      earthboundbosses-export_31: 8218928701351736562
+      earthboundbosses-export_32: 5445132237810283635
+      earthboundbosses-export_33: 4206546147871134944
+      earthboundbosses-export_34: 1862821807752468800
+      earthboundbosses-export_35: 301830162358731702
+      earthboundbosses-export_36: 7846976032638530402
+      earthboundbosses-export_37: -8888768118415280415
+      earthboundbosses-export_38: -5896575768623363006
+      earthboundbosses-export_39: -7968132525740386700
+      earthboundbosses-export_4: -6523923982652238892
+      earthboundbosses-export_40: -1451753447466653767
+      earthboundbosses-export_41: -3386613035692527727
+      earthboundbosses-export_42: 5945528689351807677
+      earthboundbosses-export_43: 699678925124791231
+      earthboundbosses-export_44: 4597014191021330449
+      earthboundbosses-export_45: -7424229459379037077
+      earthboundbosses-export_46: 1753394858530611554
+      earthboundbosses-export_47: 1929546292673100791
+      earthboundbosses-export_48: -6723343276562436933
+      earthboundbosses-export_49: 1809924629895951029
+      earthboundbosses-export_5: 117467868302705380
+      earthboundbosses-export_50: 7536063807215336291
+      earthboundbosses-export_51: 7088267730098578371
+      earthboundbosses-export_52: -6204591932259374147
+      earthboundbosses-export_53: 796215179278604090
+      earthboundbosses-export_54: -1403625897592719723
+      earthboundbosses-export_55: -9213158206760451632
+      earthboundbosses-export_56: 5386458561172566426
+      earthboundbosses-export_6: 7245502002839493610
+      earthboundbosses-export_7: -3383987394052647473
+      earthboundbosses-export_8: -8703406405202180459
+      earthboundbosses-export_9: 9127492355092528196
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

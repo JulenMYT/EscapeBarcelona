@@ -6,6 +6,7 @@ public class PuzzleConnectionManager
     private readonly Dictionary<Vector2Int, PuzzlePiece> pieces = new();
 
     private const float snapDistance = 0.3f;
+    private const float snapDistanceSqr = snapDistance * snapDistance;
 
     private static readonly Vector2Int[] directions =
     {
@@ -22,10 +23,10 @@ public class PuzzleConnectionManager
 
     public void CheckConnection(PuzzlePieceGroup group)
     {
-        foreach (PuzzlePiece piece in group.Pieces)
+        foreach (PuzzlePiece piece in group.BorderPieces)
         {
             if (CheckPieceConnections(piece))
-                break;
+                return;
         }
     }
 
@@ -53,12 +54,6 @@ public class PuzzleConnectionManager
 
     private bool CanConnect(PuzzlePiece a, PuzzlePiece b)
     {
-        Vector3 aLocalPosition =
-            a.transform.position;
-
-        Vector3 bLocalPosition =
-            b.transform.position;
-
         Vector2Int difference = b.GridPosition - a.GridPosition;
 
         Vector3 expectedOffset = new Vector3(
@@ -67,14 +62,12 @@ public class PuzzleConnectionManager
             0
         );
 
-        Vector3 currentOffset = bLocalPosition - aLocalPosition;
+        Vector3 currentOffset =
+            b.transform.position - a.transform.position;
 
-        float distance = Vector3.Distance(
-            currentOffset,
-            expectedOffset
-        );
+        Vector3 delta = currentOffset - expectedOffset;
 
-        return distance < snapDistance;
+        return delta.sqrMagnitude < snapDistanceSqr;
     }
 
     private void Merge(PuzzlePiece a, PuzzlePiece b)
@@ -87,6 +80,8 @@ public class PuzzleConnectionManager
         a.Group.transform.position += offset;
 
         a.Group.Merge(b.Group);
+
+        UpdateBorders(a.Group);
     }
 
     private Vector3 GetSnapOffset(PuzzlePiece a, PuzzlePiece b)
@@ -103,5 +98,10 @@ public class PuzzleConnectionManager
             a.transform.position - b.transform.position;
 
         return expectedPosition - currentOffset;
+    }
+
+    private void UpdateBorders(PuzzlePieceGroup group)
+    {
+        group.RefreshBorders(pieces, directions);
     }
 }
