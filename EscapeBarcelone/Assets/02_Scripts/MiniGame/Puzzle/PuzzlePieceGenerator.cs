@@ -41,6 +41,8 @@ public class PuzzlePieceGenerator
                 );
             }
         }
+
+        connectionManager.SetGroupCount(groups.Count);
     }
 
     private void CreatePiece(

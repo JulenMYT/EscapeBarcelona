@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class PuzzleConnectionManager
 {
@@ -16,9 +17,18 @@ public class PuzzleConnectionManager
         Vector2Int.right
     };
 
+    public event Action PuzzleCompleted;
+
+    private int groupCount;
+
     public void Register(PuzzlePiece piece)
     {
         pieces.Add(piece.GridPosition, piece);
+    }
+
+    public void SetGroupCount(int count)
+    {
+        groupCount = count;
     }
 
     public void CheckConnection(PuzzlePieceGroup group)
@@ -82,6 +92,11 @@ public class PuzzleConnectionManager
         a.Group.Merge(b.Group);
 
         UpdateBorders(a.Group);
+
+        groupCount--;
+
+        if (groupCount == 1)
+            PuzzleCompleted?.Invoke();
     }
 
     private Vector3 GetSnapOffset(PuzzlePiece a, PuzzlePiece b)

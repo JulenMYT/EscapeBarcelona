@@ -2,13 +2,9 @@ using UnityEngine;
 
 public class CutsceneInitiator : MonoBehaviour
 {
-    private CutsceneHandler cutsceneHandler;
-    private SceneLoader sceneLoader;
+    [SerializeField] protected bool playOnce = true;
 
-    [SerializeField] private bool playOnStart = true;
-    [SerializeField] private bool playOnSceneLoaded = false;
-    [SerializeField] private SceneName sceneName;
-    [SerializeField] private bool playOnce = true;
+    private CutsceneHandler cutsceneHandler;
 
     private bool played = false;
 
@@ -16,29 +12,10 @@ public class CutsceneInitiator : MonoBehaviour
     {
         cutsceneHandler = GetComponent<CutsceneHandler>();
 
-        if (playOnSceneLoaded)
-        {
-            sceneLoader = FindAnyObjectByType<SceneLoader>();
-            sceneLoader.OnSceneLoaded += OnSceneLoaded;
-        }
+        Initialize();
     }
 
-    private void Update()
-    {
-        if (playOnStart)
-        {
-            StartCutscene();
-            playOnStart = false;
-        }
-    }
-
-    private void OnSceneLoaded(SceneName loadedScene)
-    {
-        if (loadedScene == sceneName)
-        {
-            StartCutscene();
-        }
-    }
+    protected virtual void Initialize() { }
 
     public void StartCutscene()
     {
@@ -49,13 +26,5 @@ public class CutsceneInitiator : MonoBehaviour
         cutsceneHandler.Restart();
         cutsceneHandler.PlayNextElement();
         InteractionManager.SetBlocked(true);
-    }
-
-    private void OnDestroy()
-    {
-        if (sceneLoader != null)
-        {
-            sceneLoader.OnSceneLoaded -= OnSceneLoaded;
-        }
     }
 }

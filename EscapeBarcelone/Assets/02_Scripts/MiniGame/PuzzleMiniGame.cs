@@ -11,9 +11,12 @@ public class PuzzleMiniGame : MonoBehaviour
     [SerializeField] private BoxCollider2D centerHole;
     [SerializeField] private BoxCollider2D shuffleArea;
 
+    [SerializeField] private GameObject finalObject;
+
     private PuzzlePieceGenerator pieceGenerator;
     private PuzzleConnectionManager connectionManager = new();
     private PuzzleShuffleManager shuffleManager;
+    private bool puzzleCompleted = false;
 
     private void Awake()
     {
@@ -28,6 +31,8 @@ public class PuzzleMiniGame : MonoBehaviour
             centerHole.bounds
         );
 
+        connectionManager.PuzzleCompleted += OnPuzzleCompleted;
+
         shuffleArea.enabled = false;
         centerHole.enabled = false;
     }
@@ -35,8 +40,11 @@ public class PuzzleMiniGame : MonoBehaviour
     private void Start()
     {
         CreatePuzzle();
-        piecesParent.gameObject.SetActive(false);
-        StartMiniGame(); //testing
+    }
+
+    private void OnEnable()
+    {
+        RefreshVisualState();
     }
 
     public void CreatePuzzle()
@@ -60,5 +68,22 @@ public class PuzzleMiniGame : MonoBehaviour
     public void StartMiniGame()
     {
         piecesParent.gameObject.SetActive( true );
+    }
+
+    private void OnDestroy()
+    {
+        connectionManager.PuzzleCompleted -= OnPuzzleCompleted;
+    }
+
+    private void OnPuzzleCompleted()
+    {
+        puzzleCompleted = true;
+        RefreshVisualState();
+    }
+
+    private void RefreshVisualState()
+    {
+        piecesParent.gameObject.SetActive(!puzzleCompleted);
+        finalObject.SetActive(puzzleCompleted);
     }
 }
