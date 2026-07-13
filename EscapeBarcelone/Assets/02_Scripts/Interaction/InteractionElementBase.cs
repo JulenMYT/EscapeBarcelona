@@ -15,7 +15,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 {
     [Header("Interaction")]
     [SerializeField] private bool isInteractable = true;
-    [SerializeField] private bool canBeClosed = true;
+    [SerializeField] protected bool canBeClosed = true;
     [SerializeField] private Color highlightColor = Color.orange;
 
     [SerializeField] private InteractionType interactionType = InteractionType.None;
@@ -119,7 +119,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
             case InteractionType.Stretch:
                 if (spriteRenderer)
-                    spriteRenderer.transform.localScale *= 1.2f;
+                    transform.localScale *= 1.2f;
                 break;
         }
     }
@@ -140,7 +140,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
             case InteractionType.Stretch:
                 if (spriteRenderer)
-                    spriteRenderer.transform.localScale /= 1.2f;
+                    transform.localScale = Vector3.one;
                 break;
         }
 

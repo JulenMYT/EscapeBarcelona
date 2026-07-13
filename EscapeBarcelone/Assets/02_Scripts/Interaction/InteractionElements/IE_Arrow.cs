@@ -16,6 +16,8 @@ public class IE_Arrow : InteractionElementBase
     {
         base.Interact();
 
+        Exit();
+        
         sceneLoader.LoadScene(sceneName);
     }
 }   

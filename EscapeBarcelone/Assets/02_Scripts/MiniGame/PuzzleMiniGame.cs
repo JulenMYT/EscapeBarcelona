@@ -11,7 +11,7 @@ public class PuzzleMiniGame : MonoBehaviour
     [SerializeField] private BoxCollider2D centerHole;
     [SerializeField] private BoxCollider2D shuffleArea;
 
-    [SerializeField] private GameObject finalObject;
+    [SerializeField] private InteractionElementBase finalObject;
 
     private PuzzlePieceGenerator pieceGenerator;
     private PuzzleConnectionManager connectionManager = new();
@@ -84,6 +84,7 @@ public class PuzzleMiniGame : MonoBehaviour
     private void RefreshVisualState()
     {
         piecesParent.gameObject.SetActive(!puzzleCompleted);
-        finalObject.SetActive(puzzleCompleted);
+        if (puzzleCompleted)
+            finalObject.Open();
     }
 }
