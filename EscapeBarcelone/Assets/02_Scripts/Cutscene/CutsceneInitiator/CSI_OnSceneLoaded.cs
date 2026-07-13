@@ -1,32 +1,7 @@
-using UnityEngine;
-
-public class CSI_OnSceneLoaded : CutsceneInitiator
+public class CSI_OnSceneLoaded : CSI_SceneLoadedBase
 {
-    [SerializeField] private SceneName sceneName;
-    private SceneLoader sceneLoader;
-
-    private void OnSceneLoaded(SceneName loadedScene)
+    protected override bool CanPlay()
     {
-        if (loadedScene == sceneName)
-        {
-            StartCutscene();
-        }
-    }
-
-    protected override void Initialize()
-    {
-        base.Initialize();
-
-        sceneLoader = FindAnyObjectByType<SceneLoader>();
-        sceneLoader.OnSceneLoaded += OnSceneLoaded;
-        
-    }
-
-    private void OnDestroy()
-    {
-        if (sceneLoader != null)
-        {
-            sceneLoader.OnSceneLoaded -= OnSceneLoaded;
-        }
+        return true;
     }
 }

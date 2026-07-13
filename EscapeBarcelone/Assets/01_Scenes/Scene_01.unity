@@ -4548,6 +4548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601568254}
+  - component: {fileID: 601568258}
   - component: {fileID: 601568257}
   - component: {fileID: 601568256}
   - component: {fileID: 601568255}
@@ -4613,6 +4614,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
+--- !u!114 &601568258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601568253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3785b130a4f1dad4f9ef2d795a68cf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneInitiator
+  playOnce: 1
 --- !u!1 &636258937
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,7 +5360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &748511664
 Transform:
   m_ObjectHideFlags: 0
@@ -6313,6 +6327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860042381}
+  - component: {fileID: 860042385}
   - component: {fileID: 860042383}
   - component: {fileID: 860042382}
   - component: {fileID: 860042384}
@@ -6378,6 +6393,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Dialogue
   duration: 0
   dialogue: {fileID: 11400000, guid: 920cc8c7985c6d947a46b29f11e390d3, type: 2}
+--- !u!114 &860042385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860042380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3785b130a4f1dad4f9ef2d795a68cf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneInitiator
+  playOnce: 1
 --- !u!1 &867011956
 GameObject:
   m_ObjectHideFlags: 0
@@ -8307,7 +8335,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.007999999, y: 0.008000001, z: 0.008}
+  m_LocalScale: {x: 0.065, y: 0.065, z: 0.065}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1883155899}
@@ -9203,7 +9231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1272285228
 Transform:
   m_ObjectHideFlags: 0
@@ -10680,7 +10708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1624510246
 Transform:
   m_ObjectHideFlags: 0
@@ -11704,6 +11732,7 @@ GameObject:
   - component: {fileID: 1778470328}
   - component: {fileID: 1778470378}
   - component: {fileID: 1778470374}
+  - component: {fileID: 1778470379}
   - component: {fileID: 1778470373}
   - component: {fileID: 1778470375}
   - component: {fileID: 1778470333}
@@ -11726,7 +11755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1778470312
 Transform:
   m_ObjectHideFlags: 0
@@ -12032,11 +12061,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778470311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6957a5caa393af947b947bb7068dea60, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e4308ccf4538874b8d19b2fe351c43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSI_OnSceneLoaded
   playOnce: 1
   sceneName: 1
+--- !u!114 &1778470379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7314d232ceeff04d9ed3619db0ab283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_ToggleClosable
+  duration: 0
+  targetObjects:
+  - {fileID: 915126231}
+  - {fileID: 1272285229}
+  setClosable: 0
 --- !u!1 &1787281278
 GameObject:
   m_ObjectHideFlags: 0
@@ -12087,7 +12133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1844293528
 Transform:
   m_ObjectHideFlags: 0
@@ -12151,10 +12197,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844293527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6957a5caa393af947b947bb7068dea60, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e4308ccf4538874b8d19b2fe351c43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSI_OnSceneLoaded
-  playOnce: 1
+  playOnce: 0
   sceneName: 0
 --- !u!1 &1867459406
 GameObject:

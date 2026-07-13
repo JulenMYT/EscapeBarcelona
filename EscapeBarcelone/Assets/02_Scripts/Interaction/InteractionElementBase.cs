@@ -188,7 +188,13 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
+        if (InteractionManager.Blocked && !IgnoreInteractionBlock)
+            return;
+
         if (!IsInteractable)
+            return;
+
+        if (FocusRoot != null && !transform.IsChildOf(FocusRoot))
             return;
 
         Exit();

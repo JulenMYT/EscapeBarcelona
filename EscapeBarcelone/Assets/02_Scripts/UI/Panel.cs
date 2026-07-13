@@ -5,7 +5,7 @@ public abstract class Panel : MonoBehaviour
 {
     protected CanvasGroup canvasGroup;
 
-    private void Start()
+    private void Awake()
     {
         Initialize();
     }
