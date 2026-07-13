@@ -78,6 +78,7 @@ public class PuzzleMiniGame : MonoBehaviour
     private void OnPuzzleCompleted()
     {
         puzzleCompleted = true;
+        StoryManager.SetFlag(StoryFlag.hasCompletedJigsawPuzzle);
         RefreshVisualState();
     }
 

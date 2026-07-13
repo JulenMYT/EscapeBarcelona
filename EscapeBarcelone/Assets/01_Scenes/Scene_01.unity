@@ -1016,6 +1016,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85931837}
   m_CullTransparentMesh: 1
+--- !u!1 &95599777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95599778}
+  - component: {fileID: 95599780}
+  - component: {fileID: 95599779}
+  - component: {fileID: 95599781}
+  m_Layer: 0
+  m_Name: CS_Quit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95599778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95599777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1246337836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95599779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95599777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ccbf0d527c52b41a3b8d761837df57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSI_PlayOnFlag
+  playOnce: 1
+  sceneName: 0
+  flagNeeded: 03000000
+  flagsForbidden: 
+--- !u!114 &95599780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95599777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
+--- !u!114 &95599781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95599777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718c422eb1e06b94786d4ff9adf274b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_Dialogue
+  duration: 0
+  dialogue: {fileID: 11400000, guid: 0d9665bd37b2693449ff89991a719c04, type: 2}
 --- !u!1 &106164507
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,14 +4605,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601568254}
-  - component: {fileID: 601568258}
-  - component: {fileID: 601568257}
   - component: {fileID: 601568256}
+  - component: {fileID: 601568257}
+  - component: {fileID: 601568261}
   - component: {fileID: 601568259}
   - component: {fileID: 601568255}
   - component: {fileID: 601568260}
   m_Layer: 0
-  m_Name: CS_Cutscene_06
+  m_Name: CS_FlipJigsawPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4597,19 +4673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
---- !u!114 &601568258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601568253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3785b130a4f1dad4f9ef2d795a68cf97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutsceneInitiator
-  playOnce: 1
 --- !u!114 &601568259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4636,6 +4699,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
   duration: 0.5
+--- !u!114 &601568261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601568253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa3a4761fb97b24da22ba6e00e0627f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_AddFlag
+  duration: 0
+  _storyFlag: 3
 --- !u!1 &636258937
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,8 +5442,9 @@ GameObject:
   - component: {fileID: 748511671}
   - component: {fileID: 748511669}
   - component: {fileID: 748511672}
+  - component: {fileID: 748511673}
   m_Layer: 0
-  m_Name: CS_Cutscene_01
+  m_Name: CS_IntroOnett
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5475,6 +5553,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CSI_PlayOnStart
   playOnce: 1
+--- !u!114 &748511673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748511663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa3a4761fb97b24da22ba6e00e0627f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_AddFlag
+  duration: 0
+  _storyFlag: 0
 --- !u!1 &758856113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6370,7 +6462,7 @@ GameObject:
   - component: {fileID: 860042384}
   - component: {fileID: 860042386}
   m_Layer: 0
-  m_Name: CS_Cutscene_05
+  m_Name: CS_StartJigsawPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9262,6 +9354,7 @@ Transform:
   - {fileID: 1844293528}
   - {fileID: 860042381}
   - {fileID: 601568254}
+  - {fileID: 95599778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272285227
@@ -10781,16 +10874,17 @@ GameObject:
   - component: {fileID: 1624510246}
   - component: {fileID: 1624510248}
   - component: {fileID: 1624510247}
+  - component: {fileID: 1624510255}
   - component: {fileID: 1624510249}
   - component: {fileID: 1624510252}
   - component: {fileID: 1624510254}
   m_Layer: 0
-  m_Name: CS_Cutscene_03
+  m_Name: CS_MapPuzzleCompleted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1624510246
 Transform:
   m_ObjectHideFlags: 0
@@ -10879,6 +10973,20 @@ MonoBehaviour:
   - {fileID: 915126231}
   - {fileID: 1272285229}
   setClosable: 1
+--- !u!114 &1624510255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624510245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa3a4761fb97b24da22ba6e00e0627f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_AddFlag
+  duration: 0
+  _storyFlag: 2
 --- !u!1 &1662265014
 GameObject:
   m_ObjectHideFlags: 0
@@ -11811,8 +11919,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778470312}
-  - component: {fileID: 1778470328}
   - component: {fileID: 1778470378}
+  - component: {fileID: 1778470328}
   - component: {fileID: 1778470374}
   - component: {fileID: 1778470379}
   - component: {fileID: 1778470373}
@@ -11831,13 +11939,14 @@ GameObject:
   - component: {fileID: 1778470360}
   - component: {fileID: 1778470358}
   - component: {fileID: 1778470361}
+  - component: {fileID: 1778470380}
   m_Layer: 0
-  m_Name: CS_Cutscene_02
+  m_Name: CS_IntroTwoson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1778470312
 Transform:
   m_ObjectHideFlags: 0
@@ -12165,6 +12274,20 @@ MonoBehaviour:
   - {fileID: 915126231}
   - {fileID: 1272285229}
   setClosable: 0
+--- !u!114 &1778470380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778470311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa3a4761fb97b24da22ba6e00e0627f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_AddFlag
+  duration: 0
+  _storyFlag: 1
 --- !u!1 &1787281278
 GameObject:
   m_ObjectHideFlags: 0
@@ -12205,12 +12328,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844293528}
-  - component: {fileID: 1844293533}
+  - component: {fileID: 1844293534}
   - component: {fileID: 1844293529}
   - component: {fileID: 1844293532}
   - component: {fileID: 1844293531}
   m_Layer: 0
-  m_Name: CS_Cutscene_04
+  m_Name: CS_NeedMoreInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12270,7 +12393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_Dialogue
   duration: 0
   dialogue: {fileID: 11400000, guid: dbffdc5be6d8b0e4c8a3f0a4283405e8, type: 2}
---- !u!114 &1844293533
+--- !u!114 &1844293534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12279,11 +12402,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844293527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4308ccf4538874b8d19b2fe351c43f, type: 3}
+  m_Script: {fileID: 11500000, guid: 72ccbf0d527c52b41a3b8d761837df57, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CSI_OnSceneLoaded
+  m_EditorClassIdentifier: Assembly-CSharp::CSI_PlayOnFlag
   playOnce: 0
   sceneName: 0
+  flagNeeded: 00000000
+  flagsForbidden: 03000000
 --- !u!1 &1867459406
 GameObject:
   m_ObjectHideFlags: 0
