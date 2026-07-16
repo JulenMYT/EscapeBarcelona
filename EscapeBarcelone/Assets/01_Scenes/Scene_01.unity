@@ -9620,6 +9620,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150128436}
   m_CullTransparentMesh: 1
+--- !u!1 &1169080726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1169080727}
+  - component: {fileID: 1169080730}
+  - component: {fileID: 1169080729}
+  - component: {fileID: 1169080728}
+  m_Layer: 0
+  m_Name: CS_OpenChest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1169080727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169080726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1246337836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1169080728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169080726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718c422eb1e06b94786d4ff9adf274b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_Dialogue
+  duration: 0
+  dialogue: {fileID: 11400000, guid: 5f1d4db1e6b18c742b06e01eaf386325, type: 2}
+--- !u!114 &1169080729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169080726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3785b130a4f1dad4f9ef2d795a68cf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneInitiator
+  playOnce: 1
+--- !u!114 &1169080730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169080726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60d9d422389e464080d26d52109f2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneHandler
 --- !u!1 &1181490521
 GameObject:
   m_ObjectHideFlags: 0
@@ -9954,6 +10027,7 @@ Transform:
   - {fileID: 860042381}
   - {fileID: 601568254}
   - {fileID: 95599778}
+  - {fileID: 1169080727}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272285227
@@ -12475,6 +12549,7 @@ MonoBehaviour:
   password: FOURSIDE
   closedChest: {fileID: 1085310273}
   openChest: {fileID: 738599581}
+  cutsceneInitiator: {fileID: 1169080729}
 --- !u!1 &1723580039
 GameObject:
   m_ObjectHideFlags: 0
@@ -13333,7 +13408,7 @@ MonoBehaviour:
   playOnce: 0
   sceneName: 0
   flagNeeded: 00000000
-  flagsForbidden: 03000000
+  flagsForbidden: 04000000
 --- !u!1 &1867459406
 GameObject:
   m_ObjectHideFlags: 0

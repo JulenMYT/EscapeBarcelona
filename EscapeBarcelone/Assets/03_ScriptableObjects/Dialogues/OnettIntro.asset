@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8caee6d1f22bc10459f2f5d37fc24dcd, type: 3}
-  m_Name: Dialogue_07
+  m_Name: OnettIntro
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   dialogueLines:
   - speakerName: Julen
-    lineText: "Le billet est dat\xE9 \xE0 aujourd\u2019hui mais je vais devoir me
-      d\xE9p\xEAcher pour ne pas le rater ! Vite, \xE0 l\u2019a\xE9roport !"
+    lineText: Je suis Julen ...
+    voiceClip: {fileID: 0}
+  - speakerName: Julen
+    lineText: "Et je suis un weebos de premi\xE8re ..."
+    voiceClip: {fileID: 0}
+  - speakerName: Julen
+    lineText: "Allons chez mon ami myst\xE9rieux Mathis Rogeot"
     voiceClip: {fileID: 0}

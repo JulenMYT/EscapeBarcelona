@@ -10,6 +10,8 @@ public class PasswordMiniGame : MonoBehaviour
     [SerializeField] private InteractionElementBase closedChest;
     [SerializeField] private InteractionElementBase openChest;
 
+    [SerializeField] private CutsceneInitiator cutsceneInitiator;
+
     private GameplayPanel gameplayPanel;
 
     private bool passwordCompleted = false;
@@ -71,7 +73,7 @@ public class PasswordMiniGame : MonoBehaviour
 
         gameplayPanel.SetValidateButtonVisible(false);
         gameplayPanel.OnValidateButtonClicked -= CheckInput;
-
+        cutsceneInitiator.StartCutscene();
         RefreshVisualState();
     }
 
