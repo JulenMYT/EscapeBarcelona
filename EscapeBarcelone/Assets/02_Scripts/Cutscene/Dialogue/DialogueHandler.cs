@@ -11,7 +11,7 @@ public class DialogueHandler : MonoBehaviour
 
     private void Start()
     {
-        dialogueUI = FindAnyObjectByType<DialogueUI>();
+        dialogueUI = UIManager.Instance.dialogueUI;
 
         if (!dialogueUI)
         {
@@ -39,7 +39,7 @@ public class DialogueHandler : MonoBehaviour
     {
         if (index >= 0 && index < currentDialogue.dialogueLines.Length)
         {
-            dialogueUI.DisplayLine(currentDialogue.dialogueLines[index]);
+            dialogueUI.DisplayLine(currentDialogue.dialogueLines[index].speakerName, currentDialogue.dialogueLines[index].lineText);
         }
 
         if (index >= currentDialogue.dialogueLines.Length)

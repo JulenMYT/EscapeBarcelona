@@ -13,7 +13,7 @@ public class CSE_Highlight : CutsceneElementBase
     {
         base.Execute();
 
-        FocusPanelTutorial focusPanel = cutsceneHandler.focusPanel;
+        FocusPanelTutorial focusPanel = UIManager.Instance.focusPanelTutorial;
 
         focusPanel.Show();
         focusPanel.SetMaterialOffset(offset);

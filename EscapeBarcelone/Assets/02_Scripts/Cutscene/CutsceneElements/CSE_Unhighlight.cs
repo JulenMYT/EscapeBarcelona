@@ -6,8 +6,10 @@ public class CSE_Unhighlight : CutsceneElementBase
     {
         base.Execute();
 
-        cutsceneHandler.focusPanel.Unhighlight();
-        cutsceneHandler.focusPanel.Hide();
+        FocusPanelTutorial panel = UIManager.Instance.focusPanelTutorial;
+
+        panel.Unhighlight();
+        panel.Hide();
 
         cutsceneHandler.PlayNextElement();
     }

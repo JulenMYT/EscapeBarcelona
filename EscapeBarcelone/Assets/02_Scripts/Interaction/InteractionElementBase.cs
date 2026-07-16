@@ -78,7 +78,7 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     protected virtual void Start()
     {
         if (interactionStack == null)
-            InitializeInteractionStack(FindAnyObjectByType<GameplayPanel>());
+            interactionStack = new InteractionStack();
 
         Initialize();
     }
@@ -86,11 +86,6 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
     public virtual void Initialize()
     {
 
-    }
-
-    public static void InitializeInteractionStack(GameplayPanel panel)
-    {
-        interactionStack = new InteractionStack(panel);
     }
 
     public void SetIgnoreInteractionBlock(bool value)

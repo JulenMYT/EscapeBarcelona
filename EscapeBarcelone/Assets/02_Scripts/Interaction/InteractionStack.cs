@@ -6,9 +6,9 @@ public class InteractionStack
     private Stack<InteractionElementBase> interactionStack = new();
     private GameplayPanel gameplayPanel;
 
-    public InteractionStack(GameplayPanel gameplayPanel)
+    public InteractionStack()
     {
-        this.gameplayPanel = gameplayPanel;
+        gameplayPanel = UIManager.Instance.gameplayPanel;
         gameplayPanel.OnCloseButtonClicked += CloseCurrentInteraction;
     }
 

@@ -28,7 +28,7 @@ public class MapMiniGame : MonoBehaviour
 
     private void Start()
     {
-        gameplayPanel = FindAnyObjectByType<GameplayPanel>();
+        gameplayPanel = UIManager.Instance.gameplayPanel;
     }
 
     public void OpenMapMiniGame()
@@ -38,7 +38,6 @@ public class MapMiniGame : MonoBehaviour
             picture.SetInteractable(true);
         }
 
-        gameplayPanel.SetValidateButtonVisible(true);
         gameplayPanel.SetValidateButtonVisible(true);
 
         gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;

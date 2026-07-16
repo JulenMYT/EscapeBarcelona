@@ -11,7 +11,7 @@ public class TutorialHandler : MonoBehaviour
 
     private void Start()
     {
-        tutorialUI = FindAnyObjectByType<TutorialUI>();
+        tutorialUI = UIManager.Instance.tutorialUI;
 
         if (!tutorialUI)
         {

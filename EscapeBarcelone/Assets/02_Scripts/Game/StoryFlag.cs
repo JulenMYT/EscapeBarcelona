@@ -3,5 +3,6 @@ public enum StoryFlag
     hasSeenOnettIntroCutscene,
     hasSeenTwosonIntroCutscene,
     hasCompletedMapPuzzle,
-    hasCompletedJigsawPuzzle
+    hasCompletedJigsawPuzzle,
+    hasOpenedPasswordChest
 }

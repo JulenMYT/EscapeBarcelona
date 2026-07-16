@@ -1,3 +1,4 @@
+using System.Security;
 using TMPro;
 using UnityEngine;
 
@@ -12,10 +13,10 @@ public class DialogueUI : Panel
         Hide();
     }
 
-    public void DisplayLine(Dialogue.DialogueLine line)
+    public void DisplayLine(string speakerName, string lineText)
     {
-        speakerName.text = line.speakerName;
-        dialogueText.text = line.lineText;
+        this.speakerName.text = speakerName;
+        dialogueText.text = lineText;
     }
 
     public override void Show()

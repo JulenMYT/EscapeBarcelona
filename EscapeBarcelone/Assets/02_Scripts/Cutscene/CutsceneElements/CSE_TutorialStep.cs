@@ -28,7 +28,7 @@ public class CSE_TutorialStep : CutsceneElementBase
     {
         base.Execute();
 
-        FocusPanelTutorial focusPanel = cutsceneHandler.focusPanel;
+        FocusPanelTutorial focusPanel = UIManager.Instance.focusPanelTutorial;
 
         focusPanel.Show();
         focusPanel.SetMaterialOffset(offset);
@@ -68,15 +68,17 @@ public class CSE_TutorialStep : CutsceneElementBase
         interactionElement.OnInteract -= OnInteraction;
         interactionElement.SetIgnoreInteractionBlock(false);
 
-        cutsceneHandler.focusPanel.Unhighlight();
-        cutsceneHandler.focusPanel.Hide();
+        FocusPanelTutorial focusPanel = UIManager.Instance.focusPanelTutorial;
+
+        focusPanel.Unhighlight();
+        focusPanel.Hide();
 
         if (target)
         {
             target.SetActive(false);
         }
 
-        cutsceneHandler.tutorialUI.Hide();
+        UIManager.Instance.tutorialUI.Hide();
 
         cutsceneHandler.PlayNextElement();
     }
