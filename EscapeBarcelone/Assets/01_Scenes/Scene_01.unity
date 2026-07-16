@@ -3645,7 +3645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleMiniGame
   sprite: {fileID: 21300000, guid: 388a75a57ab1fca46aed9c946779b4a4, type: 3}
-  size: 3
+  size: 20
   piecePrefab: {fileID: 6525664140300077611, guid: 2fe6b4bf8b5357e43aa51dd69b475af5, type: 3}
   piecesParent: {fileID: 1787281279}
   centerHole: {fileID: 1723580041}

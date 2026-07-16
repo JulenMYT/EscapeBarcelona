@@ -8,7 +8,7 @@ public class LetterWheel : MonoBehaviour
     [SerializeField] private Button upButton;
     [SerializeField] private Button downButton;
 
-    private const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private const string alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
     private int index;
 
