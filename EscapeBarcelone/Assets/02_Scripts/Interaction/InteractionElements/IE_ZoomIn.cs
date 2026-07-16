@@ -39,7 +39,7 @@ public class IE_ZoomIn : InteractionElementBase
             gameObject.SetActive(false);
     }
 
-    private void HandleClose()
+    protected virtual void HandleClose()
     {
         PopFocus();
 

@@ -16,7 +16,10 @@ public class PuzzleMiniGame : MonoBehaviour
     private PuzzlePieceGenerator pieceGenerator;
     private PuzzleConnectionManager connectionManager = new();
     private PuzzleShuffleManager shuffleManager;
+    private PuzzleHidePiece hidePiece = new();
     private bool puzzleCompleted = false;
+
+    [SerializeField] private int pieceMissing = 0;
 
     private void Awake()
     {
@@ -63,6 +66,8 @@ public class PuzzleMiniGame : MonoBehaviour
         shuffleManager.Shuffle(
             pieceGenerator.Groups
         );
+
+        hidePiece.HidePieces(pieceGenerator.Groups, pieceMissing);
     }
 
     public void StartMiniGame()
@@ -88,5 +93,10 @@ public class PuzzleMiniGame : MonoBehaviour
         piecesParent.gameObject.SetActive(!puzzleCompleted);
         if (puzzleCompleted)
             finalObject.Open();
+    }
+
+    public void RevealPiece()
+    {
+        hidePiece.RevealHiddenPiece();
     }
 }

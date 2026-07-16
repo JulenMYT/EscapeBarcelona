@@ -9,7 +9,7 @@ public class PuzzlePieceGenerator
 
     private List<PuzzlePieceGroup> groups = new();
 
-    public IReadOnlyList<PuzzlePieceGroup> Groups => groups;
+    public List<PuzzlePieceGroup> Groups => groups;
 
     public PuzzlePieceGenerator(
         PuzzlePiece piecePrefab,
