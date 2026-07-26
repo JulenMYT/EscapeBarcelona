@@ -76,7 +76,6 @@ public class MapMiniGame : MonoBehaviour
             foreach (var picture in pictures)
             {
                 picture.Close();
-                picture.SetInteractable(false);
             }
         }
         else
