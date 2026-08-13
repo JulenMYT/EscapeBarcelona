@@ -1,16 +1,16 @@
-using UnityEngine;
+//using UnityEngine;
 
-public class CSE_Unhighlight : CutsceneElementBase
-{
-    public override void Execute()
-    {
-        base.Execute();
+//public class CSE_Unhighlight : CutsceneElementBase
+//{
+//    public override void Execute()
+//    {
+//        base.Execute();
 
-        FocusPanelTutorial panel = UIManager.Instance.focusPanelTutorial;
+//        FocusPanelTutorial panel = UIManager.Instance.focusPanelTutorial;
 
-        panel.Unhighlight();
-        panel.Hide();
+//        panel.Unhighlight();
+//        panel.Hide();
 
-        cutsceneHandler.PlayNextElement();
-    }
-}
+//        cutsceneHandler.PlayNextElement();
+//    }
+//}

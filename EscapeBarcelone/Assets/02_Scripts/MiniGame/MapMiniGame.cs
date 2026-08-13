@@ -28,7 +28,6 @@ public class MapMiniGame : MonoBehaviour
 
     private void Start()
     {
-        gameplayPanel = UIManager.Instance.gameplayPanel;
     }
 
     public void OpenMapMiniGame()

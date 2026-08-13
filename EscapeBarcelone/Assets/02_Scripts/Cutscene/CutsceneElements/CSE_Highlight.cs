@@ -1,30 +1,30 @@
-using System.Linq;
-using UnityEngine;
+//using System.Linq;
+//using UnityEngine;
 
-public class CSE_Highlight : CutsceneElementBase
-{
-    [SerializeField] private GameObject[] objectsToHighlight;
+//public class CSE_Highlight : CutsceneElementBase
+//{
+//    [SerializeField] private GameObject[] objectsToHighlight;
 
-    [Header("Focus")]
-    [SerializeField] private Vector2 size;
-    [SerializeField] private Vector2 offset;
+//    [Header("Focus")]
+//    [SerializeField] private Vector2 size;
+//    [SerializeField] private Vector2 offset;
 
-    public override void Execute()
-    {
-        base.Execute();
+//    public override void Execute()
+//    {
+//        base.Execute();
 
-        FocusPanelTutorial focusPanel = UIManager.Instance.focusPanelTutorial;
+//        FocusPanelTutorial focusPanel = UIManager.Instance.focusPanelTutorial;
 
-        focusPanel.Show();
-        focusPanel.SetMaterialOffset(offset);
-        focusPanel.SetMaterialSize(size);
+//        focusPanel.Show();
+//        focusPanel.SetMaterialOffset(offset);
+//        focusPanel.SetMaterialSize(size);
 
-        SpriteRenderer[] renderers = objectsToHighlight
-            .SelectMany(x => x.GetComponentsInChildren<SpriteRenderer>())
-            .ToArray();
+//        SpriteRenderer[] renderers = objectsToHighlight
+//            .SelectMany(x => x.GetComponentsInChildren<SpriteRenderer>())
+//            .ToArray();
 
-        focusPanel.Highlight(renderers);
+//        focusPanel.Highlight(renderers);
 
-        cutsceneHandler.PlayNextElement();
-    }
-}
+//        cutsceneHandler.PlayNextElement();
+//    }
+//}

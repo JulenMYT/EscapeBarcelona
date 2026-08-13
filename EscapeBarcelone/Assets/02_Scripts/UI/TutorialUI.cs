@@ -5,15 +5,17 @@ public class TutorialUI : Panel
 {
     [SerializeField] private TMP_Text tutorialText;
 
-    protected override void Initialize()
-    {
-        base.Initialize();
-        Hide();
-    }
-
     public void DisplayLine(string line)
     {
         tutorialText.text = line;
+    }
+
+    public void SetTextPosition(float position)
+    {
+        tutorialText.rectTransform.anchoredPosition = new Vector2(
+            tutorialText.rectTransform.anchoredPosition.x,
+            position
+        );
     }
 
     public override void Show()

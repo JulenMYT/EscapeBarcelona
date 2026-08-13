@@ -12,10 +12,8 @@ public class GameplayPanel : Panel
     public event Action OnValidateButtonClicked;
     public event Action OnToggleButtonClicked;
 
-    protected override void Initialize()
+    private void Awake()
     {
-        base.Initialize();
-
         closeButton.onClick.AddListener(() => OnCloseButtonClicked?.Invoke());
         validateButton.onClick.AddListener(() => OnValidateButtonClicked?.Invoke());
         toggleButton.onClick.AddListener(() => OnToggleButtonClicked?.Invoke());

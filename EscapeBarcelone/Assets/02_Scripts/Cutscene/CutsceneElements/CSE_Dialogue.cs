@@ -8,12 +8,12 @@ public class CSE_Dialogue : CutsceneElementBase
     public override void Execute()
     {
         cutsceneHandler.dialogueHandler.StartDialogue(dialogue);
-        cutsceneHandler.dialogueHandler.OnDialogueComplete += OnDialogueComplete;
+        cutsceneHandler.dialogueHandler.OnSequenceComplete += OnDialogueComplete;
     }
 
     private void OnDialogueComplete()
     {
-        cutsceneHandler.dialogueHandler.OnDialogueComplete -= OnDialogueComplete;
+        cutsceneHandler.dialogueHandler.OnSequenceComplete -= OnDialogueComplete;
         cutsceneHandler.PlayNextElement();
     }
 }

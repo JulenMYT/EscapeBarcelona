@@ -11,7 +11,6 @@ public class IE_ZoomIn : InteractionElementBase
 
     public override void Initialize()
     {
-        focusPanel = UIManager.Instance.focusPanelGameplay;
     }
 
     protected virtual void BeforeOpenTarget()

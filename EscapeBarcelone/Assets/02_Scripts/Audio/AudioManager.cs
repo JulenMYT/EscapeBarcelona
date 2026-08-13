@@ -1,69 +1,80 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager _instance;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private int poolSize = 10;
 
-    public static AudioManager Instance
-    {
-        get
-        {
-            if (!_instance)
-            {
-                _instance = new GameObject("AudioManager").AddComponent<AudioManager>();
-                DontDestroyOnLoad(_instance.gameObject);
-            }
-
-            return _instance;
-        }
-    }
-
-    public MusicManager Music { get; private set; }
-    public SFXManager SFX { get; private set; }
-
-    private AudioMixer audioMixer;
-
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void Initialize()
-    {
-        _ = Instance;
-    }
+    private List<AudioSource> sfxPool;
+    private Coroutine musicRoutine;
 
     private void Awake()
     {
-        audioMixer = Resources.Load<AudioMixer>("MainMixer");
+        ServiceLocator.Register<AudioManager>(this);
 
-        AudioMixerGroup musicGroup = audioMixer.FindMatchingGroups("Music")[0];
-
-        AudioMixerGroup sfxDefaultGroup = audioMixer.FindMatchingGroups("SFX/Default")[0];
-        AudioMixerGroup sfxRadioGroup = audioMixer.FindMatchingGroups("SFX/Radio")[0];
-
-        Music = new MusicManager(transform, musicGroup);
-        SFX = new SFXManager(transform, sfxDefaultGroup, sfxRadioGroup, 10);
+        sfxPool = new List<AudioSource>();
+        for (int i = 0; i < poolSize; i++)
+        {
+            sfxPool.Add(gameObject.AddComponent<AudioSource>());
+        }
     }
 
-    private const string MASTER_VOLUME = "MasterVolume";
-    private const string MUSIC_VOLUME = "MusicVolume";
-    private const string SFX_VOLUME = "SFXVolume";
-
-    public void SetMasterVolume(float volume)
+    public void PlaySFX(AudioData data)
     {
-        audioMixer.SetFloat(MASTER_VOLUME, ConvertVolume(volume));
+        for (int i = 0; i < poolSize; i++)
+        {
+            if (!sfxPool[i].isPlaying)
+            {
+                sfxPool[i].PlayOneShot(data.soundClip, data.volume);
+                return;
+            }
+        }
     }
 
-    public void SetMusicVolume(float volume)
+    public void PlayMusic(AudioData data, float fadeTime = 0.5f)
     {
-        audioMixer.SetFloat(MUSIC_VOLUME, ConvertVolume(volume));
+        if (musicSource.clip == data.soundClip)
+            return;
+
+        if (musicRoutine != null)
+            StopCoroutine(musicRoutine);
+
+        musicRoutine = StartCoroutine(PlayMusicRoutine(data.soundClip, data.volume, fadeTime));
     }
 
-    public void SetSFXVolume(float volume)
+    private IEnumerator PlayMusicRoutine(AudioClip clip, float volume, float fadeTime)
     {
-        audioMixer.SetFloat(SFX_VOLUME, ConvertVolume(volume));
+        yield return Fade(0, fadeTime);
+
+        musicSource.clip = clip;
+        musicSource.volume = volume;
+        musicSource.Play();
+
+        yield return Fade(volume, fadeTime);
     }
 
-    private float ConvertVolume(float volume)
+    private IEnumerator Fade(float target, float duration)
     {
-        return Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20f;
+        float start = musicSource.volume;
+        float time = 0;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(start, target, time / duration);
+            yield return null;
+        }
+
+        musicSource.volume = target;
     }
+}
+
+[System.Serializable]
+public class AudioData
+{
+    public AudioClip soundClip;
+    [Range(0, 1)] public float volume = 0.5f;
+    public bool loop = false;
 }

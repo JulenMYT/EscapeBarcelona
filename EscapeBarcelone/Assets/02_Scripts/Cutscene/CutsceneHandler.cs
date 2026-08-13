@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CutsceneHandler : MonoBehaviour
@@ -6,25 +7,19 @@ public class CutsceneHandler : MonoBehaviour
     public DialogueHandler dialogueHandler { get; private set; }
     public TutorialHandler tutorialHandler { get; private set; }
 
-    private static DialogueHandler cachedDialogueHandler;
-    private static TutorialHandler cachedTutorialHandler;
-
     private CutsceneElementBase[] cutsceneElements;
     private int index = -1;
 
-    private void Start()
+    private void Awake()
     {
         cam = Camera.main;
         cutsceneElements = GetComponentsInChildren<CutsceneElementBase>();
+    }
 
-        if (cachedDialogueHandler == null)
-            cachedDialogueHandler = FindAnyObjectByType<DialogueHandler>();
-
-        if (cachedTutorialHandler == null)
-            cachedTutorialHandler = FindAnyObjectByType<TutorialHandler>();
-
-        dialogueHandler = cachedDialogueHandler;
-        tutorialHandler = cachedTutorialHandler;
+    private void Start()
+    { 
+        dialogueHandler = ServiceLocator.Get<DialogueHandler>();
+        tutorialHandler = ServiceLocator.Get<TutorialHandler>();
     }
 
     public void Restart()
@@ -40,7 +35,7 @@ public class CutsceneHandler : MonoBehaviour
         }
         else if (index >= cutsceneElements.Length)
         {
-            InteractionManager.SetBlocked(false);
+            ServiceLocator.Get<InteractionManager>().Unlock();
         }
     }
 

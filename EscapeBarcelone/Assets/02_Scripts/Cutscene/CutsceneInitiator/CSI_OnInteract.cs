@@ -13,7 +13,7 @@ public class CSI_OnInteract : CutsceneInitiator
 
     private void OnInteract()
     {
-        if (playOnce)
+        if (true)
         {
             interaction.OnInteract -= OnInteract;
         }

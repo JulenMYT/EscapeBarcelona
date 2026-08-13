@@ -11,15 +11,6 @@ public class FocusPanelTutorial : Panel
 
     private const int HighlightOffset = 50;
 
-    protected override void Initialize()
-    {
-        base.Initialize();
-
-        Hide();
-        darkImage = GetComponentInChildren<Image>();
-        darkImageMaterial = darkImage.material;
-    }
-
     public void SetMaterialOffset(Vector2 offset)
     {
         darkImageMaterial.SetVector("_Offset", offset);

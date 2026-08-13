@@ -9,12 +9,6 @@ public class FadePanel : Panel
 
     private Coroutine fadeCoroutine;
 
-    protected override void Initialize()
-    {
-        base.Initialize();
-        Hide();
-    }
-
     public void FadeIn(float duration)
     {
         if (fadeCoroutine != null)

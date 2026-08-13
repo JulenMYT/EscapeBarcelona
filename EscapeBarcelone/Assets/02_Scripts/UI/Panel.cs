@@ -3,17 +3,7 @@ using UnityEngine;
 
 public abstract class Panel : MonoBehaviour
 {
-    protected CanvasGroup canvasGroup;
-
-    private void Awake()
-    {
-        Initialize();
-    }
-
-    protected virtual void Initialize()
-    {
-        canvasGroup = GetComponent<CanvasGroup>();
-    }
+    public CanvasGroup canvasGroup;
 
     public virtual void Show()
     {

@@ -34,7 +34,6 @@ public class PasswordMiniGame : MonoBehaviour
 
     private void OnEnable()
     {
-        gameplayPanel = UIManager.Instance.gameplayPanel;
 
         RefreshVisualState();
 

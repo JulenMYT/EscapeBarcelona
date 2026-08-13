@@ -1,82 +1,23 @@
 using UnityEngine;
 
-public class IE_Radio : InteractionElementBase
+public class IE_Radio : MonoBehaviour
 {
-    [SerializeField] private AudioClip audioClip;
-    [SerializeField] private SceneName sceneName;
+    [SerializeField] private MusicProxy sound;
 
-    private AudioSource audioSource;
     private bool activated;
 
-    private static SceneLoader sceneLoader;
-
-    public override void Initialize()
+    private void Start()
     {
-        base.Initialize();
-
-        if (sceneLoader == null)
-            sceneLoader = FindAnyObjectByType<SceneLoader>();
-
-        sceneLoader.OnSceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(SceneName loadedScene)
-    {
-        if (loadedScene == sceneName)
-        {
-            if (activated)
-                Activate();
-        }
-        else
-        {
-            if (activated)
-                CloseAudioSource();
-        }
-    }
-
-    private void Activate() 
-    {
-        if (audioSource != null)
-            return;
-
-        activated = true;
-        audioSource = AudioManager.Instance.SFX.Play(audioClip, loop: true, type: AudioChannel.Radio);
-    }
-
-    private void Deactivate()
-    {
-        if (!activated)
-            return;
-
         activated = false;
-
-        CloseAudioSource();
     }
 
-    public override void Interact()
+    public void ToggleRadio()
     {
+        activated = !activated;
+
         if (activated)
-        {
-            Deactivate();
-        }
+            sound.PlayMusic();
         else
-        {
-            Activate();
-        }
-    }
-
-    private void CloseAudioSource()
-    {
-        if (audioSource != null)
-        {
-            audioSource.Stop();
-            audioSource = null;
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (sceneLoader != null)
-            sceneLoader.OnSceneLoaded -= OnSceneLoaded;
+            sound.StopMusic();
     }
 }

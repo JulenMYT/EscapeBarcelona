@@ -7,12 +7,6 @@ public class DialogueUI : Panel
     [SerializeField] private TMP_Text speakerName;
     [SerializeField] private TMP_Text dialogueText;
 
-    protected override void Initialize()
-    {
-        base.Initialize();
-        Hide();
-    }
-
     public void DisplayLine(string speakerName, string lineText)
     {
         this.speakerName.text = speakerName;
