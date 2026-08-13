@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class CutsceneHandler : MonoBehaviour
     }
 
     private void Start()
-    { 
+    {
         dialogueHandler = ServiceLocator.Get<DialogueHandler>();
         tutorialHandler = ServiceLocator.Get<TutorialHandler>();
     }
@@ -35,8 +36,15 @@ public class CutsceneHandler : MonoBehaviour
         }
         else if (index >= cutsceneElements.Length)
         {
-            ServiceLocator.Get<InteractionManager>().Unlock();
+            StartCoroutine(UnlockNextFrame());
         }
+    }
+
+    private IEnumerator UnlockNextFrame()
+    {
+        yield return null;
+
+        ServiceLocator.Get<InteractionManager>().Unlock();
     }
 
     public void PlayNextElement()

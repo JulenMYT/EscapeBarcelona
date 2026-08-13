@@ -4,7 +4,7 @@ using UnityEngine;
 public class TutorialHandler : TextSequenceHandler<Tutorial>
 {
     [SerializeField] private TutorialUI tutorialUI;
-    [SerializeField] private TutorialOverlay tutorialOverlay;
+    [SerializeField] private GameObject tutorialOverlay;
 
     private bool waitingForInteraction;
 
@@ -56,7 +56,6 @@ public class TutorialHandler : TextSequenceHandler<Tutorial>
 
     protected override void OnEndSequence()
     {
-        ServiceLocator.Get<InteractionManager>().Unlock();
         tutorialUI.Hide();
         tutorialOverlay.SetActive(false);
     }

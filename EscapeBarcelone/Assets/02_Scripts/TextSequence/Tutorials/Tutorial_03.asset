@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial_03
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - Algunos objetos tienen varios elementos; intenta hacer clic en esta foto para
-    ampliarla !
-  autoHide: 0
+  - text: Algunos objetos tienen varios elementos; intenta hacer clic en esta foto
+      para ampliarla !
+    waitForInteraction: 1
+  textPos: 100

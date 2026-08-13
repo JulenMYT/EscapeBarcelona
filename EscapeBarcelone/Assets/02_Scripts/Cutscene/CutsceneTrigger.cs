@@ -10,9 +10,10 @@ public class CutsceneTrigger : MonoBehaviour
         StartCoroutine(WaitAndPlayCutscene());
     }
 
-    IEnumerator WaitAndPlayCutscene()
+    private IEnumerator WaitAndPlayCutscene()
     {
         yield return null;
+
         cutscene.StartCutscene();
     }
 }

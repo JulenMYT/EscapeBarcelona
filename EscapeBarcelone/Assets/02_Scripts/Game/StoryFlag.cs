@@ -1,8 +1,5 @@
 public enum StoryFlag
 {
-    hasSeenOnettIntroCutscene,
-    hasSeenTwosonIntroCutscene,
-    hasCompletedMapPuzzle,
-    hasCompletedJigsawPuzzle,
-    hasOpenedPasswordChest
+    Room01CutsceneSeen,
+    Room02CutsceneSeen
 }

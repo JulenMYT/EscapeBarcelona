@@ -15,8 +15,9 @@ public class CutsceneInitiator : MonoBehaviour
 
     public void StartCutscene()
     {
+        ServiceLocator.Get<InteractionManager>().Lock();
+
         cutsceneHandler.Restart();
         cutsceneHandler.PlayNextElement();
-        ServiceLocator.Get<InteractionManager>().Lock();
     }
 }

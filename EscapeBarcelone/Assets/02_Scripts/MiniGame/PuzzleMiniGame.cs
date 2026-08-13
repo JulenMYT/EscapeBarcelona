@@ -84,7 +84,7 @@ public class PuzzleMiniGame : MonoBehaviour
     {
         puzzleCompleted = true;
         connectionManager.PuzzleCompleted -= OnPuzzleCompleted;
-        StoryManager.SetFlag(StoryFlag.hasCompletedJigsawPuzzle);
+        //StoryManager.SetFlag(StoryFlag.hasCompletedJigsawPuzzle);
         RefreshVisualState();
     }
 

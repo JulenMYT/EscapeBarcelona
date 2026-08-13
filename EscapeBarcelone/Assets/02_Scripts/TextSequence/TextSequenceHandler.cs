@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public abstract class TextSequenceHandler<T> : MonoBehaviour where T : Scriptabl
     public event Action OnSequenceComplete;
 
     [SerializeField] private InputActionReference inputAction;
+    private bool inputBlocked;
 
     protected virtual void OnEnable()
     {
@@ -25,6 +27,9 @@ public abstract class TextSequenceHandler<T> : MonoBehaviour where T : Scriptabl
 
     private void OnClick(InputAction.CallbackContext context)
     {
+        if (inputBlocked)
+            return;
+
         if (currentSequence != null && CanAdvance())
             PlayNextLine();
     }
@@ -33,9 +38,18 @@ public abstract class TextSequenceHandler<T> : MonoBehaviour where T : Scriptabl
     {
         currentSequence = sequence;
         index = -1;
+        inputBlocked = true;
 
         ShowUI();
         PlayNextLine();
+
+        StartCoroutine(EnableInputNextFrame());
+    }
+
+    private IEnumerator EnableInputNextFrame()
+    {
+        yield return null;
+        inputBlocked = false;
     }
 
     protected void PlayNextLine()

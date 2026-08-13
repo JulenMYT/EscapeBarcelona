@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Tutorial_05
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - "Algunos objetos tienen minijuegos que te ayudar\xE1n en tu aventura ..."
-  autoHide: 0
+  - text: "Algunos objetos tienen minijuegos que te ayudar\xE1n en tu aventura ..."
+    waitForInteraction: 1
+  textPos: 100

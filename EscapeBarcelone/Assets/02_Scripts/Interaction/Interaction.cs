@@ -5,7 +5,7 @@ public class Interaction : MonoBehaviour
 {
     public Action OnClick;
 
-    [SerializeField] private int highlightSortingOrder = 100;
+    [SerializeField] private int highlightSortingOrder = 101;
 
     private SpriteRenderer spriteRenderer;
     private int defaultSortingOrder;
@@ -38,5 +38,10 @@ public class Interaction : MonoBehaviour
             return;
 
         OnClick?.Invoke();
+        Interact();
+    }
+
+    protected virtual void Interact()
+    {
     }
 }

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Tutorial_06
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - "\xA1Intenta completarlo!"
+  - text: "\xA1Intenta completarlo!"
+    waitForInteraction: 0
+  textPos: 100

@@ -68,7 +68,7 @@ public class PasswordMiniGame : MonoBehaviour
     {
         passwordCompleted = true;
 
-        StoryManager.SetFlag(StoryFlag.hasOpenedPasswordChest);
+        //StoryManager.SetFlag(StoryFlag.hasOpenedPasswordChest);
 
         gameplayPanel.SetValidateButtonVisible(false);
         gameplayPanel.OnValidateButtonClicked -= CheckInput;

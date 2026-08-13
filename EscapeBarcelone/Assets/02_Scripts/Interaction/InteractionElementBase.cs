@@ -155,8 +155,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
-            return;
+        //if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
+        //    return;
 
         if (!IsInteractable)
             return;
@@ -169,8 +169,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
-            return;
+        //if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
+        //    return;
 
         if (!IsInteractable)
             return;
@@ -183,8 +183,8 @@ public abstract class InteractionElementBase : MonoBehaviour, IPointerClickHandl
 
     public virtual void OnPointerExit(PointerEventData eventData)
     {
-        if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
-            return;
+        //if (ServiceLocator.Get<InteractionManager>().IsLocked && !IgnoreInteractionBlock)
+        //    return;
 
         if (!IsInteractable)
             return;

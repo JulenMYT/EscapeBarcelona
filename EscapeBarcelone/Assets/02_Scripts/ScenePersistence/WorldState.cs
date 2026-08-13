@@ -1,16 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldState : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public HashSet<StoryFlag> storyFlags = new();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private void Awake() => ServiceLocator.Register<WorldState>(this);
 }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial_04
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - Cuando hayas terminado con un objeto, puedes cerrarlo con la cruz de la esquina
-    superior derecha.
-  autoHide: 0
+  - text: Cuando hayas terminado con un objeto, puedes cerrarlo con la cruz de la
+      esquina superior derecha.
+    waitForInteraction: 1
+  textPos: 100

@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    public bool IsLocked { get; private set; }
+    private bool isLocked;
+    private GameObject currentInspection;
 
     private readonly HashSet<GameObject> allowedObjects = new();
 
@@ -12,15 +13,26 @@ public class InteractionManager : MonoBehaviour
         ServiceLocator.Register<InteractionManager>(this);
     }
 
+    public bool CanInteract(GameObject obj)
+    {
+        if (isLocked)
+            return allowedObjects.Contains(obj);
+
+        if (currentInspection != null)
+            return obj.transform.IsChildOf(currentInspection.transform);
+
+        return true;
+    }
+
     public void Lock()
     {
-        IsLocked = true;
+        isLocked = true;
         allowedObjects.Clear();
     }
 
     public void Unlock()
     {
-        IsLocked = false;
+        isLocked = false;
         allowedObjects.Clear();
     }
 
@@ -34,8 +46,13 @@ public class InteractionManager : MonoBehaviour
         allowedObjects.Remove(obj);
     }
 
-    public bool CanInteract(GameObject obj)
+    public void SetCurrentInspection(GameObject inspection)
     {
-        return !IsLocked || allowedObjects.Contains(obj);
+        currentInspection = inspection;
+    }
+
+    public void ClearCurrentInspection()
+    {
+        currentInspection = null;
     }
 }

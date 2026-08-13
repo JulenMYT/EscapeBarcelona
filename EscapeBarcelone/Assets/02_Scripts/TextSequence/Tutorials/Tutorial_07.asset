@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Tutorial_07
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
   tutorialLines:
-  - "\xA1Enhorabuena, has completado tu primer minijuego!"
+  - text: "\xA1Enhorabuena, has completado tu primer minijuego!"
+    waitForInteraction: 0
+  textPos: 100
