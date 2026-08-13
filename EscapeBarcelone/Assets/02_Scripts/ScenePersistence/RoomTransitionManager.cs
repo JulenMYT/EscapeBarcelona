@@ -47,10 +47,15 @@ public class RoomTransitionManager : MonoBehaviour
         }
 
         currentRoom = SceneManager.GetActiveScene().name;
+
+        yield return null;
+
+        RoomService service = ServiceLocator.Get<RoomService>();
+        ServiceLocator.Get<AudioManager>().PlayMusic(service.roomMusic);
+
         isTransitioning = false;
 
         yield return screenFader.Fade(1f, 0f, 0.5f);
-
     }
 }
 

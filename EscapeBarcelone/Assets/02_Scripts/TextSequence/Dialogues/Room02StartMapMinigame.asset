@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8caee6d1f22bc10459f2f5d37fc24dcd, type: 3}
-  m_Name: OpenPasswordMinigame
+  m_Name: Room02StartMapMinigame
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   dialogueLines:
   - speakerName: Julen
-    lineText: "Il y a un billet d\u2019avion, une \xE9trange boussole et un guide
-      touristique dans la bo\xEEte, \xE7a semble \xEAtre une piste !"
+    lineText: "Tengo que situar las ciudades de Espa\xF1a en su lugar correcto "
     voiceClip: {fileID: 0}

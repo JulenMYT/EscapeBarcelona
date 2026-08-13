@@ -3,6 +3,7 @@
 public class MapLabelAnchor : MonoBehaviour
 {
     [SerializeField] private MapLabel expectedLabel;
+    public MapLabel ExpectedLabel => expectedLabel;
 
     private MapLabel currentLabel;
 

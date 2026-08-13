@@ -3,7 +3,7 @@ using UnityEngine;
 public class CutsceneTriggerMiniGame : MonoBehaviour
 {
     [SerializeField] private MiniGame miniGame;
-    [SerializeField] private CutsceneInitiator cutscene;
+    [SerializeField] protected CutsceneInitiator cutscene;
 
     private void OnEnable()
     {
@@ -15,7 +15,7 @@ public class CutsceneTriggerMiniGame : MonoBehaviour
         miniGame.OnGameCompleted -= OnGameCompleted;
     }
 
-    private void OnGameCompleted()
+    protected virtual void OnGameCompleted()
     {
         cutscene.StartCutscene();
     }

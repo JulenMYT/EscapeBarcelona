@@ -24,11 +24,23 @@ public class MapLabelGameManager : MiniGame
 
     private void CompleteGame()
     {
+        ApplyCompletedState();
+        TriggerGameCompleted();
+    }
+
+    private void ApplyCompletedState()
+    {
         isCompleted = true;
 
         foreach (MapLabel label in labels)
             label.SetCanDrag(false);
+    }
 
-        TriggerGameCompleted();
+    protected override void SolveMiniGame()
+    {
+        foreach (MapLabelAnchor anchor in slots)
+            anchor.TryPlace(anchor.ExpectedLabel);
+
+        ApplyCompletedState();
     }
 }

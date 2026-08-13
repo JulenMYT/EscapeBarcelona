@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,25 +6,22 @@ using UnityEngine.UI;
 public class LetterWheel : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
-    [SerializeField] private Button upButton;
-    [SerializeField] private Button downButton;
+    [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject previousButton;
 
     private const string alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
     private int index;
 
-    public char Letter => alphabet[index];
+    public event Action OnLetterChanged;
 
-    private void Awake()
-    {
-        upButton.onClick.AddListener(PreviousLetter);
-        downButton.onClick.AddListener(NextLetter);
-    }
+    public char Letter => alphabet[index];
 
     public void NextLetter()
     {
         index = (index + 1) % alphabet.Length;
         Refresh();
+        OnLetterChanged?.Invoke();
     }
 
     public void PreviousLetter()
@@ -34,10 +32,28 @@ public class LetterWheel : MonoBehaviour
             index = alphabet.Length - 1;
 
         Refresh();
+        OnLetterChanged?.Invoke();
     }
 
     private void Refresh()
     {
         text.text = Letter.ToString();
+    }
+
+    public void SetLetter(char value)
+    {
+        int newIndex = alphabet.IndexOf(char.ToUpperInvariant(value));
+
+        if (newIndex < 0)
+            return;
+
+        index = newIndex;
+        Refresh();
+    }
+
+    public void SetInteractable(bool value)
+    {
+        nextButton.SetActive(value);
+        previousButton.SetActive(value);
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aca473830ae5f2e49b1208f74a89bca8
+guid: afb61ce66144575408e0b35f652fe4ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2517231869119516669
-    second: Barcelone_Tuto_3_-removebg-preview_0
+      213: -5941269532982766630
+    second: Compass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barcelone_Tuto_3_-removebg-preview_0
+      name: Compass_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 120
-        height: 71
+        x: 41
+        y: 42
+        width: 247
+        height: 337
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dff49205c010fe220800000000000000
-      internalID: 2517231869119516669
+      spriteID: ad316b386de5c8da0800000000000000
+      internalID: -5941269532982766630
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Barcelone_Tuto_3_-removebg-preview_0: 2517231869119516669
+      Compass_0: -5941269532982766630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

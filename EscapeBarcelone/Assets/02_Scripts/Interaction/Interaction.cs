@@ -10,10 +10,26 @@ public class Interaction : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int defaultSortingOrder;
 
-    protected virtual void Awake()
+    private static Material outlineMaterial;
+    private Material defaultMaterial;
+
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultSortingOrder = spriteRenderer.sortingOrder;
+        if (spriteRenderer != null )
+        {
+            defaultSortingOrder = spriteRenderer.sortingOrder;
+            defaultMaterial = spriteRenderer.sharedMaterial;
+
+            if (outlineMaterial == null)
+                outlineMaterial = Resources.Load<Material>("Materials/Outline");
+        }
+
+        Initialize();
+    }
+
+    protected virtual void Initialize()
+    {
     }
 
     public void Highlight()
@@ -30,6 +46,19 @@ public class Interaction : MonoBehaviour
             return;
 
         spriteRenderer.sortingOrder = defaultSortingOrder;
+    }
+
+    private void OnMouseEnter()
+    {
+        if (!ServiceLocator.Get<InteractionManager>().CanInteract(gameObject))
+            return;
+
+        spriteRenderer.sharedMaterial = outlineMaterial;
+    }
+
+    private void OnMouseExit()
+    {
+        spriteRenderer.sharedMaterial = defaultMaterial;
     }
 
     protected virtual void OnMouseDown()

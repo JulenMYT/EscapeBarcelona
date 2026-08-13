@@ -5,5 +5,13 @@ public class WorldState : MonoBehaviour
 {
     public HashSet<StoryFlag> storyFlags = new();
 
-    private void Awake() => ServiceLocator.Register<WorldState>(this);
+    public HashSet<string> activatedObjects = new();
+    public Dictionary<string, double> audioStartTimes = new();
+
+    public HashSet<string> completedMiniGame = new();
+
+    private void Awake()
+    {
+        ServiceLocator.Register<WorldState>(this);
+    }
 }
