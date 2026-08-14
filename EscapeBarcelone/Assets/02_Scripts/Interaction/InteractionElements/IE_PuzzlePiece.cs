@@ -8,7 +8,7 @@ public class IE_PuzzlePiece : IE_ZoomIn
     {
         base.Interact();
 
-        puzzleMiniGame.RevealPiece();
+        //puzzleMiniGame.RevealPiece();
     }
 
     protected override void HandleClose()

@@ -28,8 +28,10 @@ public static class PuzzleGridGenerator
                 if (currentColumns < 1)
                     continue;
 
-                float ratioError = currentColumns * (float)imageHeight / currentRows / imageWidth;
-                ratioError = (ratioError + 1f / ratioError) - 2f;
+                float gridRatio = (float)currentColumns / currentRows;
+
+                float ratioDifference = gridRatio / aspectRatio;
+                float ratioError = ratioDifference + 1f / ratioDifference - 2f;
 
                 float pieceCountError = Mathf.Abs(1f - (float)(currentColumns * currentRows) / targetPieces);
 

@@ -7,7 +7,6 @@ public class PasswordMiniGame : MiniGame
     [SerializeField] private string password = "ZELDA";
 
     private LetterWheel[] wheels;
-    private bool isCompleted;
 
     private void Awake()
     {
@@ -27,9 +26,6 @@ public class PasswordMiniGame : MiniGame
 
     private void CheckCompletion()
     {
-        if (isCompleted)
-            return;
-
         for (int i = 0; i < wheels.Length; i++)
         {
             if (wheels[i].Letter != password[i])
@@ -59,8 +55,6 @@ public class PasswordMiniGame : MiniGame
 
     private void ApplyCompletedState()
     {
-        isCompleted = true;
-
         foreach (LetterWheel wheel in wheels)
             wheel.SetInteractable(false);
     }

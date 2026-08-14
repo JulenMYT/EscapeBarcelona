@@ -1,17 +1,17 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class PuzzleShuffleManager
+public class PuzzleShuffle
 {
     private readonly Bounds shuffleArea;
     private readonly Bounds centerHole;
+    private readonly Vector2 bandSize;
 
-    public PuzzleShuffleManager(
-        Bounds shuffleArea,
-        Bounds centerHole)
+    public PuzzleShuffle(Bounds shuffleArea, Bounds centerHole)
     {
         this.shuffleArea = shuffleArea;
         this.centerHole = centerHole;
+        bandSize = GetBandSize(shuffleArea, centerHole);
     }
 
     public void Shuffle(IReadOnlyList<PuzzlePieceGroup> groups)
@@ -30,83 +30,44 @@ public class PuzzleShuffleManager
     {
         List<Vector3> positions = new();
 
-
-        float perimeter =
-            shuffleArea.size.x * 2 +
-            shuffleArea.size.y * 2;
-
+        float perimeter = shuffleArea.size.x * 2 + shuffleArea.size.y * 2;
         float spacing = perimeter / count;
+        Vector2 bandSize = GetBandSize(shuffleArea, centerHole);
 
         for (int i = 0; i < count; i++)
         {
-            positions.Add(
-                GetRingPosition(
-                    shuffleArea,
-                    centerHole,
-                    i * spacing
-                )
-            );
+            positions.Add(GetRingPosition(shuffleArea, bandSize, i * spacing));
         }
 
         return positions;
     }
 
-    private Vector3 GetRingPosition(
-        Bounds outer,
-        Bounds inner,
-        float distance)
+    private Vector3 GetRingPosition(Bounds outer, Vector2 bandSize, float distance)
     {
-        Vector2 bandSize = GetBandSize(outer, inner);
-
         float width = outer.size.x;
         float height = outer.size.y;
 
         if (distance < width)
-        {
-            return new Vector3(
-                outer.min.x + distance,
-                outer.max.y - Random.Range(0, bandSize.y),
-                0
-            );
-        }
+            return new Vector3(outer.min.x + distance, outer.max.y - Random.Range(0, bandSize.y), 0);
 
         distance -= width;
 
         if (distance < height)
-        {
-            return new Vector3(
-                outer.max.x - Random.Range(0, bandSize.x),
-                outer.min.y + distance,
-                0
-            );
-        }
+            return new Vector3(outer.max.x - Random.Range(0, bandSize.x), outer.min.y + distance, 0);
 
         distance -= height;
 
         if (distance < width)
-        {
-            return new Vector3(
-                outer.max.x - distance,
-                outer.min.y + Random.Range(0, bandSize.y),
-                0
-            );
-        }
+            return new Vector3(outer.max.x - distance, outer.min.y + Random.Range(0, bandSize.y), 0);
 
         distance -= width;
 
-        return new Vector3(
-            outer.min.x + Random.Range(0, bandSize.x),
-            outer.max.y - distance,
-            0
-        );
+        return new Vector3(outer.min.x + Random.Range(0, bandSize.x), outer.max.y - distance, 0);
     }
 
     private Vector2 GetBandSize(Bounds outer, Bounds inner)
     {
-        return new Vector2(
-            (outer.size.x - inner.size.x) / 2,
-            (outer.size.y - inner.size.y) / 2
-        );
+        return new Vector2((outer.size.x - inner.size.x) / 2, (outer.size.y - inner.size.y) / 2);
     }
 
     private void ShuffleList(List<Vector3> list)

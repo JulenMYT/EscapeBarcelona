@@ -1,102 +1,59 @@
 using UnityEngine;
 
-public class PuzzleMiniGame : MonoBehaviour
+public class PuzzleMiniGame : MiniGame
 {
     [SerializeField] private Sprite sprite;
     [SerializeField] private int size = 100;
+    [SerializeField] private int pieceMissing = 0;
+    [SerializeField] private int piecesSortingOrder = 11;
 
     [SerializeField] private PuzzlePiece piecePrefab;
     [SerializeField] private Transform piecesParent;
 
-    [SerializeField] private BoxCollider2D centerHole;
     [SerializeField] private BoxCollider2D shuffleArea;
+    [SerializeField] private BoxCollider2D centerHole;
 
-    [SerializeField] private InteractionElementBase finalObject;
+    [SerializeField] private SpriteRenderer completedSprite;
 
     private PuzzlePieceGenerator pieceGenerator;
-    private PuzzleConnectionManager connectionManager = new();
-    private PuzzleShuffleManager shuffleManager;
-    private PuzzleHidePiece hidePiece = new();
-    private bool puzzleCompleted = false;
-
-    [SerializeField] private int pieceMissing = 0;
+    private PuzzleConnectionManager connectionManager;
+    private PuzzleShuffle shuffleManager;
+    private PuzzleHidePiece hidePiece;
 
     private void Awake()
     {
-        pieceGenerator = new PuzzlePieceGenerator(
-            piecePrefab,
-            piecesParent,
-            connectionManager
-        );
-
-        shuffleManager = new PuzzleShuffleManager(
-            shuffleArea.bounds,
-            centerHole.bounds
-        );
-
-        connectionManager.PuzzleCompleted += OnPuzzleCompleted;
-
-        shuffleArea.enabled = false;
-        centerHole.enabled = false;
+        connectionManager = new PuzzleConnectionManager();
+        pieceGenerator = new PuzzlePieceGenerator(piecePrefab, piecesParent, connectionManager);
+        shuffleManager = new PuzzleShuffle(shuffleArea.bounds, centerHole.bounds);
     }
 
-    private void Start()
+    protected override void Initialize()
     {
-        CreatePuzzle();
+        PuzzleGridData gridData = PuzzleGridGenerator.CalculateGrid(size, sprite.texture.width, sprite.texture.height);
+        pieceGenerator.Generate(sprite, gridData, piecesSortingOrder, shuffleArea.bounds);
+        shuffleManager.Shuffle(pieceGenerator.groups);
+
+        connectionManager.PuzzleCompleted += CompleteGame;
     }
 
-    private void OnEnable()
+    private void CompleteGame()
     {
-        RefreshVisualState();
+        connectionManager.PuzzleCompleted -= CompleteGame;
+
+        ApplyCompletedState();
+        TriggerGameCompleted();
     }
 
-    public void CreatePuzzle()
+    private void ApplyCompletedState()
     {
-        PuzzleGridData grid = PuzzleGridGenerator.CalculateGrid(
-            size,
-            Mathf.RoundToInt(sprite.rect.width),
-            Mathf.RoundToInt(sprite.rect.height)
-        );
+        completedSprite.sprite = sprite;
+        completedSprite.gameObject.SetActive(true);
 
-        Debug.Log($"Grid : {grid.columns} x {grid.rows}");
-        Debug.Log($"Piece size : {grid.pieceWidth} x {grid.pieceHeight}");
-
-        pieceGenerator.Generate(sprite, grid);
-
-        shuffleManager.Shuffle(
-            pieceGenerator.Groups
-        );
-
-        hidePiece.HidePieces(pieceGenerator.Groups, pieceMissing);
+        Destroy(piecesParent.gameObject);
     }
 
-    public void StartMiniGame()
+    protected override void SolveMiniGame()
     {
-        piecesParent.gameObject.SetActive( true );
-    }
-
-    private void OnDestroy()
-    {
-        connectionManager.PuzzleCompleted -= OnPuzzleCompleted;
-    }
-
-    private void OnPuzzleCompleted()
-    {
-        puzzleCompleted = true;
-        connectionManager.PuzzleCompleted -= OnPuzzleCompleted;
-        //StoryManager.SetFlag(StoryFlag.hasCompletedJigsawPuzzle);
-        RefreshVisualState();
-    }
-
-    private void RefreshVisualState()
-    {
-        piecesParent.gameObject.SetActive(!puzzleCompleted);
-        if (puzzleCompleted)
-            finalObject.Open();
-    }
-
-    public void RevealPiece()
-    {
-        hidePiece.RevealHiddenPiece();
+        ApplyCompletedState();
     }
 }

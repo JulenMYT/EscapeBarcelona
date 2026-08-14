@@ -66,14 +66,8 @@ public class PuzzleConnectionManager
     {
         Vector2Int difference = b.GridPosition - a.GridPosition;
 
-        Vector3 expectedOffset = new Vector3(
-            difference.x * a.Size.x,
-            difference.y * a.Size.y,
-            0
-        );
-
-        Vector3 currentOffset =
-            b.transform.position - a.transform.position;
+        Vector3 expectedOffset = new Vector3(difference.x * a.Size.x, difference.y * a.Size.y, 0);
+        Vector3 currentOffset = b.transform.position - a.transform.position;
 
         Vector3 delta = currentOffset - expectedOffset;
 
@@ -95,7 +89,7 @@ public class PuzzleConnectionManager
 
         groupCount--;
 
-        if (groupCount == 1)
+        if (groupCount == 1) 
             PuzzleCompleted?.Invoke();
     }
 
@@ -103,14 +97,9 @@ public class PuzzleConnectionManager
     {
         Vector2Int difference = a.GridPosition - b.GridPosition;
 
-        Vector3 expectedPosition = new Vector3(
-            difference.x * a.Size.x,
-            difference.y * a.Size.y,
-            0
-        );
+        Vector3 expectedPosition = new Vector3(difference.x * a.Size.x, difference.y * a.Size.y, 0);
 
-        Vector3 currentOffset =
-            a.transform.position - b.transform.position;
+        Vector3 currentOffset = a.transform.position - b.transform.position;
 
         return expectedPosition - currentOffset;
     }

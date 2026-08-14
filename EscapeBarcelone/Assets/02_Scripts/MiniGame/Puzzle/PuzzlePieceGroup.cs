@@ -3,22 +3,18 @@ using System.Collections.Generic;
 
 public class PuzzlePieceGroup : MonoBehaviour
 {
-    private readonly List<PuzzlePiece> pieces = new();
-
-    private readonly HashSet<PuzzlePiece> borderPieces = new();
-
-    public IReadOnlyList<PuzzlePiece> Pieces => pieces;
-
-    public IReadOnlyCollection<PuzzlePiece> BorderPieces => borderPieces;
-
+    public List<PuzzlePiece> Pieces { get; private set; } = new();
+    public HashSet<PuzzlePiece> BorderPieces { get; private set; } = new();
 
     public void AddPiece(PuzzlePiece piece)
     {
-        if (pieces.Contains(piece))
+        if (Pieces.Contains(piece))
             return;
 
-        pieces.Add(piece);
-        borderPieces.Add(piece);
+        if (Pieces.Count == 0)
+            BorderPieces.Add(piece);
+
+        Pieces.Add(piece);
 
         piece.Group = this;
         piece.transform.SetParent(transform, true);
@@ -26,33 +22,30 @@ public class PuzzlePieceGroup : MonoBehaviour
 
     public void Merge(PuzzlePieceGroup other)
     {
-        foreach (PuzzlePiece piece in other.pieces)
+        foreach (PuzzlePiece piece in other.Pieces)
         {
             AddPiece(piece);
         }
 
-        other.pieces.Clear();
-        other.borderPieces.Clear();
-
         Destroy(other.gameObject);
     }
 
-    public void RefreshBorders(
-        Dictionary<Vector2Int, PuzzlePiece> piecesMap,
-        Vector2Int[] directions)
+    public void RefreshBorders(Dictionary<Vector2Int, PuzzlePiece> piecesMap, Vector2Int[] directions)
     {
-        borderPieces.Clear();
+        BorderPieces.Clear();
 
-        foreach (PuzzlePiece piece in pieces)
+        foreach (PuzzlePiece piece in Pieces)
         {
             foreach (Vector2Int direction in directions)
             {
                 Vector2Int position = piece.GridPosition + direction;
 
-                if (!piecesMap.TryGetValue(position, out PuzzlePiece neighbor)
-                    || neighbor.Group != this)
+                if (!piecesMap.TryGetValue(position, out PuzzlePiece neighbor))
+                    continue;
+
+                if (neighbor.Group != this)
                 {
-                    borderPieces.Add(piece);
+                    BorderPieces.Add(piece);
                     break;
                 }
             }

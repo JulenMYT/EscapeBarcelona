@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PuzzleHidePiece
 {
-    private readonly List<PuzzlePieceGroup> hiddenPieces = new();
+    public List<PuzzlePieceGroup> hiddenPieces { get; private set; } = new();
 
     public void HidePieces(List<PuzzlePieceGroup> pieces, int piecesToHide)
     {
