@@ -45,6 +45,7 @@ public class CutsceneHandler : MonoBehaviour
         yield return null;
 
         ServiceLocator.Get<InteractionManager>().Unlock();
+        ServiceLocator.Get<InspectionHandler>().SetCanClose(true);
     }
 
     public void PlayNextElement()

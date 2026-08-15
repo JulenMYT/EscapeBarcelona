@@ -33,7 +33,10 @@ public class MapLabelGameManager : MiniGame
         isCompleted = true;
 
         foreach (MapLabel label in labels)
+        {
             label.SetCanDrag(false);
+            label.SetCorrectColor();
+        }
     }
 
     protected override void SolveMiniGame()

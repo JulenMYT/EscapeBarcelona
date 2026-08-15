@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 7923593}
   - component: {fileID: 7923592}
   m_Layer: 0
-  m_Name: Cutscene2
+  m_Name: CutsceneQuick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneTriggerConditional
   cutscene: {fileID: 7923594}
-  requiredFlags: 01000000
+  requiredFlags: 0100000000000000
   forbiddenFlags: 02000000
 --- !u!1 &496795515
 GameObject:
@@ -344,9 +344,10 @@ GameObject:
   - component: {fileID: 1004154132}
   - component: {fileID: 1004154131}
   - component: {fileID: 1004154130}
+  - component: {fileID: 1004154133}
   - component: {fileID: 1004154129}
   m_Layer: 0
-  m_Name: Cutscene3
+  m_Name: CutsceneAirport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,6 +407,19 @@ Transform:
   - {fileID: 496795516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1004154133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004154128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e907ef0bd80343649bf6dd9452b8cfca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
+  duration: 1
 --- !u!1 &1304681826
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,11 +571,12 @@ GameObject:
   - component: {fileID: 1546469621}
   - component: {fileID: 1546469624}
   - component: {fileID: 1546469623}
+  - component: {fileID: 1546469627}
   - component: {fileID: 1546469622}
   - component: {fileID: 1546469625}
   - component: {fileID: 1546469626}
   m_Layer: 0
-  m_Name: Cutscene
+  m_Name: CutsceneIntro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,6 +665,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CSE_AddFlag
   duration: 0
   flag: 0
+--- !u!114 &1546469627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546469620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e907ef0bd80343649bf6dd9452b8cfca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSE_Wait
+  duration: 1
 --- !u!114 &2089097027 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3086947469369143835, guid: d7735428b07db5e4f864470c4e385ba7, type: 3}

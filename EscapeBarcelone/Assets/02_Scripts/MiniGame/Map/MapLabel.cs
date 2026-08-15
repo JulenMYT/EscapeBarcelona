@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class MapLabel : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     [SerializeField] private PolygonCollider2D bounds;
     [SerializeField] private LayerMask anchorLayer;
     [SerializeField] private MapLabelGameManager gameManager;
+
+    [SerializeField] private Color baseColor = Color.white;
+    [SerializeField] private Color anchoredColor = Color.yellow;
+    [SerializeField] private Color correctColor = Color.green;
 
     private Camera mainCamera;
     private Vector3 dragOffset;
@@ -28,6 +34,8 @@ public class MapLabel : MonoBehaviour
             currentAnchor = null;
         }
 
+        SetBaseColor();
+
         Vector3 mousePosition = GetMouseWorldPosition();
         dragOffset = transform.position - mousePosition;
     }
@@ -47,11 +55,7 @@ public class MapLabel : MonoBehaviour
 
         Vector2 closestPoint = bounds.ClosestPoint(position);
 
-        transform.position = new Vector3(
-            closestPoint.x,
-            closestPoint.y,
-            transform.position.z
-        );
+        transform.position = new Vector3(closestPoint.x, closestPoint.y, transform.position.z);
     }
 
     private void OnMouseUp()
@@ -68,6 +72,22 @@ public class MapLabel : MonoBehaviour
     {
         currentAnchor = anchor;
         transform.position = anchor.transform.position;
+        SetAnchoredColor();
+    }
+
+    public void SetCorrectColor()
+    {
+        spriteRenderer.color = correctColor;
+    }
+
+    private void SetBaseColor()
+    {
+        spriteRenderer.color = baseColor;
+    }
+
+    private void SetAnchoredColor()
+    {
+        spriteRenderer.color = anchoredColor;
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -88,10 +108,7 @@ public class MapLabel : MonoBehaviour
     {
         Vector3 mousePosition = GetMouseWorldPosition();
 
-        Collider2D collider = Physics2D.OverlapPoint(
-            mousePosition,
-            anchorLayer
-        );
+        Collider2D collider = Physics2D.OverlapPoint(mousePosition, anchorLayer);
 
         if (collider == null)
             return null;

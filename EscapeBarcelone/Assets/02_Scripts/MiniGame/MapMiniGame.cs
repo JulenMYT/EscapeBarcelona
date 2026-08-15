@@ -8,7 +8,7 @@ public class MapMiniGame : MonoBehaviour
     [SerializeField] private GameObject mapMiniGameCanvas;
     [SerializeField] private List<TMP_InputField> inputFields;
 
-    [SerializeField] private InteractionElementBase[] pictures;
+    //[SerializeField] private InteractionElementBase[] pictures;
 
     [SerializeField] private CutsceneInitiator cutsceneInitiator;
 
@@ -32,10 +32,10 @@ public class MapMiniGame : MonoBehaviour
 
     public void OpenMapMiniGame()
     {
-        foreach (var picture in pictures)
-        {
-            picture.SetInteractable(true);
-        }
+        //foreach (var picture in pictures)
+        //{
+        //    picture.SetInteractable(true);
+        //}
 
         gameplayPanel.SetValidateButtonVisible(true);
 
@@ -72,10 +72,10 @@ public class MapMiniGame : MonoBehaviour
             gameplayPanel.OnToggleButtonClicked -= ToggleCanvas;
             gameplayPanel.OnValidateButtonClicked -= VerifyAnswers;
 
-            foreach (var picture in pictures)
-            {
-                picture.Close();
-            }
+            //foreach (var picture in pictures)
+            //{
+            //    picture.Close();
+            //}
         }
         else
         {

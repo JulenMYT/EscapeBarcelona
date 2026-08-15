@@ -5,30 +5,30 @@ public class Interaction : MonoBehaviour
 {
     public Action OnClick;
 
-    [SerializeField] private int highlightSortingOrder = 101;
-
     private SpriteRenderer spriteRenderer;
-    private int defaultSortingOrder;
 
     private static Material outlineMaterial;
     private Material defaultMaterial;
 
+    private string defaultSortingLayer;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null )
+
+        if (spriteRenderer != null)
         {
-            defaultSortingOrder = spriteRenderer.sortingOrder;
+            defaultSortingLayer = spriteRenderer.sortingLayerName;
             defaultMaterial = spriteRenderer.sharedMaterial;
 
             if (outlineMaterial == null)
                 outlineMaterial = Resources.Load<Material>("Materials/Outline");
         }
 
-        Initialize();
+        AwakeInitialize();
     }
 
-    protected virtual void Initialize()
+    protected virtual void AwakeInitialize()
     {
     }
 
@@ -37,7 +37,7 @@ public class Interaction : MonoBehaviour
         if (spriteRenderer == null)
             return;
 
-        spriteRenderer.sortingOrder = highlightSortingOrder;
+        spriteRenderer.sortingLayerName = "Highlight";
     }
 
     public void RemoveHighlight()
@@ -45,7 +45,7 @@ public class Interaction : MonoBehaviour
         if (spriteRenderer == null)
             return;
 
-        spriteRenderer.sortingOrder = defaultSortingOrder;
+        spriteRenderer.sortingLayerName = defaultSortingLayer;
     }
 
     private void OnMouseEnter()

@@ -70,6 +70,29 @@ public class InspectionHandler : MonoBehaviour
             BaseSortingOrder + inspectionStack.Count * SortingStep;
     }
 
+    public void CloseAll()
+    {
+        if (inspectionStack.Count == 0)
+            return;
+
+        while (inspectionStack.Count > 0)
+        {
+            GameObject currentView = inspectionStack.Pop();
+            currentView.SetActive(false);
+            OnInspectionClosed?.Invoke();
+        }
+
+        darkBackground.SetActive(false);
+        closeButton.SetActive(false);
+
+        ServiceLocator.Get<InteractionManager>()
+            .ClearCurrentInspection();
+
+        darkBackgroundRenderer.sortingOrder = BaseSortingOrder;
+
+        canClose = true;
+    }
+
     public void SetCanClose(bool canClose)
     {
         this.canClose = canClose;

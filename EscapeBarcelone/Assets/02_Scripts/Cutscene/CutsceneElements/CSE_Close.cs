@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class CSE_Close : CutsceneElementBase
 {
-    [SerializeField] private List<InteractionElementBase> interactions;
+    public bool closeAll = true;
 
     public override void Execute()
     {
         base.Execute();
-        foreach (InteractionElementBase interaction in interactions)
-        {
-            interaction.Close();
-        }
+
+        if (closeAll)
+            ServiceLocator.Get<InspectionHandler>().CloseAll();
+        else
+            ServiceLocator.Get<InspectionHandler>().Close();
 
         cutsceneHandler.PlayNextElement();
     }

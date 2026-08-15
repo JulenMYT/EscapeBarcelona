@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de26db52ef7082d4aaca9fa07b34e070, type: 3}
+  m_Name: Tutorial_Room02_Inventory
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  tutorialLines:
+  - text: "Una \xFAltima cosa: este es tu inventario"
+    waitForInteraction: 0
+  - text: "A lo largo de tu aventura podr\xE1s recoger objetos importantes; para
+      verlos, solo tendr\xE1s que hacer clic sobre ellos, como con cualquier otro
+      objeto."
+    waitForInteraction: 0
+  - text: "Ahora que ya sabes hacerlo todo, te toca a ti continuar la aventura por
+      tu cuenta. \xA1\xC1nimo! Si necesitas volver a consultar el tutorial, lo encontrar\xE1s
+      en el men\xFA del juego, situado en la parte superior izquierda."
+    waitForInteraction: 0
+  textPos: 200

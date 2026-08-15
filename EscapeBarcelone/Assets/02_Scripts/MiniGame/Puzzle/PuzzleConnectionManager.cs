@@ -108,4 +108,32 @@ public class PuzzleConnectionManager
     {
         group.RefreshBorders(pieces, directions);
     }
+
+    public void RestoreGroup(PuzzleState.PuzzleGroupState groupState)
+    {
+        PuzzlePieceGroup targetGroup = null;
+
+        foreach (Vector2Int position in groupState.pieces)
+        {
+            if (!pieces.TryGetValue(position, out PuzzlePiece piece))
+                continue;
+
+            if (targetGroup == null)
+            {
+                targetGroup = piece.Group;
+                continue;
+            }
+
+            if (piece.Group == targetGroup)
+                continue;
+
+            Merge(targetGroup.Pieces[0], piece);
+        }
+
+        if (targetGroup != null)
+        {
+            targetGroup.transform.position = groupState.position;
+            UpdateBorders(targetGroup);
+        }
+    }
 }
