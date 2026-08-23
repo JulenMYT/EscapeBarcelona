@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438ebb5485f134b4caa20fa96a3fcdca, type: 3}
+  m_Name: Barcelona
+  m_EditorClassIdentifier: Assembly-CSharp::CrosswordData
+  words:
+  - word: MEDITERANEO
+    hint: Clima en Barcelona
+    originPosition: {x: 0, y: 0}
+    isDown: 0
+  - word: PAELLA
+    hint: "Plato espa\xF1ol con arroz"
+    originPosition: {x: 1, y: -3}
+    isDown: 0
+  - word: IMPORTANTE
+    hint: Contrario de insignificante
+    originPosition: {x: 0, y: -5}
+    isDown: 0
+  - word: GAUDI
+    hint: Arquitecto famoso de Barcelona
+    originPosition: {x: 0, y: -9}
+    isDown: 1
+  - word: CATALAN
+    hint: Lengua que se habla en Barcelona
+    originPosition: {x: 6, y: -8}
+    isDown: 1
+  - word: CASTELLANO
+    hint: El que vive en Castilla
+    originPosition: {x: 8, y: -8}
+    isDown: 1
+  - word: MODERNISMO
+    hint: "Estilo art\xEDstico t\xEDpico de la ciudad"
+    originPosition: {x: 3, y: -6}
+    isDown: 1
+  - word: FUTBOL
+    hint: Deporte muy popular en Barcelona
+    originPosition: {x: 10, y: -4}
+    isDown: 1
+  - word: RAMBLA
+    hint: Calle famosa para pasear
+    originPosition: {x: 0, y: -2}
+    isDown: 1
+  - word: ESPANA
+    hint: "Pa\xEDs donde est\xE1 Barcelona"
+    originPosition: {x: 5, y: 0}
+    isDown: 1
