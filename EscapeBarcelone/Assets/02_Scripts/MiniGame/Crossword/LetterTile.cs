@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class LetterTile : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private TMP_Text numberText;
+    [SerializeField] private TMP_Text numberText2;
     [SerializeField] private Color selectedColor;
     [SerializeField] private Color wordHighlightColor;
     [SerializeField] private Color baseColor;
@@ -24,7 +26,10 @@ public class LetterTile : MonoBehaviour, IPointerClickHandler
     {
         TileData = tileData;
         this.crosswordView = crosswordView;
+
         inputField.text = string.Empty;
+        numberText.text = tileData.Number?.ToString() ?? string.Empty;
+
         SetBase();
     }
 

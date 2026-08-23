@@ -17,6 +17,7 @@ public class WordData
     public string hint;
 
     public Vector2Int originPosition;
-
     public bool isDown;
+
+    [NonSerialized] public int Number;
 }
