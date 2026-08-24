@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CutsceneTrigger : MonoBehaviour
+public class CutsceneTriggerOnStart : MonoBehaviour
 {
     [SerializeField] private CutsceneInitiator cutscene;
 

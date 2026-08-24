@@ -4,5 +4,6 @@ public enum StoryFlag
     Room02CutsceneSeen,
     Room03PasswordCutsceneSeen,
     Room03PuzzleZoomCutsceneSeen,
-    Room03PuzzleFlipCutsceneSeen
+    Room03PuzzleFlipCutsceneSeen,
+    Room04BookOpen
 }

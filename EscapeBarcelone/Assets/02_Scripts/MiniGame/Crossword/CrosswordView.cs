@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ public class CrosswordView : MonoBehaviour
     private LetterTile selectedTile;
 
     private bool currentSelectionIsDown = true;
+    public event Action OnCrosswordCompleted;
 
     private void OnEnable()
     {
@@ -222,5 +224,19 @@ public class CrosswordView : MonoBehaviour
 
         selectedTiles.Clear();
         selectedTile = null;
+
+        if (AreAllTilesLocked())
+            OnCrosswordCompleted?.Invoke();
+    }
+
+    private bool AreAllTilesLocked()
+    {
+        foreach (LetterTile tile in tiles.Values)
+        {
+            if (!tile.IsLocked)
+                return false;
+        }
+
+        return true;
     }
 }
