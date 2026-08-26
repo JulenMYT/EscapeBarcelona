@@ -6,6 +6,8 @@ using UnityEngine;
 public class CrosswordData : ScriptableObject
 {
     public List<WordData> words;
+    public string finalWord;
+    public List<Vector2Int> finalWordLetterPositions;
 }
 
 [Serializable]

@@ -53,3 +53,5 @@ MonoBehaviour:
     hint: "Pa\xEDs donde est\xE1 Barcelona"
     originPosition: {x: 5, y: 0}
     isDown: 1
+  finalWord: SAGRADAFAMILIA
+  finalWordLetterPosition: []

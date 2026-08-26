@@ -10,6 +10,7 @@ public class WorldState : MonoBehaviour
     public HashSet<string> completedMiniGame = new();
     public HashSet<string> puzzlePiecesCollected = new();
     public PuzzleState puzzleState = new();
+    public CrosswordState crosswordState = new();
 
     //No Save
     public Dictionary<string, double> audioStartTimes = new();

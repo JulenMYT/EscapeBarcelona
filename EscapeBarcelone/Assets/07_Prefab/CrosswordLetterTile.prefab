@@ -68,8 +68,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7810317579886311923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7}
-  m_AnchorMax: {x: 0.3, y: 1}
+  m_AnchorMin: {x: 0.05, y: 0.7}
+  m_AnchorMax: {x: 0.3, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
@@ -321,10 +321,10 @@ GameObject:
   - component: {fileID: 7810317579886311923}
   - component: {fileID: 7249025071743459525}
   - component: {fileID: 2569832381688780360}
-  - component: {fileID: 2394897270668765449}
+  - component: {fileID: 8436682140455333873}
   - component: {fileID: 3153836316855360926}
   m_Layer: 5
-  m_Name: LetterTile
+  m_Name: CrosswordLetterTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
---- !u!114 &2394897270668765449
+--- !u!114 &8436682140455333873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,16 +399,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217161013294278269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abc0de0839e7af4c9c4e2ec6f2547f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3faea98fd6799254c9141040f03788d4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LetterTile
+  m_EditorClassIdentifier: Assembly-CSharp::CrosswordLetterTile
   inputField: {fileID: 3153836316855360926}
-  numberText: {fileID: 8897905947036411855}
-  numberText2: {fileID: 571432038918445847}
-  selectedColor: {r: 0.90943396, g: 0.56196195, b: 0.21792093, a: 1}
-  wordHighlightColor: {r: 1, g: 0.7993687, b: 0.20188677, a: 1}
+  selectedColor: {r: 0.909804, g: 0.56078434, b: 0.21960786, a: 1}
+  highlightedColor: {r: 1, g: 0.7795024, b: 0.4660377, a: 1}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
-  correctColor: {r: 0, g: 0.6528301, b: 0.005120275, a: 1}
+  correctColor: {r: 0, g: 0.6509804, b: 0.003921569, a: 1}
+  numberText: {fileID: 8897905947036411855}
 --- !u!114 &3153836316855360926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,8 +541,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7810317579886311923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0}
-  m_AnchorMax: {x: 1, y: 0.3}
+  m_AnchorMin: {x: 0.7, y: 0.05}
+  m_AnchorMax: {x: 0.95, y: 0.3}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}

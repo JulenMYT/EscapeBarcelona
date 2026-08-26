@@ -93,6 +93,22 @@ public class CrosswordGridCreator
             HighestPosition = Vector2Int.Max(HighestPosition, tile.Position);
         }
     }
+
+    public void SetFinalWordLetters(CrosswordData data)
+    {
+        for (int i = 0; i < data.finalWordLetterPositions.Count; i++)
+        {
+            Vector2Int position = data.finalWordLetterPositions[i];
+
+            if (!Tiles.TryGetValue(position, out TileData tile))
+            {
+                Debug.LogError($"Final word position {position} does not contain a tile.");
+                continue;
+            }
+
+            tile.FinalWordNumber = i + 1;
+        }
+    }
 }
 
 public class TileData
@@ -100,6 +116,7 @@ public class TileData
     public Vector2Int Position { get; }
     public char CorrectChar { get; }
     public int? Number { get; set; }
+    public int? FinalWordNumber { get; set; }
     public bool IsHorizontal { get; set; }
     public bool IsVertical { get; set; }
 

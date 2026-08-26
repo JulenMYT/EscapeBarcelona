@@ -6,12 +6,16 @@ using UnityEngine.UI;
 
 public class CrosswordView : MonoBehaviour
 {
-    [SerializeField] private GridLayoutGroup layoutGroup;
-    [SerializeField] private LetterTile letterTile;
-    [SerializeField] private GameObject emptyTile;
-    [SerializeField] private InputActionReference backspaceAction;
-    [SerializeField] private RectTransform grid;
+    public event Action OnCrosswordCompleted;
 
+    [Header("References")]
+    [SerializeField] private GridLayoutGroup layoutGroup;
+    [SerializeField] private CrosswordLetterTile letterTile;
+    [SerializeField] private GameObject emptyTile;
+    [SerializeField] private RectTransform grid;
+    [SerializeField] private InputActionReference backspaceAction;
+
+    [Header("Grid Settings")]
     [SerializeField] private float tileSpacing = 5;
 
     private Dictionary<Vector2Int, LetterTile> tiles;
@@ -19,7 +23,6 @@ public class CrosswordView : MonoBehaviour
     private LetterTile selectedTile;
 
     private bool currentSelectionIsDown = true;
-    public event Action OnCrosswordCompleted;
 
     private void OnEnable()
     {
@@ -33,9 +36,20 @@ public class CrosswordView : MonoBehaviour
 
     public void GenerateGrid(CrosswordGridCreator gridCreator)
     {
+        InitializeGrid();
+        ConfigureGridLayout(gridCreator);
+        CreateTiles(gridCreator);
+    }
+
+    private void InitializeGrid()
+    {
         tiles = new Dictionary<Vector2Int, LetterTile>();
         selectedTiles = new HashSet<LetterTile>();
+        selectedTile = null;
+    }
 
+    private void ConfigureGridLayout(CrosswordGridCreator gridCreator)
+    {
         float availableWidth = grid.rect.width - (gridCreator.GridSize.x - 1) * tileSpacing;
         float availableHeight = grid.rect.height - (gridCreator.GridSize.y - 1) * tileSpacing;
 
@@ -46,9 +60,12 @@ public class CrosswordView : MonoBehaviour
 
         layoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         layoutGroup.constraintCount = gridCreator.GridSize.x;
-        layoutGroup.spacing = new Vector2(tileSpacing, tileSpacing);
+        layoutGroup.spacing = Vector2.one * tileSpacing;
         layoutGroup.cellSize = Vector2.one * calculatedTileSize;
+    }
 
+    private void CreateTiles(CrosswordGridCreator gridCreator)
+    {
         for (int y = 0; y < gridCreator.GridSize.y; y++)
         {
             for (int x = 0; x < gridCreator.GridSize.x; x++)
@@ -57,8 +74,12 @@ public class CrosswordView : MonoBehaviour
 
                 if (gridCreator.Tiles.TryGetValue(position, out TileData tileData))
                 {
-                    LetterTile tile = Instantiate(letterTile, layoutGroup.transform);
-                    tile.Setup(tileData, this);
+                    CrosswordLetterTile tile = Instantiate(letterTile, layoutGroup.transform);
+
+                    tile.Setup(tileData);
+                    tile.OnTileClicked += OnTileClicked;
+                    tile.OnLetterEntered += OnLetterEntered;
+
                     tiles.Add(position, tile);
                 }
                 else
@@ -67,6 +88,22 @@ public class CrosswordView : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnTileClicked(LetterTile tile)
+    {
+        if (tile is not CrosswordLetterTile crosswordTile)
+            return;
+
+        SelectTile(crosswordTile.TileData.Position);
+    }
+
+    private void OnLetterEntered(LetterTile tile)
+    {
+        if (tile is not CrosswordLetterTile crosswordTile)
+            return;
+
+        SelectNextTile(crosswordTile.TileData.Position);
     }
 
     private void OnBackspace(InputAction.CallbackContext context)
@@ -80,7 +117,8 @@ public class CrosswordView : MonoBehaviour
             return;
         }
 
-        SelectPreviousTile(selectedTile.TileData.Position);
+        if (selectedTile is CrosswordLetterTile crosswordTile)
+            SelectPreviousTile(crosswordTile.TileData.Position);
     }
 
     public void SelectTile(Vector2Int position)
@@ -88,9 +126,13 @@ public class CrosswordView : MonoBehaviour
         if (!tiles.TryGetValue(position, out LetterTile tile))
             return;
 
+        if (tile is not CrosswordLetterTile crosswordTile)
+            return;
+
         if (selectedTile == tile)
         {
-            if (tile.TileData.IsHorizontal && tile.TileData.IsVertical)
+            if (crosswordTile.TileData.IsHorizontal &&
+                crosswordTile.TileData.IsVertical)
             {
                 currentSelectionIsDown = !currentSelectionIsDown;
                 SelectTiles(position, currentSelectionIsDown);
@@ -102,10 +144,10 @@ public class CrosswordView : MonoBehaviour
         if (selectedTile != null)
             selectedTile.SetHighlighted();
 
-        if (currentSelectionIsDown && !tile.TileData.IsVertical)
+        if (currentSelectionIsDown && !crosswordTile.TileData.IsVertical)
             currentSelectionIsDown = false;
 
-        if (!currentSelectionIsDown && !tile.TileData.IsHorizontal)
+        if (!currentSelectionIsDown && !crosswordTile.TileData.IsHorizontal)
             currentSelectionIsDown = true;
 
         SelectTiles(position, currentSelectionIsDown);
@@ -126,7 +168,11 @@ public class CrosswordView : MonoBehaviour
 
         while (tiles.TryGetValue(currentPosition, out LetterTile tile))
         {
-            if ((isDown && !tile.TileData.IsVertical) || (!isDown && !tile.TileData.IsHorizontal))
+            if (tile is not CrosswordLetterTile crosswordTile)
+                break;
+
+            if ((isDown && !crosswordTile.TileData.IsVertical) ||
+                (!isDown && !crosswordTile.TileData.IsHorizontal))
                 break;
 
             selectedTiles.Add(tile);
@@ -137,15 +183,19 @@ public class CrosswordView : MonoBehaviour
 
         while (tiles.TryGetValue(currentPosition, out LetterTile tile))
         {
-            if ((isDown && !tile.TileData.IsVertical) || (!isDown && !tile.TileData.IsHorizontal))
+            if (tile is not CrosswordLetterTile crosswordTile)
+                break;
+
+            if ((isDown && !crosswordTile.TileData.IsVertical) ||
+                (!isDown && !crosswordTile.TileData.IsHorizontal))
                 break;
 
             selectedTiles.Add(tile);
             currentPosition -= direction;
         }
 
-        foreach (LetterTile tile in selectedTiles)
-            tile.SetHighlighted();
+        foreach (LetterTile selectedTile in selectedTiles)
+            selectedTile.SetHighlighted();
 
         selectedTile = startTile;
         selectedTile.SetSelected();
@@ -153,9 +203,15 @@ public class CrosswordView : MonoBehaviour
 
     public void SelectNextTile(Vector2Int position)
     {
+        Debug.Log("next tile");
+
         if (IsSelectedWordCorrect())
         {
             LockSelectedTiles();
+
+            if (AreAllTilesLocked())
+                OnCrosswordCompleted?.Invoke();
+
             return;
         }
 
@@ -207,7 +263,11 @@ public class CrosswordView : MonoBehaviour
     {
         foreach (LetterTile tile in selectedTiles)
         {
-            if (!tile.HasLetter() || tile.GetEnteredLetter() != tile.TileData.CorrectChar)
+            if (tile is not CrosswordLetterTile crosswordTile)
+                return false;
+
+            if (!tile.HasLetter() ||
+                tile.GetEnteredLetter() != crosswordTile.TileData.CorrectChar)
                 return false;
         }
 
@@ -224,9 +284,6 @@ public class CrosswordView : MonoBehaviour
 
         selectedTiles.Clear();
         selectedTile = null;
-
-        if (AreAllTilesLocked())
-            OnCrosswordCompleted?.Invoke();
     }
 
     private bool AreAllTilesLocked()
@@ -238,5 +295,54 @@ public class CrosswordView : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void SaveState(CrosswordState state)
+    {
+        state.tiles.Clear();
+
+        foreach (LetterTile tile in tiles.Values)
+        {
+            CrosswordLetterTile crosswordTile = (CrosswordLetterTile)tile;
+
+            state.tiles.Add(new CrosswordState.CrosswordTileState
+            {
+                position = crosswordTile.TileData.Position,
+                letter = crosswordTile.HasLetter() ? crosswordTile.GetEnteredLetter() : '\0',
+                locked = crosswordTile.IsLocked
+            });
+        }
+    }
+
+    public void RestoreState(CrosswordState state)
+    {
+        foreach (CrosswordState.CrosswordTileState tileState in state.tiles)
+        {
+            if (!tiles.TryGetValue(tileState.position, out LetterTile tile))
+                continue;
+
+            CrosswordLetterTile crosswordTile = (CrosswordLetterTile)tile;
+
+            if (tileState.letter != '\0')
+                crosswordTile.SetLetter(tileState.letter);
+
+            if (tileState.locked)
+            {
+                crosswordTile.Lock();
+                crosswordTile.SetCorrect();
+            }
+        }
+    }
+
+    public void Solve()
+    {
+        foreach (LetterTile tile in tiles.Values)
+        {
+            CrosswordLetterTile crosswordTile = (CrosswordLetterTile)tile;
+
+            crosswordTile.SetLetter(crosswordTile.TileData.CorrectChar);
+            crosswordTile.Lock();
+            crosswordTile.SetCorrect();
+        }
     }
 }
