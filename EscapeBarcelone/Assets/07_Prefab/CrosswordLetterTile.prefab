@@ -407,7 +407,9 @@ MonoBehaviour:
   highlightedColor: {r: 1, g: 0.7795024, b: 0.4660377, a: 1}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   correctColor: {r: 0, g: 0.6509804, b: 0.003921569, a: 1}
+  hintColor: {r: 1, g: 0.2471698, b: 0.6181735, a: 1}
   numberText: {fileID: 8897905947036411855}
+  numberText2: {fileID: 571432038918445847}
 --- !u!114 &3153836316855360926
 MonoBehaviour:
   m_ObjectHideFlags: 0

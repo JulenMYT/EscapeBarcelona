@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CrosswordManager : MiniGame
 {
+    [Header("References")]
     [SerializeField] private CrosswordData crosswordData;
     [SerializeField] private CrosswordView crosswordView;
     [SerializeField] private CrosswordDefinition crosswordDefinition;
     [SerializeField] private CrosswordFinalAnswer crosswordFinalAnswer;
 
     private CrosswordGridCreator crosswordGridCreator;
-
     private bool isCompleted;
 
     private void Awake()
@@ -35,6 +35,12 @@ public class CrosswordManager : MiniGame
         SaveCrosswordState(ServiceLocator.Get<WorldState>().crosswordState);
     }
 
+    private void OnDestroy()
+    {
+        crosswordView.OnCrosswordCompleted -= OnCrosswordCompleted;
+        crosswordFinalAnswer.OnAnswerCompleted -= CompleteGame;
+    }
+
     private void CreateCrossword()
     {
         crosswordGridCreator.CreateTiles(crosswordData);
@@ -54,24 +60,26 @@ public class CrosswordManager : MiniGame
 
     private void CreateCrosswordState(CrosswordState state)
     {
-        SaveCrosswordState(state);
         state.initialized = true;
     }
 
     private void RestoreCrosswordState(CrosswordState state)
     {
-        crosswordView.RestoreState(state);
-
-        if (!string.IsNullOrEmpty(state.finalAnswer))
+        if (state.crosswordSolved)
         {
+            crosswordView.Solve();
             crosswordFinalAnswer.CreateAnswer(crosswordData);
             crosswordFinalAnswer.RestoreState(state);
+            return;
         }
+
+        crosswordView.RestoreState(state);
     }
 
     private void SaveCrosswordState(CrosswordState state)
     {
         crosswordView.SaveState(state);
+        state.crosswordSolved = crosswordView.solved;
         state.finalAnswer = crosswordFinalAnswer.GetAnswer();
     }
 
@@ -96,20 +104,15 @@ public class CrosswordManager : MiniGame
 
         isCompleted = true;
     }
-
-    private void OnDestroy()
-    {
-        crosswordView.OnCrosswordCompleted -= OnCrosswordCompleted;
-        crosswordFinalAnswer.OnAnswerCompleted -= CompleteGame;
-    }
 }
 
 [Serializable]
 public class CrosswordState
 {
     public bool initialized;
-    public List<CrosswordTileState> tiles = new();
+    public bool crosswordSolved;
     public string finalAnswer = string.Empty;
+    public List<CrosswordTileState> tiles = new();
 
     [Serializable]
     public class CrosswordTileState

@@ -14,6 +14,7 @@ public class CrosswordFinalAnswer : MonoBehaviour
     private int selectedTileIndex;
 
     public event Action OnAnswerCompleted;
+
     public void CreateAnswer(CrosswordData data)
     {
         finalWord = data.finalWord;
@@ -113,10 +114,15 @@ public class CrosswordFinalAnswer : MonoBehaviour
     {
         string answer = string.Empty;
 
+        if (answerTiles == null)
+            return answer;
+
         foreach (LetterTile tile in answerTiles)
         {
             if (tile.HasLetter())
                 answer += tile.GetEnteredLetter();
+            else
+                answer += ' ';
         }
 
         return answer;

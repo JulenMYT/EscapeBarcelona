@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 public class LetterTile : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] protected TMP_InputField inputField;
-    [SerializeField] private Color selectedColor;
-    [SerializeField] private Color highlightedColor;
-    [SerializeField] private Color baseColor;
-    [SerializeField] private Color correctColor;
+    [SerializeField] protected Color selectedColor;
+    [SerializeField] protected Color highlightedColor;
+    [SerializeField] protected Color baseColor;
+    [SerializeField] protected Color correctColor;
 
     public event Action<LetterTile> OnTileClicked;
     public event Action<LetterTile> OnLetterEntered;
