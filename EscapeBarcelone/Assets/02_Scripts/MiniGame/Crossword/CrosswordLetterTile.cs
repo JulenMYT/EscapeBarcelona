@@ -24,6 +24,7 @@ public class CrosswordLetterTile : LetterTile
     public void ShowHint()
     {
         numberText2.text = TileData.FinalWordNumber.ToString();
+        numberText.text = string.Empty;
         if (!String.IsNullOrEmpty(numberText2.text))
         {
             inputField.image.color = hintColor;

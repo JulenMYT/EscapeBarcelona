@@ -13,45 +13,71 @@ MonoBehaviour:
   m_Name: Barcelona
   m_EditorClassIdentifier: Assembly-CSharp::CrosswordData
   words:
-  - word: MEDITERANEO
-    hint: Clima en Barcelona
+  - word: MEDITERRANEO
+    hint: tipo de clima en barcelona
     originPosition: {x: 0, y: 0}
     isDown: 0
-  - word: PAELLA
-    hint: "Plato espa\xF1ol con arroz"
-    originPosition: {x: 1, y: -3}
-    isDown: 0
-  - word: IMPORTANTE
-    hint: Contrario de insignificante
-    originPosition: {x: 0, y: -5}
-    isDown: 0
-  - word: GAUDI
-    hint: Arquitecto famoso de Barcelona
-    originPosition: {x: 0, y: -9}
+  - word: ESPANA
+    hint: "Pa\xEDs al que pertenece Barcelona"
+    originPosition: {x: 1, y: 0}
     isDown: 1
+  - word: GAUDI
+    hint: apellido de Antonio
+    originPosition: {x: 0, y: 5}
+    isDown: 0
   - word: CATALAN
-    hint: Lengua que se habla en Barcelona
+    hint: "Idioma regional en Catalu\xF1a"
+    originPosition: {x: 2, y: 7}
+    isDown: 0
+  - word: MODERNISTA
+    hint: Estilo del famoso arquitecto
+    originPosition: {x: 1, y: -5}
+    isDown: 0
+  - word: FUTBOL
+    hint: "deporte muy popular gracias al Bar\xE7a"
+    originPosition: {x: 6, y: 5}
+    isDown: 0
+  - word: GRANDE
+    hint: "contrario de peque\xF1o"
     originPosition: {x: 6, y: -8}
     isDown: 1
-  - word: CASTELLANO
-    hint: El que vive en Castilla
-    originPosition: {x: 8, y: -8}
+  - word: DINAMICA
+    hint: "as\xED se considera Barcelona"
+    originPosition: {x: 3, y: -5}
     isDown: 1
-  - word: MODERNISMO
-    hint: "Estilo art\xEDstico t\xEDpico de la ciudad"
-    originPosition: {x: 3, y: -6}
+  - word: NORESTE
+    hint: "zona de localizaci\xF3n de b."
+    originPosition: {x: 3, y: -3}
+    isDown: 0
+  - word: VERANOS
+    hint: "son c\xE1lidos y h\xFAmedos en barcelona"
+    originPosition: {x: 1, y: 10}
+    isDown: 0
+  - word: TURISTICA
+    hint: Que cuenta muchos turistas
+    originPosition: {x: 4, y: 2}
     isDown: 1
-  - word: FUTBOL
-    hint: Deporte muy popular en Barcelona
-    originPosition: {x: 10, y: -4}
+  - word: CIUDAD
+    hint: Barceloa es una
+    originPosition: {x: 7, y: 3}
     isDown: 1
-  - word: RAMBLA
-    hint: Calle famosa para pasear
-    originPosition: {x: 0, y: -2}
-    isDown: 1
-  - word: ESPANA
-    hint: "Pa\xEDs donde est\xE1 Barcelona"
-    originPosition: {x: 5, y: 0}
-    isDown: 1
+  - word: PRAT
+    hint: nombre del aeropuerto
+    originPosition: {x: 1, y: 2}
+    isDown: 0
   finalWord: SAGRADAFAMILIA
-  finalWordLetterPosition: []
+  finalWordLetterPositions:
+  - {x: 4, y: 6}
+  - {x: 10, y: -5}
+  - {x: 6, y: -8}
+  - {x: 6, y: 0}
+  - {x: 1, y: 3}
+  - {x: 3, y: -5}
+  - {x: 4, y: 10}
+  - {x: 6, y: 5}
+  - {x: 3, y: 2}
+  - {x: 0, y: 0}
+  - {x: 7, y: -5}
+  - {x: 11, y: 5}
+  - {x: 4, y: 8}
+  - {x: 7, y: 7}

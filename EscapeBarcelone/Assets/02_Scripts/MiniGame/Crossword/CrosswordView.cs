@@ -118,7 +118,7 @@ public class CrosswordView : MonoBehaviour
 
     private void OnBackspace(InputAction.CallbackContext context)
     {
-        if (selectedTile == null || selectedTile.IsLocked)
+        if (solved || selectedTile == null || selectedTile.IsLocked)
             return;
 
         if (selectedTile.HasLetter())
@@ -287,6 +287,16 @@ public class CrosswordView : MonoBehaviour
                 tile.SetCorrect();
             }
         }
+    }
+
+    public void AutoSolve()
+    {
+        if (solved)
+            return;
+        Solve();
+        solved = true;
+        ShowHints();
+        OnCrosswordCompleted?.Invoke();
     }
 
     public void Solve()

@@ -15,6 +15,7 @@ public class CrosswordGridCreator
         CreateTileData(data);
         AssignWordNumbers(data);
         CalculateBounds();
+        SetFinalWordLetters(data);
     }
 
     private void CreateTileData(CrosswordData data)
@@ -94,7 +95,7 @@ public class CrosswordGridCreator
         }
     }
 
-    public void SetFinalWordLetters(CrosswordData data)
+    private void SetFinalWordLetters(CrosswordData data)
     {
         for (int i = 0; i < data.finalWordLetterPositions.Count; i++)
         {
