@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CrosswordData", menuName = "Crossword/Data")]
+[CreateAssetMenu(fileName = "CrosswordData", menuName = "MiniGames/CrosswordData")]
 public class CrosswordData : ScriptableObject
 {
     public List<WordData> words;
