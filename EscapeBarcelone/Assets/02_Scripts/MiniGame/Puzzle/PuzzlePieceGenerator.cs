@@ -9,6 +9,9 @@ public class PuzzlePieceGenerator
 
     public List<PuzzlePieceGroup> groups { get; private set; } = new();
 
+    // Sprites créés à l'exécution : Unity ne les libère pas tout seul.
+    private readonly List<Sprite> createdSprites = new();
+
     public PuzzlePieceGenerator(PuzzlePiece piecePrefab, Transform piecesParent, PuzzleConnectionManager connectionManager)
     {
         this.piecePrefab = piecePrefab;
@@ -56,7 +59,9 @@ public class PuzzlePieceGenerator
 
         Rect rect = new Rect(spriteRect.x + xMin, spriteRect.y + yMin, xMax - xMin, yMax - yMin);
 
-        return Sprite.Create(texture, rect, Vector2.one * 0.5f, pixelsPerUnit);
+        Sprite pieceSprite = Sprite.Create(texture, rect, Vector2.one * 0.5f, pixelsPerUnit);
+        createdSprites.Add(pieceSprite);
+        return pieceSprite;
     }
 
     private void CreateGroup(PuzzlePiece piece)
@@ -69,5 +74,17 @@ public class PuzzlePieceGenerator
         groups.Add(group);
 
         piece.transform.localPosition = Vector3.zero;
+    }
+
+    /// <summary>Libère les sprites des pièces (à appeler quand le puzzle est détruit ou terminé).</summary>
+    public void DestroySprites()
+    {
+        foreach (Sprite pieceSprite in createdSprites)
+        {
+            if (pieceSprite != null)
+                Object.Destroy(pieceSprite);
+        }
+
+        createdSprites.Clear();
     }
 }

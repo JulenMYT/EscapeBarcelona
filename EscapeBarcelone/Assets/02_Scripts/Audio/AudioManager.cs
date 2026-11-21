@@ -40,6 +40,15 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioData data, float fadeTime = 0.5f, float position = 0)
     {
+        // Pas de musique demandée : on coupe proprement (au lieu de jouer un clip vide).
+        if (data == null || data.soundClip == null)
+        {
+            if (musicSource.clip != null)
+                StopMusic(fadeTime);
+
+            return;
+        }
+
         if (musicSource.clip == data.soundClip)
         {
             if (musicRoutine != null)
@@ -63,17 +72,19 @@ public class AudioManager : MonoBehaviour
         if (musicRoutine != null)
             StopCoroutine(musicRoutine);
 
-        musicRoutine = StartCoroutine(PlayMusicRoutine(data.soundClip, data.volume, fadeTime, data.mixerGroup, position));
+        musicRoutine = StartCoroutine(PlayMusicRoutine(data.soundClip, data.volume, fadeTime, data.mixerGroup, position, data.loop));
     }
 
-    private IEnumerator PlayMusicRoutine(AudioClip clip, float volume, float fadeTime, AudioMixerGroup mixerGroup, float position)
+    private IEnumerator PlayMusicRoutine(AudioClip clip, float volume, float fadeTime, AudioMixerGroup mixerGroup, float position, bool loop)
     {
         yield return Fade(0, fadeTime);
 
         musicSource.clip = clip;
-        musicSource.volume = volume;
+        musicSource.loop = loop;
+        musicSource.volume = 0f;   // part de 0 pour que le fondu d'entrée s'entende vraiment
         musicSource.outputAudioMixerGroup = mixerGroup;
-        musicSource.time = position;
+        // + fadeTime : le fondu de sortie a pris ce temps, la radio a « continué » pendant ce temps.
+        musicSource.time = clip.length > 0f ? Mathf.Repeat(position + fadeTime, clip.length) : 0f;
         musicSource.Play();
 
         yield return Fade(volume, fadeTime);

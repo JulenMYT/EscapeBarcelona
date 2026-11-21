@@ -40,8 +40,10 @@ public class PuzzleMiniGame : MiniGame
         connectionManager.PuzzleCompleted += CompleteGame;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
+
         if (isCompleted)
             return;
 
@@ -79,9 +81,16 @@ public class PuzzleMiniGame : MiniGame
 
     private void RestorePuzzleState(PuzzleState puzzleState)
     {
+        Dictionary<Vector2Int, PuzzlePieceGroup> groupsByPosition = new();
+
         foreach (PuzzlePieceGroup group in pieceGenerator.groups)
+            groupsByPosition[group.Pieces[0].GridPosition] = group;
+
+        // On reconstruit la liste dans l'ordre sauvegardé, pour que RevealHiddenPiece
+        // révèle toujours les mêmes pièces d'une visite à l'autre.
+        foreach (Vector2Int position in puzzleState.hiddenPieces)
         {
-            if (!puzzleState.hiddenPieces.Contains(group.Pieces[0].GridPosition))
+            if (!groupsByPosition.TryGetValue(position, out PuzzlePieceGroup group))
                 continue;
 
             group.gameObject.SetActive(false);
@@ -131,6 +140,12 @@ public class PuzzleMiniGame : MiniGame
         isCompleted = true;
         completedSprite.SetActive(true);
         Destroy(piecesParent.gameObject);
+        pieceGenerator.DestroySprites();
+    }
+
+    private void OnDestroy()
+    {
+        pieceGenerator?.DestroySprites();
     }
 
     protected override void SolveMiniGame()

@@ -26,22 +26,5 @@ public class CutsceneInteractionConditional : MonoBehaviour
         cutscene.StartCutscene();
     }
 
-    private bool CanPlay()
-    {
-        WorldState worldState = ServiceLocator.Get<WorldState>();
-
-        foreach (StoryFlag flag in requiredFlags)
-        {
-            if (!worldState.storyFlags.Contains(flag))
-                return false;
-        }
-
-        foreach (StoryFlag flag in forbiddenFlags)
-        {
-            if (worldState.storyFlags.Contains(flag))
-                return false;
-        }
-
-        return true;
-    }
+    private bool CanPlay() => StoryCondition.Check(requiredFlags, forbiddenFlags);
 }

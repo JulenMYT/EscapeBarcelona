@@ -98,26 +98,89 @@ public class CrosswordView : MonoBehaviour
     private void OnLetterEntered(LetterTile tile)
     {
         CrosswordLetterTile crosswordTile = (CrosswordLetterTile)tile;
+        Vector2Int position = crosswordTile.TileData.Position;
 
-        if (IsSelectedWordCorrect())
+        bool selectedWordCorrect = IsSelectedWordCorrect();
+
+        // On vérifie les DEUX mots qui passent par cette case (horizontal et vertical),
+        // pas seulement le mot sélectionné : sinon un mot complété par sa case de
+        // croisement n'était jamais validé, et la grille restait bloquée.
+        LockCompletedWordsAt(position);
+
+        if (AreAllTilesLocked())
         {
-            LockHighlightedTiles();
-
-            if (AreAllTilesLocked())
-            {
-                solved = true;
-                ShowHints();
-                OnCrosswordCompleted?.Invoke();
-            }
-
+            solved = true;
+            ShowHints();
+            OnCrosswordCompleted?.Invoke();
             return;
         }
 
-        SelectNextTile(crosswordTile.TileData.Position);
+        if (selectedWordCorrect)
+        {
+            LockHighlightedTiles();
+            return;
+        }
+
+        SelectNextTile(position);
+    }
+
+    /// <summary>Verrouille chaque mot passant par cette case s'il est entièrement juste.</summary>
+    private void LockCompletedWordsAt(Vector2Int position)
+    {
+        if (!tiles.TryGetValue(position, out CrosswordLetterTile tile))
+            return;
+
+        if (tile.TileData.IsHorizontal)
+            LockIfCorrect(GetWordTiles(position, Vector2Int.right));
+
+        if (tile.TileData.IsVertical)
+            LockIfCorrect(GetWordTiles(position, Vector2Int.up));
+    }
+
+    private void LockIfCorrect(List<CrosswordLetterTile> word)
+    {
+        if (word.Count < 2)
+            return;
+
+        foreach (CrosswordLetterTile tile in word)
+        {
+            if (!IsTileCorrect(tile))
+                return;
+        }
+
+        foreach (CrosswordLetterTile tile in word)
+        {
+            tile.Lock();
+            tile.SetCorrect();
+        }
+    }
+
+    /// <summary>Toutes les cases contiguës passant par cette position, dans une direction.</summary>
+    private List<CrosswordLetterTile> GetWordTiles(Vector2Int position, Vector2Int direction)
+    {
+        List<CrosswordLetterTile> word = new();
+
+        Vector2Int start = position;
+
+        while (tiles.ContainsKey(start - direction))
+            start -= direction;
+
+        for (Vector2Int current = start; tiles.TryGetValue(current, out CrosswordLetterTile tile); current += direction)
+            word.Add(tile);
+
+        return word;
+    }
+
+    private static bool IsTileCorrect(CrosswordLetterTile tile)
+    {
+        return tile.HasLetter() && CrosswordText.SameLetter(tile.GetEnteredLetter(), tile.TileData.CorrectChar);
     }
 
     private void OnBackspace(InputAction.CallbackContext context)
     {
+        if (CutsceneDirector.IsPlaying)
+            return;
+
         if (solved || selectedTile == null || selectedTile.IsLocked)
             return;
 
@@ -211,7 +274,9 @@ public class CrosswordView : MonoBehaviour
         {
             if (!targetTile.IsLocked)
             {
-                selectedTile.SetHighlighted();
+                if (selectedTile != null)
+                    selectedTile.SetHighlighted();
+
                 selectedTile = targetTile;
                 selectedTile.SetSelected();
                 targetTile.Focus();
@@ -226,7 +291,7 @@ public class CrosswordView : MonoBehaviour
     {
         foreach (CrosswordLetterTile tile in highlightedTiles)
         {
-            if (!tile.HasLetter() || tile.GetEnteredLetter() != tile.TileData.CorrectChar)
+            if (!IsTileCorrect(tile))
                 return false;
         }
 

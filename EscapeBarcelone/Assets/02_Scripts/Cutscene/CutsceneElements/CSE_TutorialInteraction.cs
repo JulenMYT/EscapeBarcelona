@@ -45,15 +45,28 @@ public class CSE_TutorialInteraction : CSE_Tutorial
 
     protected override void OnTutorialComplete()
     {
-        target.OnClick -= OnTargetClicked;
-
-        ServiceLocator.Get<InteractionManager>()
-            .DisallowObject(target.gameObject);
-
-        target.RemoveHighlight();
-
-        cutsceneHandler.tutorialHandler.OnInteractionRequired -= OnInteractionRequired;
-
+        Cleanup();
         base.OnTutorialComplete();
+    }
+
+    // Cutscene interrompue (salle déchargée) : on ne laisse pas d'abonnement vers un objet détruit.
+    private void OnDestroy()
+    {
+        Cleanup();
+    }
+
+    private void Cleanup()
+    {
+        TutorialHandler tutorialHandler = ServiceLocator.Get<TutorialHandler>();
+
+        if (tutorialHandler != null)
+            tutorialHandler.OnInteractionRequired -= OnInteractionRequired;
+
+        if (target == null)
+            return;
+
+        target.OnClick -= OnTargetClicked;
+        ServiceLocator.Get<InteractionManager>()?.DisallowObject(target.gameObject);
+        target.RemoveHighlight();
     }
 }

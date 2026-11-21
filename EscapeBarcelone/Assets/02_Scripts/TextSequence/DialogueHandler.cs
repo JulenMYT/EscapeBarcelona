@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DialogueHandler : TextSequenceHandler<Dialogue>
@@ -9,9 +10,10 @@ public class DialogueHandler : TextSequenceHandler<Dialogue>
         ServiceLocator.Register<DialogueHandler>(this);
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    /// <param name="onComplete">Appelé à la fin de ce dialogue précisément.</param>
+    public void StartDialogue(Dialogue dialogue, Action onComplete = null)
     {
-        StartSequence(dialogue);
+        StartSequence(dialogue, onComplete);
     }
 
     protected override int GetLineCount()
@@ -21,11 +23,13 @@ public class DialogueHandler : TextSequenceHandler<Dialogue>
 
     protected override void DisplayCurrentLine()
     {
-        dialogueUI.DisplayLine(
-            currentSequence.dialogueLines[index].speakerName,
-            currentSequence.dialogueLines[index].lineText
-        );
+        Dialogue.DialogueLine line = currentSequence.dialogueLines[index];
+        dialogueUI.DisplayLine(line.speakerName, line.lineText);
     }
+
+    protected override bool IsLineAnimating() => dialogueUI.IsTyping;
+
+    protected override void CompleteLineAnimation() => dialogueUI.CompleteLine();
 
     protected override void ShowUI()
     {

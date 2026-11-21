@@ -42,3 +42,7 @@
 
 .DS_Store
 Thumbs.db
+# Unity : sauvegardes après crash et captures du profiler
+_Recovery/
+_Recovery.meta
+[Pp]rofiler[Cc]aptures/

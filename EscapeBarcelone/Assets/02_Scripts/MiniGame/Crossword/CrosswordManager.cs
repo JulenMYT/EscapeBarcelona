@@ -10,6 +10,9 @@ public class CrosswordManager : MiniGame
     [SerializeField] private CrosswordDefinition crosswordDefinition;
     [SerializeField] private CrosswordFinalAnswer crosswordFinalAnswer;
 
+    /// <summary>La grille est entièrement remplie (le mot final reste à trouver).</summary>
+    public event Action OnGridCompleted;
+
     private CrosswordGridCreator crosswordGridCreator;
     private bool isCompleted;
 
@@ -27,8 +30,10 @@ public class CrosswordManager : MiniGame
         InitializeCrosswordState();
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
+
         if (isCompleted)
             return;
 
@@ -86,6 +91,7 @@ public class CrosswordManager : MiniGame
     private void OnCrosswordCompleted()
     {
         crosswordFinalAnswer.CreateAnswer(crosswordData);
+        OnGridCompleted?.Invoke();
     }
 
     private void CompleteGame()

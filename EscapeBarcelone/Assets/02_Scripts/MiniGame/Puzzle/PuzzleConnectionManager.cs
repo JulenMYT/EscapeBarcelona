@@ -9,6 +9,11 @@ public class PuzzleConnectionManager
     private const float snapDistance = 0.3f;
     private const float snapDistanceSqr = snapDistance * snapDistance;
 
+    // Écart de profondeur entre deux groupes : assez pour départager l'affichage et le
+    // clic (OnMouseDown prend le plus proche de la caméra), assez petit pour rester
+    // loin de la caméra même avec beaucoup de groupes.
+    private const float DepthStep = 0.01f;
+
     private static readonly Vector2Int[] directions =
     {
         Vector2Int.up,
@@ -21,9 +26,18 @@ public class PuzzleConnectionManager
 
     private int groupCount;
 
+    // Du plus en arrière au plus en avant.
+    private readonly List<PuzzlePieceGroup> layering = new();
+
     public void Register(PuzzlePiece piece)
     {
         pieces.Add(piece.GridPosition, piece);
+
+        if (piece.Group != null && !layering.Contains(piece.Group))
+        {
+            layering.Add(piece.Group);
+            ApplyLayering();
+        }
     }
 
     public void SetGroupCount(int count)
@@ -31,12 +45,50 @@ public class PuzzleConnectionManager
         groupCount = count;
     }
 
+    // ───────────────────────── Premier plan ─────────────────────────
+
+    /// <summary>Fait passer ce groupe devant tous les autres (affichage et clic).</summary>
+    public void BringToFront(PuzzlePieceGroup group)
+    {
+        layering.Remove(group);
+        layering.Add(group);
+        ApplyLayering();
+    }
+
+    private void ApplyLayering()
+    {
+        layering.RemoveAll(g => g == null);
+
+        // Le dernier de la liste est le plus proche de la caméra (z le plus petit).
+        int count = layering.Count;
+
+        for (int i = 0; i < count; i++)
+            layering[i].SetDepth(-(i + 1) * DepthStep);
+    }
+
+    // ───────────────────────── Collage ─────────────────────────
+
+    /// <summary>
+    /// Colle le groupe à TOUS ses voisins compatibles, pas seulement au premier :
+    /// une pièce posée entre deux voisins se colle aux deux d'un coup.
+    /// </summary>
     public void CheckConnection(PuzzlePieceGroup group)
     {
-        foreach (PuzzlePiece piece in group.BorderPieces)
+        bool merged = true;
+
+        while (merged && group != null)
         {
-            if (CheckPieceConnections(piece))
-                return;
+            merged = false;
+
+            // Copie : la liste change à chaque fusion.
+            foreach (PuzzlePiece piece in new List<PuzzlePiece>(group.BorderPieces))
+            {
+                if (CheckPieceConnections(piece))
+                {
+                    merged = true;
+                    break;
+                }
+            }
         }
     }
 
@@ -50,6 +102,10 @@ public class PuzzleConnectionManager
                 continue;
 
             if (other.Group == piece.Group)
+                continue;
+
+            // Une pièce encore cachée ne peut pas servir de voisin.
+            if (!other.gameObject.activeInHierarchy)
                 continue;
 
             if (CanConnect(piece, other))
@@ -70,6 +126,7 @@ public class PuzzleConnectionManager
         Vector3 currentOffset = b.transform.position - a.transform.position;
 
         Vector3 delta = currentOffset - expectedOffset;
+        delta.z = 0;   // la profondeur ne compte pas pour l'emboîtement
 
         return delta.sqrMagnitude < snapDistanceSqr;
     }
@@ -83,13 +140,16 @@ public class PuzzleConnectionManager
 
         a.Group.transform.position += offset;
 
-        a.Group.Merge(b.Group);
+        PuzzlePieceGroup absorbed = b.Group;
+        a.Group.Merge(absorbed);
+        layering.Remove(absorbed);
 
         UpdateBorders(a.Group);
+        BringToFront(a.Group);
 
         groupCount--;
 
-        if (groupCount == 1) 
+        if (groupCount == 1)
             PuzzleCompleted?.Invoke();
     }
 
@@ -101,7 +161,10 @@ public class PuzzleConnectionManager
 
         Vector3 currentOffset = a.transform.position - b.transform.position;
 
-        return expectedPosition - currentOffset;
+        Vector3 offset = expectedPosition - currentOffset;
+        offset.z = 0;   // on aligne en x/y seulement, la profondeur est gérée par le layering
+
+        return offset;
     }
 
     private void UpdateBorders(PuzzlePieceGroup group)
@@ -132,7 +195,8 @@ public class PuzzleConnectionManager
 
         if (targetGroup != null)
         {
-            targetGroup.transform.position = groupState.position;
+            Vector3 saved = groupState.position;
+            targetGroup.transform.position = new Vector3(saved.x, saved.y, targetGroup.transform.position.z);
             UpdateBorders(targetGroup);
         }
     }

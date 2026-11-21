@@ -28,12 +28,28 @@ public class PasswordMiniGame : MiniGame
     {
         for (int i = 0; i < wheels.Length; i++)
         {
-            if (wheels[i].Letter != password[i])
+            if (wheels[i].Letter != char.ToUpperInvariant(password[i]))
                 return;
         }
 
         CompleteGame();
     }
+
+#if UNITY_EDITOR
+    // Prévient dans l'inspecteur si le mot de passe contient un caractère absent des roues
+    // (espace, accent, chiffre…) : le mini-jeu serait alors impossible à résoudre.
+    private void OnValidate()
+    {
+        foreach (char c in password)
+        {
+            if (LetterWheel.Alphabet.IndexOf(char.ToUpperInvariant(c)) < 0)
+            {
+                UnityEngine.Debug.LogWarning($"PasswordMiniGame : le caractère « {c} » du mot de passe « {password} » n'existe pas sur les roues, le mini-jeu est impossible.", this);
+                return;
+            }
+        }
+    }
+#endif
 
     private void OnDestroy()
     {

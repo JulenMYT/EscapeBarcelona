@@ -14,6 +14,7 @@ public class PuzzlePiece : MonoBehaviour
     public PuzzlePieceGroup Group { get; set; }
 
     private Vector3 dragOffset;
+    private bool isDragging;
 
     public void Initialize(Sprite pieceSprite, Vector2Int gridPosition, PuzzleConnectionManager connectionManager, int sortingOrder, Bounds shuffleArea)
     {
@@ -34,21 +35,33 @@ public class PuzzlePiece : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (CutsceneDirector.IsPlaying)
+            return;
+
+        isDragging = true;
+
+        // Le groupe attrapé passe devant tous les autres (affichage ET clic) et y reste.
+        connectionManager.BringToFront(Group);
+
         dragOffset = Group.transform.position - GetMousePosition();
     }
 
     private void OnMouseDrag()
     {
+        if (!isDragging || CutsceneDirector.IsPlaying)
+            return;
+
         Vector3 position = GetMousePosition() + dragOffset;
 
-        position.x = Mathf.Clamp(position.x, shuffleArea.min.x, shuffleArea.max.x);
-        position.y = Mathf.Clamp(position.y, shuffleArea.min.y, shuffleArea.max.y);
-
-        Group.Move(position);
+        Group.Move(Group.ClampToArea(position, shuffleArea));
     }
 
     private void OnMouseUp()
     {
+        if (!isDragging)
+            return;
+
+        isDragging = false;
         connectionManager.CheckConnection(Group);
     }
 

@@ -18,6 +18,17 @@ public class MapLabel : MonoBehaviour
 
     private bool canDrag = true;
 
+    // Les étiquettes et les ancres sont toutes à z = 0 dans la scène. OnMouseDown choisit
+    // l'objet touché selon sa profondeur : à égalité, il peut toucher l'ancre au lieu de
+    // l'étiquette posée dessus. On place donc l'étiquette un peu plus près de la caméra.
+    private const float LabelDepthOffset = -0.1f;
+
+    private void Awake()
+    {
+        Vector3 local = transform.localPosition;
+        transform.localPosition = new Vector3(local.x, local.y, LabelDepthOffset);
+    }
+
     public void SetCanDrag(bool canDrag)
     {
         this.canDrag = canDrag;
@@ -25,6 +36,9 @@ public class MapLabel : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (CutsceneDirector.IsPlaying)
+            return;
+
         if (!canDrag)
             return;
 
@@ -42,6 +56,9 @@ public class MapLabel : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (CutsceneDirector.IsPlaying)
+            return;
+
         if (!canDrag)
             return;
 
@@ -71,7 +88,12 @@ public class MapLabel : MonoBehaviour
     public void Anchor(MapLabelAnchor anchor)
     {
         currentAnchor = anchor;
-        transform.position = anchor.transform.position;
+
+        // On garde le z de l'étiquette : avec celui de l'ancre, les deux colliders sont à
+        // la même profondeur, et OnMouseDown peut alors toucher l'ancre au lieu de
+        // l'étiquette (impossible de la reprendre).
+        Vector3 anchorPosition = anchor.transform.position;
+        transform.position = new Vector3(anchorPosition.x, anchorPosition.y, transform.position.z);
         SetAnchoredColor();
     }
 

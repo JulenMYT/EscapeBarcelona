@@ -6,8 +6,7 @@ public class CSE_AddStoryFlag : CutsceneElementBase
 
     public override void Execute()
     {
-        ServiceLocator.Get<WorldState>()
-            .storyFlags.Add(flag);
+        ServiceLocator.Get<WorldState>().AddFlag(flag);
 
         cutsceneHandler.PlayNextElement();
     }

@@ -76,8 +76,12 @@ public class WordHuntView : MonoBehaviour
 
     private void HandlePointerDown(Vector2Int position)
     {
+        // Nouvelle sélection : on efface l'ancienne barre.
+        HideSelection();
+
         firstPosition = position;
         currentPosition = position;
+        direction = Vector2Int.zero;
         isSelecting = true;
     }
 
@@ -99,6 +103,12 @@ public class WordHuntView : MonoBehaviour
 
         UpdateSelectionVisual(firstPosition, finalPosition);
         selectionVisual.gameObject.SetActive(true);
+    }
+
+    /// <summary>Masque la barre de sélection (sélection invalide, ou après un départ).</summary>
+    public void HideSelection()
+    {
+        selectionVisual.gameObject.SetActive(false);
     }
 
     private void HandlePointerUp(InputAction.CallbackContext context)
@@ -148,6 +158,11 @@ public class WordHuntView : MonoBehaviour
     private Vector2Int GetFinalPosition()
     {
         Vector2Int finalPosition = firstPosition;
+
+        // Sans direction (simple clic sans glisser), la boucle ci-dessous ne se terminerait jamais.
+        if (direction == Vector2Int.zero)
+            return finalPosition;
+
         float closestDistance = float.MaxValue;
 
         Vector2Int position = firstPosition;

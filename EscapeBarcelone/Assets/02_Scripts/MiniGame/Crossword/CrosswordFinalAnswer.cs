@@ -92,8 +92,12 @@ public class CrosswordFinalAnswer : MonoBehaviour
 
     private void OnTileClicked(LetterTile tile)
     {
-        answerTiles[selectedTileIndex].SetBase();
-        tile.SetSelected();
+        int index = answerTiles.IndexOf(tile);
+
+        if (index < 0 || tile.IsLocked)
+            return;
+
+        SelectTile(index);
     }
 
     private void SelectTile(int index)
@@ -110,13 +114,26 @@ public class CrosswordFinalAnswer : MonoBehaviour
 
     private void OnBackspace(InputAction.CallbackContext context)
     {
-        if (answerTiles[selectedTileIndex].HasLetter())
+        if (CutsceneDirector.IsPlaying)
+            return;
+
+        // La réponse finale n'existe qu'une fois la grille terminée.
+        if (answerTiles == null || answerTiles.Count == 0)
+            return;
+
+        LetterTile selectedTile = answerTiles[selectedTileIndex];
+
+        if (selectedTile.IsLocked)
+            return;
+
+        if (selectedTile.HasLetter())
         {
-            answerTiles[selectedTileIndex].ClearLetter();
+            selectedTile.ClearLetter();
             return;
         }
 
-        SelectTile(selectedTileIndex - 1);
+        if (selectedTileIndex > 0)
+            SelectTile(selectedTileIndex - 1);
     }
 
     private bool CheckAnswer()
@@ -126,7 +143,7 @@ public class CrosswordFinalAnswer : MonoBehaviour
             if (!answerTiles[i].HasLetter())
                 return false;
 
-            if (answerTiles[i].GetEnteredLetter() != char.ToUpper(finalWord[i]))
+            if (!CrosswordText.SameLetter(answerTiles[i].GetEnteredLetter(), finalWord[i]))
                 return false;
         }
 

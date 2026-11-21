@@ -6,13 +6,13 @@ public class CSE_Tutorial : CutsceneElementBase
 
     public override void Execute()
     {
-        cutsceneHandler.tutorialHandler.OnSequenceComplete += OnTutorialComplete;
-        cutsceneHandler.tutorialHandler.StartTutorial(tutorial);
+        // Callback propre à CE tuto : même s'il doit attendre la fin d'un autre,
+        // on ne sera prévenu qu'à sa propre fin.
+        cutsceneHandler.tutorialHandler.StartTutorial(tutorial, OnTutorialComplete);
     }
 
     protected virtual void OnTutorialComplete()
     {
-        cutsceneHandler.tutorialHandler.OnSequenceComplete -= OnTutorialComplete;
         cutsceneHandler.PlayNextElement();
     }
 }

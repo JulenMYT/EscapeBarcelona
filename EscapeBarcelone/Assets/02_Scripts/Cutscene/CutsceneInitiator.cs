@@ -13,12 +13,12 @@ public class CutsceneInitiator : MonoBehaviour
 
     protected virtual void Initialize() { }
 
+    /// <summary>
+    /// Lance la cutscene. Si une autre est déjà en cours, celle-ci attend son tour.
+    /// Le blocage des entrées est géré par CutsceneDirector.
+    /// </summary>
     public void StartCutscene()
     {
-        ServiceLocator.Get<InteractionManager>().Lock();
-        ServiceLocator.Get<InspectionHandler>().SetCanClose(false);
-
-        cutsceneHandler.Restart();
-        cutsceneHandler.PlayNextElement();
+        cutsceneHandler.Play();
     }
 }

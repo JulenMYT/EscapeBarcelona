@@ -9,7 +9,10 @@ public class LetterWheel : MonoBehaviour
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject previousButton;
 
-    private const string alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+    private const string alphabet = "ABCDEFGHIJKLMNÃ‘OPQRSTUVWXYZ";
+
+    /// <summary>Lettres disponibles sur une roue (le mot de passe ne peut utiliser que celles-ci).</summary>
+    public static string Alphabet => alphabet;
 
     private int index;
 
