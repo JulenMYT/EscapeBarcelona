@@ -2264,7 +2264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 633472536}
   - component: {fileID: 633472534}
-  - component: {fileID: 633472532}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -2272,19 +2271,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &633472532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633472531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6528d0800fe42844ab3caaf8d4e4356e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PersistentGuid
-  guid: 5bdf36b9-e1f6-4330-878d-a7ff9ba04ea1
 --- !u!114 &633472534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0da303494a2ca1b1c18c6042834c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RadioEcho
-  radioId: 
+  radioId: Radio
   sound:
     soundClip: {fileID: 8300000, guid: 47881352df2eafc4191cfd1f5c209afb, type: 3}
     volume: 0.5

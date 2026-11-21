@@ -1,6 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PuzzlePiece : MonoBehaviour
+/// <summary>
+/// Pièce de puzzle. Le glisser-déposer passe par l'EventSystem : l'UI bloque les clics, et
+/// la pièce attrapée est celle affichée devant (même ordre d'affichage : la plus proche
+/// de la caméra, réglée par PuzzleConnectionManager.BringToFront).
+/// </summary>
+public class PuzzlePiece : MonoBehaviour, IPointerDownHandler, IInitializePotentialDragHandler, IDragHandler, IPointerUpHandler
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private BoxCollider2D boxCollider;
@@ -33,9 +39,9 @@ public class PuzzlePiece : MonoBehaviour
         boxCollider.size = Size;
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (CutsceneDirector.IsPlaying)
+        if (eventData.button != PointerEventData.InputButton.Left || CutsceneDirector.IsPlaying)
             return;
 
         isDragging = true;
@@ -43,20 +49,26 @@ public class PuzzlePiece : MonoBehaviour
         // Le groupe attrapé passe devant tous les autres (affichage ET clic) et y reste.
         connectionManager.BringToFront(Group);
 
-        dragOffset = Group.transform.position - GetMousePosition();
+        dragOffset = Group.transform.position - ToWorld(eventData);
     }
 
-    private void OnMouseDrag()
+    // Le glissement commence tout de suite, sans le petit seuil de l'EventSystem.
+    public void OnInitializePotentialDrag(PointerEventData eventData)
+    {
+        eventData.useDragThreshold = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
     {
         if (!isDragging || CutsceneDirector.IsPlaying)
             return;
 
-        Vector3 position = GetMousePosition() + dragOffset;
+        Vector3 position = ToWorld(eventData) + dragOffset;
 
         Group.Move(Group.ClampToArea(position, shuffleArea));
     }
 
-    private void OnMouseUp()
+    public void OnPointerUp(PointerEventData eventData)
     {
         if (!isDragging)
             return;
@@ -65,9 +77,10 @@ public class PuzzlePiece : MonoBehaviour
         connectionManager.CheckConnection(Group);
     }
 
-    private Vector3 GetMousePosition()
+    private static Vector3 ToWorld(PointerEventData eventData)
     {
-        Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Camera cam = eventData.pressEventCamera != null ? eventData.pressEventCamera : Camera.main;
+        Vector3 position = cam.ScreenToWorldPoint(eventData.position);
 
         position.z = 0;
         return position;

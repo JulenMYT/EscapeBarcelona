@@ -67,7 +67,7 @@ public class CutsceneDirector : MonoBehaviour
             if (instance == null && !isQuitting)
             {
                 // Normalement, celui de Bootstrap s'est déjà déclaré dans Awake.
-                instance = FindFirstObjectByType<CutsceneDirector>();
+                instance = FindAnyObjectByType<CutsceneDirector>();
 
                 if (instance == null)
                 {

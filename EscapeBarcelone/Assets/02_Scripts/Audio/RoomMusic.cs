@@ -41,9 +41,8 @@ public static class RoomMusic
             }
         }
 
-        RoomService service = ServiceLocator.Get<RoomService>();
-
-        if (service != null && service.gameObject.scene == room)
+        // Optionnel : une salle peut ne pas avoir de RoomService (pas de musique propre).
+        if (ServiceLocator.TryGet(out RoomService service) && service.gameObject.scene == room)
             audio.PlayMusic(service.roomMusic);
         else
             audio.StopMusic();

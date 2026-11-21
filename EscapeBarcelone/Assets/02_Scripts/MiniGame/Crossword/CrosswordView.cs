@@ -354,6 +354,8 @@ public class CrosswordView : MonoBehaviour
         }
     }
 
+    // Test uniquement : clic droit sur le composant CrosswordView > Résoudre la grille (test).
+    [ContextMenu("Résoudre la grille (test)")]
     public void AutoSolve()
     {
         if (solved)

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UIElements;
 
 public class AudioManager : MonoBehaviour
 {
@@ -21,16 +20,16 @@ public class AudioManager : MonoBehaviour
             sfxPool.Add(gameObject.AddComponent<AudioSource>());
     }
 
-    public void PlaySFX(AudioData data, float position = 0)
+    public void PlaySFX(AudioData data)
     {
+        if (data == null || data.soundClip == null)
+            return;
+
         for (int i = 0; i < poolSize; i++)
         {
             if (!sfxPool[i].isPlaying)
             {
                 sfxPool[i].outputAudioMixerGroup = data.mixerGroup;
-                sfxPool[i].clip = data.soundClip;
-                sfxPool[i].volume = data.volume;
-                sfxPool[i].time = position;
                 sfxPool[i].PlayOneShot(data.soundClip, data.volume);
 
                 return;
@@ -126,24 +125,6 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(musicRoutine);
             musicRoutine = null;
         }
-    }
-
-    private IEnumerator FadeMixer(AudioMixer mixer, string parameter, float target, float duration)
-    {
-        mixer.GetFloat(parameter, out float start);
-
-        float targetDb = Mathf.Log10(Mathf.Max(target, 0.0001f)) * 20f;
-        float time = 0f;
-
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            float value = Mathf.Lerp(start, targetDb, time / duration);
-            mixer.SetFloat(parameter, value);
-            yield return null;
-        }
-
-        mixer.SetFloat(parameter, targetDb);
     }
 
     public float GetMusicTime() => musicSource.time;

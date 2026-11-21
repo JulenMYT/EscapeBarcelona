@@ -777,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c6d409a24a47b4888ea91379e4dc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Radio
+  radioId: Radio
   sound:
     soundClip: {fileID: 8300000, guid: 47881352df2eafc4191cfd1f5c209afb, type: 3}
     volume: 0.5

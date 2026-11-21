@@ -1,6 +1,13 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class MapLabel : MonoBehaviour
+/// <summary>
+/// Étiquette de la carte qu'on glisse sur une ancre.
+/// Le glisser-déposer passe par l'EventSystem (comme le reste du jeu) : l'UI posée
+/// par-dessus bloque les clics, et l'objet attrapé est celui qui est affiché au-dessus
+/// (ordre d'affichage), sans astuce de profondeur.
+/// </summary>
+public class MapLabel : MonoBehaviour, IPointerDownHandler, IInitializePotentialDragHandler, IDragHandler, IPointerUpHandler
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
 
@@ -12,35 +19,23 @@ public class MapLabel : MonoBehaviour
     [SerializeField] private Color anchoredColor = Color.yellow;
     [SerializeField] private Color correctColor = Color.green;
 
-    private Camera mainCamera;
     private Vector3 dragOffset;
     private MapLabelAnchor currentAnchor;
 
     private bool canDrag = true;
-
-    // Les étiquettes et les ancres sont toutes à z = 0 dans la scène. OnMouseDown choisit
-    // l'objet touché selon sa profondeur : à égalité, il peut toucher l'ancre au lieu de
-    // l'étiquette posée dessus. On place donc l'étiquette un peu plus près de la caméra.
-    private const float LabelDepthOffset = -0.1f;
-
-    private void Awake()
-    {
-        Vector3 local = transform.localPosition;
-        transform.localPosition = new Vector3(local.x, local.y, LabelDepthOffset);
-    }
+    private bool isDragging;
 
     public void SetCanDrag(bool canDrag)
     {
         this.canDrag = canDrag;
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (CutsceneDirector.IsPlaying)
+        if (eventData.button != PointerEventData.InputButton.Left || !canDrag || CutsceneDirector.IsPlaying)
             return;
 
-        if (!canDrag)
-            return;
+        isDragging = true;
 
         if (currentAnchor != null)
         {
@@ -50,19 +45,21 @@ public class MapLabel : MonoBehaviour
 
         SetBaseColor();
 
-        Vector3 mousePosition = GetMouseWorldPosition();
-        dragOffset = transform.position - mousePosition;
+        dragOffset = transform.position - ToWorld(eventData);
     }
 
-    private void OnMouseDrag()
+    // Le glissement commence tout de suite, sans le petit seuil de l'EventSystem.
+    public void OnInitializePotentialDrag(PointerEventData eventData)
     {
-        if (CutsceneDirector.IsPlaying)
+        eventData.useDragThreshold = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!isDragging || !canDrag || CutsceneDirector.IsPlaying)
             return;
 
-        if (!canDrag)
-            return;
-
-        Vector3 position = GetMouseWorldPosition() + dragOffset;
+        Vector3 position = ToWorld(eventData) + dragOffset;
 
         if (bounds.OverlapPoint(position))
         {
@@ -75,9 +72,14 @@ public class MapLabel : MonoBehaviour
         transform.position = new Vector3(closestPoint.x, closestPoint.y, transform.position.z);
     }
 
-    private void OnMouseUp()
+    public void OnPointerUp(PointerEventData eventData)
     {
-        MapLabelAnchor anchor = GetAnchorUnderMouse();
+        if (!isDragging)
+            return;
+
+        isDragging = false;
+
+        MapLabelAnchor anchor = GetAnchorUnder(ToWorld(eventData));
 
         if (anchor != null && anchor.TryPlace(this))
             currentAnchor = anchor;
@@ -89,9 +91,6 @@ public class MapLabel : MonoBehaviour
     {
         currentAnchor = anchor;
 
-        // On garde le z de l'étiquette : avec celui de l'ancre, les deux colliders sont à
-        // la même profondeur, et OnMouseDown peut alors toucher l'ancre au lieu de
-        // l'étiquette (impossible de la reprendre).
         Vector3 anchorPosition = anchor.transform.position;
         transform.position = new Vector3(anchorPosition.x, anchorPosition.y, transform.position.z);
         SetAnchoredColor();
@@ -112,31 +111,20 @@ public class MapLabel : MonoBehaviour
         spriteRenderer.color = anchoredColor;
     }
 
-    private Vector3 GetMouseWorldPosition()
+    private Vector3 ToWorld(PointerEventData eventData)
     {
-        if (mainCamera == null)
-            mainCamera = Camera.main;
+        Camera cam = eventData.pressEventCamera != null ? eventData.pressEventCamera : Camera.main;
 
-        if (mainCamera == null)
-            Debug.Log("camera null");
-
-        Vector3 position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 position = cam.ScreenToWorldPoint(eventData.position);
         position.z = transform.position.z;
 
         return position;
     }
 
-    private MapLabelAnchor GetAnchorUnderMouse()
+    private MapLabelAnchor GetAnchorUnder(Vector3 worldPosition)
     {
-        Vector3 mousePosition = GetMouseWorldPosition();
+        Collider2D collider = Physics2D.OverlapPoint(worldPosition, anchorLayer);
 
-        Collider2D collider = Physics2D.OverlapPoint(mousePosition, anchorLayer);
-
-        if (collider == null)
-            return null;
-
-        MapLabelAnchor anchor = collider.GetComponent<MapLabelAnchor>();
-
-        return anchor;
+        return collider != null ? collider.GetComponent<MapLabelAnchor>() : null;
     }
 }

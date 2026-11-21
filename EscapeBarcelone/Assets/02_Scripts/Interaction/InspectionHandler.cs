@@ -111,6 +111,7 @@ public class InspectionHandler : MonoBehaviour
 
         int overlayOrder = BaseSortingOrder + inspectionStack.Count * SortingStep;
         darkBackgroundRenderer.sortingOrder = overlayOrder;
+        AssignCanvasCamera(detailedView);
         ApplySorting(entry, overlayOrder + 1);
 
         if (isFirst)
@@ -301,6 +302,26 @@ public class InspectionHandler : MonoBehaviour
         entry.canvasOrders.Clear();
     }
 
+    /// <summary>
+    /// Un gros plan en UI réglé sur « Screen Space - Camera » ne peut pas référencer la
+    /// caméra : elle est dans Bootstrap, lui dans une salle. Sans caméra, Unity l'affiche
+    /// comme un canvas « Overlay », par-dessus tout, y compris la croix de fermeture.
+    /// On lui donne donc la caméra principale à l'ouverture.
+    /// </summary>
+    private static void AssignCanvasCamera(GameObject view)
+    {
+        Camera cam = Camera.main;
+
+        if (cam == null)
+            return;
+
+        foreach (Canvas canvas in view.GetComponentsInChildren<Canvas>(true))
+        {
+            if (canvas.isRootCanvas && canvas.renderMode == RenderMode.ScreenSpaceCamera && canvas.worldCamera == null)
+                canvas.worldCamera = cam;
+        }
+    }
+
     // Un canvas imbriqué sans « Override Sorting » hérite de l'ordre de son parent.
     private static bool OwnsSorting(Canvas canvas)
     {
@@ -332,13 +353,11 @@ public class InspectionHandler : MonoBehaviour
             height * margin / (spriteSize.y * parentScale.y),
             1f);
 
-        // On place l'écran sombre un peu DERRIÈRE le plan z = 0 : son collider (pour le
-        // clic à côté) ne doit pas passer devant les objets qui utilisent encore
-        // OnMouseDown (pièces de puzzle, étiquettes de la carte), triés par profondeur.
-        // L'affichage, lui, dépend du sortingOrder, pas de z.
+        // Centré sur la caméra. Tous les clics passent par l'EventSystem, qui choisit
+        // l'objet selon l'ordre d'affichage : le gros plan (au-dessus de l'écran sombre)
+        // reçoit donc ses clics avant l'écran sombre, quelle que soit la profondeur.
         Vector3 camPosition = cam.transform.position;
-        float behind = cam.transform.forward.z >= 0f ? 1f : -1f;
-        overlay.position = new Vector3(camPosition.x, camPosition.y, behind);
+        overlay.position = new Vector3(camPosition.x, camPosition.y, overlay.position.z);
     }
 
     private void FadeOverlay(float targetAlpha, bool deactivateAtEnd)
