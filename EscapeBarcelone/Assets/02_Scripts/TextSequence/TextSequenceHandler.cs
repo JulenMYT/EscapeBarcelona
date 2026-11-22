@@ -6,14 +6,14 @@ using UnityEngine.InputSystem;
 
 public abstract class TextSequenceHandler<T> : MonoBehaviour where T : ScriptableObject
 {
-    protected int index = -1;
-    protected T currentSequence;
-
     /// <summary>Déclenché à la fin de chaque séquence.</summary>
     public event Action OnSequenceComplete;
 
     [SerializeField] private InputActionReference inputAction;
     private bool inputBlocked;
+
+    protected int index = -1;
+    protected T currentSequence;
 
     // Séquences demandées pendant qu'une autre est en cours : jouées à la suite.
     private readonly Queue<(T sequence, Action onComplete)> pending = new();
@@ -34,22 +34,6 @@ public abstract class TextSequenceHandler<T> : MonoBehaviour where T : Scriptabl
     protected virtual void OnDisable()
     {
         inputAction.action.performed -= OnClick;
-    }
-
-    private void OnClick(InputAction.CallbackContext context)
-    {
-        if (inputBlocked || currentSequence == null)
-            return;
-
-        // Premier clic pendant l'écriture : affiche toute la réplique d'un coup.
-        if (IsLineAnimating())
-        {
-            CompleteLineAnimation();
-            return;
-        }
-
-        if (CanAdvance())
-            PlayNextLine();
     }
 
     /// <param name="onComplete">Appelé à la fin de CETTE séquence (même si elle a dû attendre son tour).</param>
@@ -131,4 +115,20 @@ public abstract class TextSequenceHandler<T> : MonoBehaviour where T : Scriptabl
     protected abstract void DisplayCurrentLine();
     protected abstract void ShowUI();
     protected abstract void OnEndSequence();
+
+    private void OnClick(InputAction.CallbackContext context)
+    {
+        if (inputBlocked || currentSequence == null)
+            return;
+
+        // Premier clic pendant l'écriture : affiche toute la réplique d'un coup.
+        if (IsLineAnimating())
+        {
+            CompleteLineAnimation();
+            return;
+        }
+
+        if (CanAdvance())
+            PlayNextLine();
+    }
 }

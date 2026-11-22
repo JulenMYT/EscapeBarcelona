@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Compass : MonoBehaviour
 {
+    public event Action OnCompassOpened;
+    public event Action OnCompassClosed;
+
     [SerializeField] private GameObject compassUI;
     [SerializeField] private GameObject openButton;
     [SerializeField] private GameObject closeButton;
@@ -10,9 +13,6 @@ public class Compass : MonoBehaviour
     private bool isOpen = false;
 
     public bool IsOpen => isOpen;
-
-    public event Action OnCompassOpened;
-    public event Action OnCompassClosed;
 
     private void Awake()
     {

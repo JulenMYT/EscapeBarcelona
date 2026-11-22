@@ -102,6 +102,11 @@ public static class PersistentGuidChecker
         return entries;
     }
 
+    private static IEnumerable<string> BuildScenePaths()
+    {
+        return EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path);
+    }
+
     private static void Fix(HashSet<(string scene, string path)> toFix)
     {
         foreach (string scenePath in toFix.Select(f => f.scene).Distinct())
@@ -118,20 +123,20 @@ public static class PersistentGuidChecker
         }
     }
 
-    private static IEnumerable<PersistentGuid> FindIn(Scene scene)
-    {
-        return scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<PersistentGuid>(true));
-    }
-
-    private static IEnumerable<string> BuildScenePaths()
-    {
-        return EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path);
-    }
-
     private static void RestoreSetup(SceneSetup[] setup)
     {
         if (setup != null && setup.Length > 0)
             EditorSceneManager.RestoreSceneManagerSetup(setup);
+    }
+
+    private static string SceneName(string path)
+    {
+        return System.IO.Path.GetFileNameWithoutExtension(path);
+    }
+
+    private static IEnumerable<PersistentGuid> FindIn(Scene scene)
+    {
+        return scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<PersistentGuid>(true));
     }
 
     private static string GetPath(Transform transform)
@@ -142,10 +147,5 @@ public static class PersistentGuidChecker
             path = parent.name + "/" + path;
 
         return path;
-    }
-
-    private static string SceneName(string path)
-    {
-        return System.IO.Path.GetFileNameWithoutExtension(path);
     }
 }

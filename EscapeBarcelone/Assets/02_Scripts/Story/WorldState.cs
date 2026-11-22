@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WorldState : MonoBehaviour
 {
+    public event Action<StoryFlag> OnStoryFlagAdded;
+    public event Action<StoryFlag> OnStoryFlagRemoved;
+
     [Tooltip("ÉDITEUR UNIQUEMENT : flags ajoutés au lancement du Play, pour tester une salle " +
              "sans rejouer tout le jeu (ex. HasBook pour tester la Room 4). Ignoré dans le build.")]
     [SerializeField] private List<StoryFlag> editorTestFlags = new();
@@ -23,9 +26,6 @@ public class WorldState : MonoBehaviour
 
     /// <summary>Lecture seule : pour modifier, utiliser AddFlag / RemoveFlag.</summary>
     public IReadOnlyCollection<StoryFlag> StoryFlags => storyFlags;
-
-    public event Action<StoryFlag> OnStoryFlagAdded;
-    public event Action<StoryFlag> OnStoryFlagRemoved;
 
     private void Awake()
     {

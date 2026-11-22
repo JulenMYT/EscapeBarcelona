@@ -5,11 +5,23 @@ public class CSE_TutorialInteraction : CSE_Tutorial
 {
     [SerializeField] private Interaction target;
 
+    // Cutscene interrompue (salle déchargée) : on ne laisse pas d'abonnement vers un objet détruit.
+    private void OnDestroy()
+    {
+        Cleanup();
+    }
+
     public override void Execute()
     {
         cutsceneHandler.tutorialHandler.OnInteractionRequired += OnInteractionRequired;
 
         base.Execute();
+    }
+
+    protected override void OnTutorialComplete()
+    {
+        Cleanup();
+        base.OnTutorialComplete();
     }
 
     private void OnInteractionRequired()
@@ -41,18 +53,6 @@ public class CSE_TutorialInteraction : CSE_Tutorial
         target.RemoveHighlight();
 
         cutsceneHandler.tutorialHandler.CompleteInteraction();
-    }
-
-    protected override void OnTutorialComplete()
-    {
-        Cleanup();
-        base.OnTutorialComplete();
-    }
-
-    // Cutscene interrompue (salle déchargée) : on ne laisse pas d'abonnement vers un objet détruit.
-    private void OnDestroy()
-    {
-        Cleanup();
     }
 
     private void Cleanup()

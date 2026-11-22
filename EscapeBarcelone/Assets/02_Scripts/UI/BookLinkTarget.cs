@@ -22,6 +22,18 @@ public class BookLinkTarget : MonoBehaviour
 
     private Book book;
 
+    /// <summary>Le gros plan à ouvrir (null si rien n'est renseigné).</summary>
+    public GameObject View
+    {
+        get
+        {
+            if (view == null)
+                Debug.LogWarning($"BookLinkTarget « {linkId} » : aucun gros plan (View) renseigné.", this);
+
+            return view;
+        }
+    }
+
     private void OnEnable()
     {
         if (ServiceLocator.TryGet(out book))
@@ -34,16 +46,5 @@ public class BookLinkTarget : MonoBehaviour
     {
         if (book != null)
             book.UnregisterLinkTarget(this);
-    }
-
-    public void Open()
-    {
-        if (view == null)
-        {
-            Debug.LogWarning($"BookLinkTarget « {linkId} » : aucun gros plan (View) renseigné.", this);
-            return;
-        }
-
-        ServiceLocator.Get<InspectionHandler>()?.Inspect(view);
     }
 }

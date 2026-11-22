@@ -28,6 +28,14 @@ public class MapLabelGameManager : MiniGame
         TriggerGameCompleted();
     }
 
+    protected override void SolveMiniGame()
+    {
+        foreach (MapLabelAnchor anchor in slots)
+            anchor.TryPlace(anchor.ExpectedLabel);
+
+        ApplyCompletedState();
+    }
+
     private void ApplyCompletedState()
     {
         isCompleted = true;
@@ -37,13 +45,5 @@ public class MapLabelGameManager : MiniGame
             label.SetCanDrag(false);
             label.SetCorrectColor();
         }
-    }
-
-    protected override void SolveMiniGame()
-    {
-        foreach (MapLabelAnchor anchor in slots)
-            anchor.TryPlace(anchor.ExpectedLabel);
-
-        ApplyCompletedState();
     }
 }

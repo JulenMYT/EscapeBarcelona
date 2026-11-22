@@ -5,15 +5,33 @@ using UnityEngine;
 /// <summary>
 /// Grille de la boussole : on y « sélectionne » un lieu (comme dans une recherche de mots)
 /// pour s'y rendre. Chaque destination associe un mot de la grille à une scène.
+/// La grille elle-même se génère depuis l'inspecteur (bouton « Générer la grille »).
 /// </summary>
 [CreateAssetMenu(fileName = "WordHuntData", menuName = "MiniGames/WordHunt")]
 public class WordHuntData : ScriptableObject
 {
-    [Tooltip("Lignes de la grille, toutes de la même longueur.")]
-    [SerializeField] private List<string> rows;
-
     [Tooltip("Lieux qu'on peut sélectionner dans la grille.")]
     [SerializeField] private List<CompassDestination> destinations = new();
+
+    // ── Génération automatique (utilisée seulement par l'inspecteur, voir WordHuntDataEditor) ──
+
+    [Tooltip("Faux lieux cachés dans la grille pour brouiller les pistes (ex. MADRID, SEVILLA). " +
+             "Les sélectionner ne fait rien.")]
+    [SerializeField] private List<string> decoyWords = new();
+
+    [SerializeField] private Vector2Int gridSize = new(15, 14);
+
+    // Lus seulement par l'inspecteur (WordHuntDataEditor), pas en jeu.
+#pragma warning disable CS0414
+    [Tooltip("Autoriser les mots en diagonale.")]
+    [SerializeField] private bool allowDiagonal = true;
+
+    [Tooltip("Autoriser les mots écrits à l'envers (de droite à gauche, de bas en haut).")]
+    [SerializeField] private bool allowReversed = false;
+#pragma warning restore CS0414
+
+    [Tooltip("Lignes de la grille, toutes de la même longueur. Remplies par « Générer la grille ».")]
+    [SerializeField] private List<string> rows;
 
     public IReadOnlyList<string> Rows => rows;
     public IReadOnlyList<CompassDestination> Destinations => destinations;

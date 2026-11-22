@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 
 public class LetterTile : MonoBehaviour, IPointerClickHandler
 {
+    public event Action<LetterTile> OnTileClicked;
+    public event Action<LetterTile> OnLetterEntered;
+
     [SerializeField] protected TMP_InputField inputField;
     [SerializeField] protected Color selectedColor;
     [SerializeField] protected Color highlightedColor;
     [SerializeField] protected Color baseColor;
     [SerializeField] protected Color correctColor;
-
-    public event Action<LetterTile> OnTileClicked;
-    public event Action<LetterTile> OnLetterEntered;
 
     public bool IsLocked { get; private set; }
 

@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class LetterWheel : MonoBehaviour
 {
+    private const string alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+
+    public event Action OnLetterChanged;
+
     [SerializeField] private TMP_Text text;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject previousButton;
-
-    private const string alphabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
     /// <summary>Lettres disponibles sur une roue (le mot de passe ne peut utiliser que celles-ci).</summary>
     public static string Alphabet => alphabet;
 
     private int index;
-
-    public event Action OnLetterChanged;
 
     public char Letter => alphabet[index];
 
@@ -38,11 +38,6 @@ public class LetterWheel : MonoBehaviour
         OnLetterChanged?.Invoke();
     }
 
-    private void Refresh()
-    {
-        text.text = Letter.ToString();
-    }
-
     public void SetLetter(char value)
     {
         int newIndex = alphabet.IndexOf(char.ToUpperInvariant(value));
@@ -58,5 +53,10 @@ public class LetterWheel : MonoBehaviour
     {
         nextButton.SetActive(value);
         previousButton.SetActive(value);
+    }
+
+    private void Refresh()
+    {
+        text.text = Letter.ToString();
     }
 }

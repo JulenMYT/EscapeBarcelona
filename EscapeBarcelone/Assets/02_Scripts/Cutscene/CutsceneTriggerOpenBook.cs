@@ -33,6 +33,8 @@ public class CutsceneTriggerOpenBook : MonoBehaviour
         cutscene.StartCutscene();
     }
 
+    private bool CanPlay() => StoryCondition.Check(requiredFlags, forbiddenFlags);
+
     private void Unsubscribe()
     {
         if (book != null)
@@ -40,6 +42,4 @@ public class CutsceneTriggerOpenBook : MonoBehaviour
 
         book = null;
     }
-
-    private bool CanPlay() => StoryCondition.Check(requiredFlags, forbiddenFlags);
 }

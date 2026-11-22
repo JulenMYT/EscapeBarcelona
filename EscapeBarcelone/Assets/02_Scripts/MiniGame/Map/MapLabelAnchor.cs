@@ -7,6 +7,8 @@ public class MapLabelAnchor : MonoBehaviour
 
     private MapLabel currentLabel;
 
+    public bool IsOccupied => currentLabel != null;
+
     public bool TryPlace(MapLabel label)
     {
         if (currentLabel != null)
@@ -22,8 +24,6 @@ public class MapLabelAnchor : MonoBehaviour
     {
         currentLabel = null;
     }
-
-    public bool IsOccupied => currentLabel != null;
 
     public bool IsCorrect()
     {

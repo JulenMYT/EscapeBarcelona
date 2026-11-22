@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 
 public class WordHuntCell : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
 {
-    [SerializeField] private TMP_Text letterText;
-
     public event Action<Vector2Int> PointerDown;
     public event Action<Vector2Int> PointerEnter;
+
+    [SerializeField] private TMP_Text letterText;
 
     public Vector2 Position => transform.position;
 

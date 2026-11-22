@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class TutorialHandler : TextSequenceHandler<Tutorial>
 {
+    public event Action OnInteractionRequired;
+
     [SerializeField] private TutorialUI tutorialUI;
     [SerializeField] private GameObject tutorialOverlay;
 
     private bool waitingForInteraction;
-
-    public event Action OnInteractionRequired;
 
     private void Awake()
     {

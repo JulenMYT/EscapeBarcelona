@@ -39,10 +39,6 @@ public class Interaction : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         AwakeInitialize();
     }
 
-    protected virtual void AwakeInitialize()
-    {
-    }
-
     protected virtual void OnEnable()
     {
         InteractionManager.StateChanged += RefreshHover;
@@ -54,6 +50,10 @@ public class Interaction : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
 
         isHovered = false;
         RefreshHover();
+    }
+
+    protected virtual void AwakeInitialize()
+    {
     }
 
     public bool CanInteract()
@@ -109,6 +109,10 @@ public class Interaction : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         RefreshHover();
     }
 
+    protected virtual void Interact()
+    {
+    }
+
     /// <summary>
     /// Met à jour le contour et le curseur selon le survol et l'état actuel
     /// (verrouillage, inspection, conditions). Appelé aussi quand l'état de
@@ -127,9 +131,5 @@ public class Interaction : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
             spriteRenderer.sharedMaterial = shouldOutline ? outlineMaterial : defaultMaterial;
 
         ServiceLocator.Get<InteractionManager>()?.SetHovered(this, shouldOutline);
-    }
-
-    protected virtual void Interact()
-    {
     }
 }

@@ -8,9 +8,37 @@ public class PasswordMiniGame : MiniGame
 
     private LetterWheel[] wheels;
 
+#if UNITY_EDITOR
+    // Prévient dans l'inspecteur si le mot de passe contient un caractère absent des roues
+    // (espace, accent, chiffre…) : le mini-jeu serait alors impossible à résoudre.
+    private void OnValidate()
+    {
+        foreach (char c in password)
+        {
+            if (LetterWheel.Alphabet.IndexOf(char.ToUpperInvariant(c)) < 0)
+            {
+                UnityEngine.Debug.LogWarning($"PasswordMiniGame : le caractère « {c} » du mot de passe « {password} » n'existe pas sur les roues, le mini-jeu est impossible.", this);
+                return;
+            }
+        }
+    }
+#endif
+
     private void Awake()
     {
         CreateWheels();
+    }
+
+    private void OnDestroy()
+    {
+        if (wheels == null)
+            return;
+
+        foreach (LetterWheel wheel in wheels)
+        {
+            if (wheel != null)
+                wheel.OnLetterChanged -= CheckCompletion;
+        }
     }
 
     private void CreateWheels()
@@ -35,44 +63,10 @@ public class PasswordMiniGame : MiniGame
         CompleteGame();
     }
 
-#if UNITY_EDITOR
-    // Prévient dans l'inspecteur si le mot de passe contient un caractère absent des roues
-    // (espace, accent, chiffre…) : le mini-jeu serait alors impossible à résoudre.
-    private void OnValidate()
-    {
-        foreach (char c in password)
-        {
-            if (LetterWheel.Alphabet.IndexOf(char.ToUpperInvariant(c)) < 0)
-            {
-                UnityEngine.Debug.LogWarning($"PasswordMiniGame : le caractère « {c} » du mot de passe « {password} » n'existe pas sur les roues, le mini-jeu est impossible.", this);
-                return;
-            }
-        }
-    }
-#endif
-
-    private void OnDestroy()
-    {
-        if (wheels == null)
-            return;
-
-        foreach (LetterWheel wheel in wheels)
-        {
-            if (wheel != null)
-                wheel.OnLetterChanged -= CheckCompletion;
-        }
-    }
-
     private void CompleteGame()
     {
         ApplyCompletedState();
         TriggerGameCompleted();
-    }
-
-    private void ApplyCompletedState()
-    {
-        foreach (LetterWheel wheel in wheels)
-            wheel.SetInteractable(false);
     }
 
     protected override void SolveMiniGame()
@@ -81,5 +75,11 @@ public class PasswordMiniGame : MiniGame
             wheels[i].SetLetter(password[i]);
 
         ApplyCompletedState();
+    }
+
+    private void ApplyCompletedState()
+    {
+        foreach (LetterWheel wheel in wheels)
+            wheel.SetInteractable(false);
     }
 }

@@ -171,7 +171,8 @@ public class CrosswordDataEditor : Editor
 
     private static string NormalizeWord(string word)
     {
-        return new string(word.Select(CrosswordText.Normalize).ToArray());
+        // Lettres seulement : « SAGRADA FAMILIA » → SAGRADAFAMILIA (l'espace ne sert qu'à l'affichage).
+        return new string(word.Where(char.IsLetter).Select(CrosswordText.Normalize).ToArray());
     }
 
     // ───────────────────────── Grille & vérifications ─────────────────────────

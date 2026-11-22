@@ -30,6 +30,9 @@ public class BookLink : MonoBehaviour
     private Button button;
     private Book book;
 
+    private bool IsAvailable =>
+        book != null && book.HasLinkTarget(linkId) && (condition == null || condition.IsMet());
+
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -51,15 +54,6 @@ public class BookLink : MonoBehaviour
             book.LinkTargetsChanged -= Refresh;
     }
 
-    private bool IsAvailable =>
-        book != null && book.HasLinkTarget(linkId) && (condition == null || condition.IsMet());
-
-    private void Refresh()
-    {
-        // Avec un dialogue d'explication, l'élément reste cliquable pour pouvoir le jouer.
-        button.interactable = IsAvailable || unavailableDialogue != null;
-    }
-
     private void OnClick()
     {
         if (IsAvailable)
@@ -70,5 +64,11 @@ public class BookLink : MonoBehaviour
 
         if (unavailableDialogue != null)
             ServiceLocator.Get<DialogueHandler>()?.StartDialogue(unavailableDialogue);
+    }
+
+    private void Refresh()
+    {
+        // Avec un dialogue d'explication, l'élément reste cliquable pour pouvoir le jouer.
+        button.interactable = IsAvailable || unavailableDialogue != null;
     }
 }

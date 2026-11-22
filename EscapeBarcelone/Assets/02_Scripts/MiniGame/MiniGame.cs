@@ -21,11 +21,6 @@ public class MiniGame : MonoBehaviour
             ServiceLocator.Get<InspectionHandler>()?.AddCloseBlocker(this, gameObject);
     }
 
-    protected virtual void OnDisable()
-    {
-        ServiceLocator.Get<InspectionHandler>()?.RemoveCloseBlocker(this);
-    }
-
     private void Start()
     {
         if (IsCompleted)
@@ -35,6 +30,11 @@ public class MiniGame : MonoBehaviour
         }
 
         Initialize();
+    }
+
+    protected virtual void OnDisable()
+    {
+        ServiceLocator.Get<InspectionHandler>()?.RemoveCloseBlocker(this);
     }
 
     protected void TriggerGameCompleted()

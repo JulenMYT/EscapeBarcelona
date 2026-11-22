@@ -27,6 +27,18 @@ public class CutsceneTriggerPasswordMiniGame : CutsceneTriggerMiniGame
             anim.Play(OpenState, 0, 1f);
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        // Gros plan fermé ou salle déchargée pendant l'animation : on ne laisse pas le jeu bloqué.
+        if (waitingForAnimation)
+        {
+            waitingForAnimation = false;
+            CutsceneDirector.Instance?.Release(this);
+        }
+    }
+
     protected override void OnGameCompleted()
     {
         waitingForAnimation = true;
@@ -48,17 +60,5 @@ public class CutsceneTriggerPasswordMiniGame : CutsceneTriggerMiniGame
 
         cutscene.StartCutscene();
         CutsceneDirector.Instance.Release(this);
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        // Gros plan fermé ou salle déchargée pendant l'animation : on ne laisse pas le jeu bloqué.
-        if (waitingForAnimation)
-        {
-            waitingForAnimation = false;
-            CutsceneDirector.Instance?.Release(this);
-        }
     }
 }

@@ -31,33 +31,15 @@ public class InteractionManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
     private void Start()
     {
         EnsureRaycaster();
         NotifyStateChanged();
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnDisable()
     {
-        EnsureRaycaster();
-        NotifyStateChanged();
-    }
-
-    /// <summary>
-    /// Les Interaction reçoivent les clics via l'EventSystem : la caméra doit avoir
-    /// un Physics2DRaycaster. On l'ajoute si besoin (tu peux aussi le mettre dans la scène).
-    /// </summary>
-    private static void EnsureRaycaster()
-    {
-        Camera cam = Camera.main;
-
-        if (cam != null && cam.GetComponent<Physics2DRaycaster>() == null)
-            cam.gameObject.AddComponent<Physics2DRaycaster>();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public bool CanInteract(GameObject obj)
@@ -168,6 +150,24 @@ public class InteractionManager : MonoBehaviour
 
         if (hoverCursor != null)
             Cursor.SetCursor(hoveredInteraction != null ? hoverCursor : null, hoverCursorHotspot, CursorMode.Auto);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        EnsureRaycaster();
+        NotifyStateChanged();
+    }
+
+    /// <summary>
+    /// Les Interaction reçoivent les clics via l'EventSystem : la caméra doit avoir
+    /// un Physics2DRaycaster. On l'ajoute si besoin (tu peux aussi le mettre dans la scène).
+    /// </summary>
+    private static void EnsureRaycaster()
+    {
+        Camera cam = Camera.main;
+
+        if (cam != null && cam.GetComponent<Physics2DRaycaster>() == null)
+            cam.gameObject.AddComponent<Physics2DRaycaster>();
     }
 
     private static void NotifyStateChanged()

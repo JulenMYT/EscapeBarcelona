@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class WordHuntView : MonoBehaviour
 {
+    public event Action<Vector2Int, Vector2Int, Vector2Int> SelectionEnded;
+
     [SerializeField] private GridLayoutGroup grid;
     [SerializeField] private WordHuntCell cellPrefab;
     [SerializeField] private RectTransform selectionVisual;
@@ -20,8 +22,6 @@ public class WordHuntView : MonoBehaviour
 
     private Vector2Int gridSize;
     private Dictionary<Vector2Int, WordHuntCell> cells = new();
-
-    public event Action<Vector2Int, Vector2Int, Vector2Int> SelectionEnded;
 
     private void Awake()
     {
@@ -104,21 +104,6 @@ public class WordHuntView : MonoBehaviour
         selectionVisual.gameObject.SetActive(true);
     }
 
-    /// <summary>Masque la barre de sélection (sélection invalide, ou après un départ).</summary>
-    public void HideSelection()
-    {
-        selectionVisual.gameObject.SetActive(false);
-    }
-
-    private void HandlePointerUp(InputAction.CallbackContext context)
-    {
-        if (!isSelecting)
-            return;
-
-        EndSelection();
-        isSelecting = false;
-    }
-
     private Vector2Int CalculateDirection(Vector2Int absoluteDirection)
     {
         Vector2 normalizedDirection = ((Vector2)absoluteDirection).normalized;
@@ -145,6 +130,34 @@ public class WordHuntView : MonoBehaviour
         }
 
         return bestDirection;
+    }
+
+    private void UpdateSelectionVisual(Vector2Int start, Vector2Int end)
+    {
+        Vector2 startPosition = cells[start].Position;
+        Vector2 endPosition = cells[end].Position;
+
+        Vector2 difference = endPosition - startPosition;
+
+        selectionVisual.position = (startPosition + endPosition) * 0.5f;
+        selectionVisual.sizeDelta = new Vector2(difference.magnitude + grid.cellSize.x, grid.cellSize.y);
+
+        selectionVisual.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg);
+    }
+
+    /// <summary>Masque la barre de sélection (sélection invalide, ou après un départ).</summary>
+    public void HideSelection()
+    {
+        selectionVisual.gameObject.SetActive(false);
+    }
+
+    private void HandlePointerUp(InputAction.CallbackContext context)
+    {
+        if (!isSelecting)
+            return;
+
+        EndSelection();
+        isSelecting = false;
     }
 
     private void EndSelection()
@@ -180,18 +193,5 @@ public class WordHuntView : MonoBehaviour
         }
 
         return finalPosition;
-    }
-
-    private void UpdateSelectionVisual(Vector2Int start, Vector2Int end)
-    {
-        Vector2 startPosition = cells[start].Position;
-        Vector2 endPosition = cells[end].Position;
-
-        Vector2 difference = endPosition - startPosition;
-
-        selectionVisual.position = (startPosition + endPosition) * 0.5f;
-        selectionVisual.sizeDelta = new Vector2(difference.magnitude + grid.cellSize.x, grid.cellSize.y);
-
-        selectionVisual.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg);
     }
 }

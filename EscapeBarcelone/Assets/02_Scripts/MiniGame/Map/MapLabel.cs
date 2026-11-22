@@ -48,6 +48,11 @@ public class MapLabel : MonoBehaviour, IPointerDownHandler, IInitializePotential
         dragOffset = transform.position - ToWorld(eventData);
     }
 
+    private void SetBaseColor()
+    {
+        spriteRenderer.color = baseColor;
+    }
+
     // Le glissement commence tout de suite, sans le petit seuil de l'EventSystem.
     public void OnInitializePotentialDrag(PointerEventData eventData)
     {
@@ -87,6 +92,13 @@ public class MapLabel : MonoBehaviour, IPointerDownHandler, IInitializePotential
         gameManager.CheckCompletion();
     }
 
+    private MapLabelAnchor GetAnchorUnder(Vector3 worldPosition)
+    {
+        Collider2D collider = Physics2D.OverlapPoint(worldPosition, anchorLayer);
+
+        return collider != null ? collider.GetComponent<MapLabelAnchor>() : null;
+    }
+
     public void Anchor(MapLabelAnchor anchor)
     {
         currentAnchor = anchor;
@@ -96,19 +108,14 @@ public class MapLabel : MonoBehaviour, IPointerDownHandler, IInitializePotential
         SetAnchoredColor();
     }
 
-    public void SetCorrectColor()
-    {
-        spriteRenderer.color = correctColor;
-    }
-
-    private void SetBaseColor()
-    {
-        spriteRenderer.color = baseColor;
-    }
-
     private void SetAnchoredColor()
     {
         spriteRenderer.color = anchoredColor;
+    }
+
+    public void SetCorrectColor()
+    {
+        spriteRenderer.color = correctColor;
     }
 
     private Vector3 ToWorld(PointerEventData eventData)
@@ -119,12 +126,5 @@ public class MapLabel : MonoBehaviour, IPointerDownHandler, IInitializePotential
         position.z = transform.position.z;
 
         return position;
-    }
-
-    private MapLabelAnchor GetAnchorUnder(Vector3 worldPosition)
-    {
-        Collider2D collider = Physics2D.OverlapPoint(worldPosition, anchorLayer);
-
-        return collider != null ? collider.GetComponent<MapLabelAnchor>() : null;
     }
 }

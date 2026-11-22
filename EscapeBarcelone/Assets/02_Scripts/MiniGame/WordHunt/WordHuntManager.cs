@@ -22,14 +22,14 @@ public class WordHuntManager : MonoBehaviour
         view.SelectionEnded += HandleSelectionEnded;
     }
 
-    private void OnDisable()
-    {
-        view.SelectionEnded -= HandleSelectionEnded;
-    }
-
     private void Start()
     {
         view.CreateGrid(data);
+    }
+
+    private void OnDisable()
+    {
+        view.SelectionEnded -= HandleSelectionEnded;
     }
 
     private void HandleSelectionEnded(Vector2Int start, Vector2Int end, Vector2Int direction)

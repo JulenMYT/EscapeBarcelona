@@ -21,6 +21,16 @@ public class PuzzleHidePiece
         }
     }
 
+    private void ShuffleList(List<PuzzlePieceGroup> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int randomIndex = Random.Range(i, list.Count);
+
+            (list[i], list[randomIndex]) = (list[randomIndex], list[i]);
+        }
+    }
+
     public void RevealHiddenPiece(int number = 1)
     {
         number = Mathf.Min(number, hiddenPieces.Count);
@@ -29,16 +39,6 @@ public class PuzzleHidePiece
         {
             hiddenPieces[0].gameObject.SetActive(true);
             hiddenPieces.RemoveAt(0);
-        }
-    }
-
-    private void ShuffleList(List<PuzzlePieceGroup> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            int randomIndex = Random.Range(i, list.Count);
-
-            (list[i], list[randomIndex]) = (list[randomIndex], list[i]);
         }
     }
 }

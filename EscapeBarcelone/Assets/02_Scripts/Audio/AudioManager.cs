@@ -89,21 +89,6 @@ public class AudioManager : MonoBehaviour
         yield return Fade(volume, fadeTime);
     }
 
-    private IEnumerator Fade(float target, float duration)
-    {
-        float start = musicSource.volume;
-        float time = 0;
-
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            musicSource.volume = Mathf.Lerp(start, target, time / duration);
-            yield return null;
-        }
-
-        musicSource.volume = target;
-    }
-
     public void StopMusic(float fadeTime = 0.5f)
     {
         StopCurrentMusicRoutine();
@@ -128,6 +113,21 @@ public class AudioManager : MonoBehaviour
     }
 
     public float GetMusicTime() => musicSource.time;
+
+    private IEnumerator Fade(float target, float duration)
+    {
+        float start = musicSource.volume;
+        float time = 0;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(start, target, time / duration);
+            yield return null;
+        }
+
+        musicSource.volume = target;
+    }
 }
 
 [System.Serializable]

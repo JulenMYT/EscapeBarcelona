@@ -12,7 +12,9 @@ using UnityEngine;
 /// deux pages à la fois (« Pages Per Spread »). Le carnet se rouvre là où on l'a laissé.
 ///
 /// ÉLÉMENTS CLIQUABLES : un objet d'une page avec un BookLink ouvre quelque chose dans la
-/// salle courante (voir BookLink / BookLinkTarget).
+/// salle courante (voir BookLink / BookLinkTarget) ; avec un BookZoom, il ouvre en gros plan
+/// une fiche du carnet lui-même. Dans les deux cas, le carnet se cache pendant le gros plan
+/// et se rouvre (à la même page) quand on le ferme.
 /// </summary>
 public class Book : MonoBehaviour
 {
@@ -70,6 +72,43 @@ public class Book : MonoBehaviour
         // Une page débloquée pendant que le carnet est ouvert apparaît tout de suite.
         if (ServiceLocator.TryGet(out WorldState worldState))
             worldState.OnStoryFlagAdded += _ => { if (isOpen) ShowPages(); };
+
+        if (ServiceLocator.TryGet(out InspectionHandler inspection))
+            inspection.OnInspectionClosed += OnInspectionClosed;
+    }
+
+    // ───────────────────────── Gros plans ouverts depuis le carnet ─────────────────────────
+    // Le carnet s'affiche par-dessus tout (canvas Overlay) : on le cache pendant le gros plan,
+    // puis on le rouvre à la même page quand le joueur ferme ce gros plan.
+
+    private GameObject viewOpenedFromBook;
+
+    /// <summary>Ouvre ce gros plan depuis le carnet ; le carnet revient quand on le ferme.</summary>
+    public void OpenFromBook(GameObject view)
+    {
+        InspectionHandler inspection = ServiceLocator.Get<InspectionHandler>();
+
+        if (view == null || inspection == null)
+            return;
+
+        CloseBook();
+        viewOpenedFromBook = view;
+        inspection.Inspect(view);
+    }
+
+    private void OnInspectionClosed(GameObject closedView)
+    {
+        if (viewOpenedFromBook == null || closedView != viewOpenedFromBook)
+            return;
+
+        viewOpenedFromBook = null;
+
+        // Fermé par le jeu (changement de salle, cutscene de fin du mini-jeu…) : on ne
+        // rouvre pas le carnet au milieu.
+        bool transitioning = ServiceLocator.TryGet(out RoomTransitionManager rooms) && rooms.IsBusy;
+
+        if (!transitioning && !CutsceneDirector.IsPlaying)
+            OpenBook();
     }
 
     public void OpenBook()
@@ -214,8 +253,7 @@ public class Book : MonoBehaviour
         if (!HasLinkTarget(linkId))
             return false;
 
-        CloseBook();
-        linkTargets[linkId].Open();
+        OpenFromBook(linkTargets[linkId].View);
         return true;
     }
 }

@@ -11,6 +11,9 @@ using UnityEngine;
 [Serializable]
 public class Typewriter
 {
+    /// <summary>Déclenché quand la réplique est entièrement affichée.</summary>
+    public event Action Completed;
+
     [Tooltip("Lettres par seconde. 0 = texte affiché d'un coup.")]
     [SerializeField] private float charactersPerSecond = 40f;
 
@@ -25,9 +28,6 @@ public class Typewriter
     private Coroutine routine;
 
     public bool IsTyping => routine != null;
-
-    /// <summary>Déclenché quand la réplique est entièrement affichée.</summary>
-    public event Action Completed;
 
     public void Play(MonoBehaviour host, TMP_Text text, string content)
     {
@@ -46,32 +46,6 @@ public class Typewriter
 
         text.maxVisibleCharacters = 0;
         routine = host.StartCoroutine(TypeRoutine());
-    }
-
-    /// <summary>Affiche immédiatement toute la réplique.</summary>
-    public void Complete()
-    {
-        if (!IsTyping)
-            return;
-
-        Stop();
-        ShowAll();
-    }
-
-    public void Stop()
-    {
-        if (routine != null && host != null)
-            host.StopCoroutine(routine);
-
-        routine = null;
-    }
-
-    private void ShowAll()
-    {
-        if (text != null)
-            text.maxVisibleCharacters = int.MaxValue;
-
-        Completed?.Invoke();
     }
 
     private IEnumerator TypeRoutine()
@@ -110,5 +84,31 @@ public class Typewriter
 
         routine = null;
         ShowAll();
+    }
+
+    /// <summary>Affiche immédiatement toute la réplique.</summary>
+    public void Complete()
+    {
+        if (!IsTyping)
+            return;
+
+        Stop();
+        ShowAll();
+    }
+
+    public void Stop()
+    {
+        if (routine != null && host != null)
+            host.StopCoroutine(routine);
+
+        routine = null;
+    }
+
+    private void ShowAll()
+    {
+        if (text != null)
+            text.maxVisibleCharacters = int.MaxValue;
+
+        Completed?.Invoke();
     }
 }

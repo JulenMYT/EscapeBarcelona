@@ -65,11 +65,6 @@ public class PuzzleShuffle
         return new Vector3(outer.min.x + Random.Range(0, bandSize.x), outer.max.y - distance, 0);
     }
 
-    private Vector2 GetBandSize(Bounds outer, Bounds inner)
-    {
-        return new Vector2((outer.size.x - inner.size.x) / 2, (outer.size.y - inner.size.y) / 2);
-    }
-
     private void ShuffleList(List<Vector3> list)
     {
         for (int i = 0; i < list.Count; i++)
@@ -80,5 +75,10 @@ public class PuzzleShuffle
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
         }
+    }
+
+    private Vector2 GetBandSize(Bounds outer, Bounds inner)
+    {
+        return new Vector2((outer.size.x - inner.size.x) / 2, (outer.size.y - inner.size.y) / 2);
     }
 }

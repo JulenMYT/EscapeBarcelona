@@ -31,6 +31,23 @@ public class PuzzleMiniGame : MiniGame
         hidePiece = new PuzzleHidePiece();
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        // Bootstrap (WorldState) peut déjà être détruit quand on arrête le Play avec le
+        // puzzle ouvert : rien à sauvegarder dans ce cas.
+        if (isCompleted || !ServiceLocator.TryGet(out WorldState worldState))
+            return;
+
+        SavePuzzleGroups(worldState.puzzleState);
+    }
+
+    private void OnDestroy()
+    {
+        pieceGenerator?.DestroySprites();
+    }
+
     protected override void Initialize()
     {
         GeneratePuzzle();
@@ -38,16 +55,6 @@ public class PuzzleMiniGame : MiniGame
         RevealHiddenPieces();
 
         connectionManager.PuzzleCompleted += CompleteGame;
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        if (isCompleted)
-            return;
-
-        SavePuzzleGroups(ServiceLocator.Get<WorldState>().puzzleState);
     }
 
     private void GeneratePuzzle()
@@ -101,6 +108,24 @@ public class PuzzleMiniGame : MiniGame
             connectionManager.RestoreGroup(groupState);
     }
 
+    private void RevealHiddenPieces()
+    {
+        int piecesCollected = ServiceLocator.Get<WorldState>().puzzlePiecesCollected.Count;
+        hidePiece.RevealHiddenPiece(piecesCollected);
+    }
+
+    private void CompleteGame()
+    {
+        connectionManager.PuzzleCompleted -= CompleteGame;
+        ApplyCompletedState();
+        TriggerGameCompleted();
+    }
+
+    protected override void SolveMiniGame()
+    {
+        ApplyCompletedState();
+    }
+
     private void SavePuzzleGroups(PuzzleState puzzleState)
     {
         puzzleState.groupStates.Clear();
@@ -122,35 +147,12 @@ public class PuzzleMiniGame : MiniGame
         }
     }
 
-    private void RevealHiddenPieces()
-    {
-        int piecesCollected = ServiceLocator.Get<WorldState>().puzzlePiecesCollected.Count;
-        hidePiece.RevealHiddenPiece(piecesCollected);
-    }
-
-    private void CompleteGame()
-    {
-        connectionManager.PuzzleCompleted -= CompleteGame;
-        ApplyCompletedState();
-        TriggerGameCompleted();
-    }
-
     private void ApplyCompletedState()
     {
         isCompleted = true;
         completedSprite.SetActive(true);
         Destroy(piecesParent.gameObject);
         pieceGenerator.DestroySprites();
-    }
-
-    private void OnDestroy()
-    {
-        pieceGenerator?.DestroySprites();
-    }
-
-    protected override void SolveMiniGame()
-    {
-        ApplyCompletedState();
     }
 }
 

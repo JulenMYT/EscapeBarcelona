@@ -21,6 +21,19 @@ public class CutsceneHandler : MonoBehaviour
         cutsceneElements = GetComponentsInChildren<CutsceneElementBase>();
     }
 
+    // Salle déchargée en pleine cutscene (CSE_ChangeScene suivi d'autres éléments…) :
+    // on prévient le directeur pour que le jeu ne reste pas bloqué.
+    private void OnDestroy()
+    {
+        if (!IsPlaying)
+            return;
+
+        IsPlaying = false;
+
+        if (CutsceneDirector.IsPlaying)
+            CutsceneDirector.Instance.NotifyFinished(this);
+    }
+
     /// <summary>Demande à jouer cette cutscene (attend son tour si une autre est en cours).</summary>
     public void Play()
     {
@@ -61,18 +74,5 @@ public class CutsceneHandler : MonoBehaviour
     {
         IsPlaying = false;
         CutsceneDirector.Instance?.NotifyFinished(this);
-    }
-
-    // Salle déchargée en pleine cutscene (CSE_ChangeScene suivi d'autres éléments…) :
-    // on prévient le directeur pour que le jeu ne reste pas bloqué.
-    private void OnDestroy()
-    {
-        if (!IsPlaying)
-            return;
-
-        IsPlaying = false;
-
-        if (CutsceneDirector.IsPlaying)
-            CutsceneDirector.Instance.NotifyFinished(this);
     }
 }

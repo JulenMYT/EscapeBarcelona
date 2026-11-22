@@ -43,6 +43,8 @@ public class CrosswordGridCreator
                     else
                         existingTile.IsHorizontal = true;
 
+                    existingTile.IsPrefilled |= word.prefilled;
+
                     continue;
                 }
 
@@ -51,7 +53,10 @@ public class CrosswordGridCreator
                     correctChar,
                     !word.isDown,
                     word.isDown
-                ));
+                )
+                {
+                    IsPrefilled = word.prefilled
+                });
             }
         }
     }
@@ -120,6 +125,9 @@ public class TileData
     public int? FinalWordNumber { get; set; }
     public bool IsHorizontal { get; set; }
     public bool IsVertical { get; set; }
+
+    /// <summary>La case appartient à un mot déjà écrit au début (WordData.prefilled).</summary>
+    public bool IsPrefilled { get; set; }
 
     public TileData(Vector2Int position, char correctChar, bool isHorizontal, bool isVertical)
     {
